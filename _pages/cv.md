@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Applied Mathematics, The Hong Kong Polytechnic University, 2028 (Expected)
+* M.S. in Statistics (Data Science), Imperial College London, 2024 (Distinction)
+* B.S. in Mathematics, Imperial College London, 2023 (1st Class Honours)
 
-Work experience
+<!-- Work experience
 ======
 * Spring 2024: Academic Pages Collaborator
   * Github University
@@ -61,4 +61,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
