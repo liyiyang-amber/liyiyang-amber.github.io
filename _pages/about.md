@@ -11,7 +11,7 @@ Hi, my name is Li Yiyang (Amber), a first-year PhD student in Applied Mathematic
 
 I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
 
-About me:
+Something about me:
 - 最喜欢的歌手是Lana Del Rey
 - 喜欢大自然 hiking爱好者 在户外就能莫名开心的人
 - 喜欢阳光（但是怕晒）看到很绝的光影会哇哇大叫然后拿出手机狂拍
@@ -20,4 +20,4 @@ About me:
 - NF人
 - 会因为睡不着觉骑车/坐船去看日出
 - 伦敦留子三年 但没能成为厨子
-- 喜欢世界观宏大的作品和生动的文字 （eg：芥川龙之介全集 ps赵玉皎翻译的那版）
+- 喜欢世界观宏大的作品和生动的文字 （eg：芥川龙之介全集 ps一定要是赵玉皎翻译的那版）
