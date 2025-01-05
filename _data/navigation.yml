@@ -6,13 +6,13 @@
 
 main:
   - title: "Projects"
-    url: /portfolio/
+    url: /publications/
         
   - title: "Blog Posts"
     url: /year-archive/
     
   - title: "Memories"
-    url: /talks/
+    url: /portfolio/
 
   - title: "CV"
     url: /cv/
