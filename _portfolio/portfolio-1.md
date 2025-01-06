@@ -1,6 +1,6 @@
 ---
 title: "2024 Review with Chatgpt"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "First post! <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
