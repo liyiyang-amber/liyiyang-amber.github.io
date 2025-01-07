@@ -15,6 +15,12 @@ Education
 * M.S. in Statistics (Data Science), Imperial College London, 2024 (Distinction)
 * B.S. in Mathematics, Imperial College London, 2023 (1st Class Honours)
 
+Awards
+======
+* Hong Kong PhD Fellowship Scheme (HKPFS), 2024
+* Winton Prize, Imperial College London, 2022
+
+
 <!-- Work experience
 ======
 * Spring 2024: Academic Pages Collaborator
