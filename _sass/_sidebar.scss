@@ -60,7 +60,7 @@
 
   @include breakpoint($x-large) {
   max-width: $sidebar-link-max-width;
-  padding-right: 0;
+  // padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
@@ -119,7 +119,7 @@
   }
 
   img {
-    max-width: 175px;
+    max-width: 8em;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -295,9 +295,9 @@
 
     &:hover {
       // text-decoration: underline;
-      background-color: $code-background-color;
+      background-color:  #f8f0e7;
       scale: 1.025;
-      color: #f8f0e7;
+      color:#3d211a ;
 
     }
   }
