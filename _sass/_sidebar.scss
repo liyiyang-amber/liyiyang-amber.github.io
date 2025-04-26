@@ -5,35 +5,89 @@
 /*
    Default
    ========================================================================== */
-
+   .sidebar {
+    width: auto;
+    min-width: 0;
+    align-self: flex-start;
+    display: inline-block;
+    -webkit-transform: translate3d(0, 0 , 0);
+            transform: translate3d(0, 0 , 0);
+    border-radius: $border-radius*2;
+    @include clearfix();
+    margin-bottom: 1em;
+    @include breakpoint($large) {
+      @include span(2 of 12);
+  
+      opacity: 0.8;
+      transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      &:hover {
+        opacity: 1;
+        box-shadow: 0 4px  4px  rgba(200, 200, 200, 0.25),
+                  0 1px  6px  rgba(0, 0, 0, .15),
+                  0 8px  8px  rgba(0, 0, 0, .25), 
+                  0 16px 16px rgba(0, 0, 0, .25), 
+                  8px 32px 32px rgba(0, 0, 0, .35), 
+                  8px 64px 64px rgba(0, 0, 0, .35); 
+   
+       transform: scale(1.05)
+      }
+      overflow: hidden;
+    }
 .sidebar {
+  // -webkit-transform: translate3d(0, 0 , 0);
+  //         transform: translate3d(0, 0 , 0);
+
+  // @include clearfix();
+  // margin-bottom: 1em;
+
+  // @media screen and (min-width: $sidebar-screen-min-width) {
+  //   height: 100vh;
+  //   overflow-y: auto;               // Add scrollbar if the sidebar is too long
+  //   // position: fixed;
+  //   // padding-top: $masthead-height;
+  // }
+
+  // @include breakpoint($large) {
+  //   @include span(2 of 12);
+  //   opacity: 1;
+  //   -webkit-transition: opacity 0.2s ease-in-out;
+  //           transition: opacity 0.2s ease-in-out;
+
+  //   &:hover {
+  //     opacity: 1;
+  //   }
+  // }
+  width: auto;
+  min-width: 0;
+  align-self: flex-start;
+  display: inline-block;
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
-
+  border-radius: $border-radius*2;
   @include clearfix();
   margin-bottom: 1em;
-
-  @media screen and (min-width: $sidebar-screen-min-width) {
-    height: 100vh;
-    overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    // position: fixed;
-    // padding-top: $masthead-height;
-  }
-
   @include breakpoint($large) {
-    @include span(2 of 12);
-    opacity: 1;
-    -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
+  @include span(2 of 12);
 
+    opacity: 0.8;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:hover {
       opacity: 1;
+      box-shadow: 0 4px  4px  rgba(200, 200, 200, 0.25),
+                0 1px  6px  rgba(200, 200, 200, .15),
+                0 8px  8px  rgba(200, 200, 200, .25), 
+                0 16px 16px rgba(200, 200, 200, .25), 
+                8px 32px 32px rgba(200, 200, 200, .35), 
+                8px 64px 64px rgba(200, 200, 200, .35); 
+  
+      transform: scale(1.05)
     }
+    overflow: hidden;
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
-    padding-right: 0;
+  max-width: $sidebar-link-max-width;
+  padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
