@@ -93,7 +93,7 @@
     aspect-ratio: 3.5;
   }
   box-shadow: rgba(200, 200, 200, 0.25) 0px 14px 28px, rgba(200, 200, 200, 0.22) 0px 10px 10px;
-	background: rgba(255, 255, 255, 0.05);
+	background: rgba(30, 30, 30, 0.85);
 	border-radius: 1em;
   padding: 2em;
   align-items: flex-start;
@@ -122,15 +122,17 @@
       font-size: $type-size-2;
       margin-top: 0.5em;
     }
-    color: $text-color;
+    color: $snow-color;
     font-family: $global-font-family;
+    text-decoration: none;
   }
 
   p {
     transition: inherit;
     text-shadow:rgba(200, 200, 200, 0.6) 0px 7px 14px, rgba(200, 200, 200, 0.65) 0px 5px 5px;
-    font-size: $type-size-8;
-    color: $text-color;
+    font-size: $type-size-6;
+    color: $snow-color;
+    text-decoration: none;
     @include breakpoint($large) {
       margin-top: 0;
     }
