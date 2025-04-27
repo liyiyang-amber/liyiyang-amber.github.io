@@ -16,6 +16,20 @@
   }
 }
 
+.article-image {
+  display: block;
+  text-align: center;
+  img {
+    max-width: 75%;
+    margin: 0.5em auto;
+    align-self: center;
+    border-radius: 1em;
+    transition: all 0.5s cubic-bezier(.33,.11,.12,.99);
+    &:hover {
+      scale: 105%;
+    }
+  }
+}
 .page {
   @include breakpoint($large) {
     @include span(10 of 12 last);
