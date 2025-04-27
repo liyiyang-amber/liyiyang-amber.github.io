@@ -4,7 +4,7 @@ excerpt: "'Does this choice reflect who I want to be?'"
 permalink: /memories/memories-1
 date: 2025-01-05
 header:
-  overlay_image: blank.png
+  overlay_image: covers/Chatgpt_cover.jpg
   overlay_filter: 0.25
 ---
 
