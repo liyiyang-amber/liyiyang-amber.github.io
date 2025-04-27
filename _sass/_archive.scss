@@ -129,8 +129,8 @@
 
   p {
     transition: inherit;
-    text-shadow:rgba(200, 200, 200, 0.6) 0px 7px 14px, rgba(200, 200, 200, 0.65) 0px 5px 5px;
-    font-size: $type-size-4;
+    text-shadow:rgba(200, 200, 200, 0.4) 0px 7px 14px, rgba(200, 200, 200, 0.4) 0px 5px 5px;
+    font-size: $type-size-5;
     color: $snow-color;
     text-decoration: none;
     @include breakpoint($large) {
@@ -153,13 +153,13 @@
  
     transform: scale(1.03)
               translateY(-10px);
-    h3 {
-      text-shadow:rgba(200, 200, 200, 0.5) 0px 14px 28px, rgba(200, 200, 200, 0.44) 0px 10px 10px;
+    .content h3 {
+      text-shadow:rgba(200, 200, 200, 0.2) 0px 14px 28px, rgba(200, 200, 200, 0.2) 0px 10px 10px;
       transform: translateY(-10px);
       text-decoration: none;
     }
 
-    p{
+    .content sci{
       text-decoration: none;
     }
     .hidden_item {
