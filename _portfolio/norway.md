@@ -1,9 +1,9 @@
 ---
 title: "Norway Travel Log"
-excerpt: "'Does this choice reflect who I want to be?'"
+excerpt: "'But here, we just call it Tuesday.'"
 collection: portfolio
 permalink: /portfolio/norway
-date: 2024-08-15
+date: 2024-08-13
 header:
   overlay_image: covers/Norway_cover.jpg
   overlay_filter: 0.25
