@@ -63,6 +63,6 @@ The Flåm Railway was the encore: waterfalls weaving through cliffs, their mist 
 
 By Myrdal, the mountains tucked themselves into cloud quilts. I floated home through a dream of steam and peaks.
 
-![](/images/memories/Norway_14_5.jpg)
+![](/images/memories/Norway_14_5.png)
 {: .article-image}
 
