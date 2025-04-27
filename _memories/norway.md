@@ -41,3 +41,28 @@ Troll carvings from Norwegian fairytales hid in the bark, placed to lure childre
 
 **Date: 14/08/2024  Norway in a Nutshell Trip**
 
+Dawn came wet and reluctant. On the train to Voss, I obediently sat left as advised—then missed the right-side views but found left-side glory: lakes mirroring the sky, farms clinging to hills like patches on a quilt.
+
+![](/images/memories/Norway_14_1.jpg)
+{: .article-image}
+
+In Gudvangen, the sun staged against the forecast, gilding the Viking village’s runes (NFR: survival, wealth, evolution).
+
+![](/images/memories/norway_14_2.jpg)
+{: .article-image}
+
+The cruise was a duel with the elements—wind sharp enough to flay nostalgia from bones, fjords looming like cathedral ruins reclaimed by the sea. 
+
+![](/images/memories/Norway_14_3.jpg)
+{: .article-image}
+
+The Flåm Railway was the encore: waterfalls weaving through cliffs, their mist turning the light silvery and soft. 
+
+![](/images/memories/Norway_14_4.jpg)
+{: .article-image}
+
+By Myrdal, the mountains tucked themselves into cloud quilts. I floated home through a dream of steam and peaks.
+
+![](/images/memories/Norway_14_5.jpg)
+{: .article-image}
+
