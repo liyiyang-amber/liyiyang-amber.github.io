@@ -12,7 +12,7 @@ main:
     url: /year-archive/
     
   - title: "Memories"
-    url: /portfolio/
+    url: /memories/
 
   - title: "CV"
     url: /cv/

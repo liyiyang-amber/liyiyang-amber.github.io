@@ -1,8 +1,8 @@
 ---
 title: "Norway Travel Log"
 excerpt: "'But here, we just call it Tuesday.'"
-collection: portfolio
-permalink: /portfolio/norway
+collection: memories
+permalink: /memories/norway
 date: 2024-08-13
 header:
   overlay_image: covers/Norway_cover.jpg

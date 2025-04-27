@@ -219,7 +219,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  memories:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -265,10 +265,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _memories
   - scope:
       path: ""
-      type: portfolio
+      type: memories
     values:
       layout: single
       author_profile: true

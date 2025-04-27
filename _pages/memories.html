@@ -2,7 +2,7 @@
 layout: archive
 title: "Memories"
 excerpt: "Every letter, postcard or ticket just to remind me of all the things I've loved and lost and love again, unconditionally."
-permalink: /portfolio/
+permalink: /memories/
 author_profile: true
 header: 
   overlay_image: covers/Memory_cover.jpg
@@ -11,8 +11,8 @@ header:
 {% include base_path %}
 
 <div class="container">
-  {% for post in site.portfolio reversed%}
-  {% include archive-single.html %}
+  {% for post in site.memories reversed%}
+  {% include archive-single-card.html %}
   {% endfor %}
 </div>
 

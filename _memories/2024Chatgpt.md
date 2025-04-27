@@ -1,8 +1,7 @@
 ---
 title: "Reflecting on 2024 and Welcoming 2025 with Chatgpt"
 excerpt: "'Does this choice reflect who I want to be?'"
-collection: portfolio
-permalink: /portfolio/portfolio-1
+permalink: /memories/memories-1
 date: 2025-01-05
 header:
   overlay_image: blank.png

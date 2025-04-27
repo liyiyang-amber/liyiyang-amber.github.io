@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% if post.header.overlay_image %}
+    {% capture teaser %}{{ post.header.overlay_image }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+{% if teaser contains "://" %}
+  {% assign teaser = {{ teaser }} %}
+{% else %}
+  {% assign teaser = teaser | prepend: "/images/" | prepend: base_path %}
+{% endif %}
+
+{% assign ovl_address = ")" | prepend: teaser | prepend: "--bg-img: url(" %}
+
+
+{% if post.link %}
+  {% assign post_link = post.link %}
+{% else %}
+  {% assign post_link = post.url | prepend: base_path %}
+{% endif %}
+
+<a class="card" href={{ post_link }} style="{{ ovl_address }}">
+  <span></span>
+    <div class="content">
+      <h3>{{ title }}</h3>
+          {% if post.read_time %}
+            <p class="readtime"> {% include read-time.html %}</p>
+          {% endif %}
+      <div class="sci">
+        {% if post.excerpt %}
+        <p itemprop="description">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="date">
+      {% if post.date %}
+          <p><time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d" }}</time></p>
+        {% endif %}
+    </div>
+  </a>
