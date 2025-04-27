@@ -8,14 +8,14 @@ header:
   overlay_image: covers/Norway_cover.jpg
   overlay_filter: 0.25
 ---
-Date: 13/08/2024  Location: Bergen, Norway
+**Date: 13/08/2024  Location: Bergen, Norway**
 
 The moment the plane descended, I knew Norway was different. Other places spread out in logical grids—cities, mountains, rivers stitching them together—but here, the world fractured into emerald islands scattered like broken jewelry. Tiny kingdoms, each with a single house crowned in pine trees, floating in water so dark it looked like spilled ink. Maps hinted at it, but nothing prepared me for the quiet chaos of beauty.
 
+The tram rattled through streets washed in liquid silver by sudden rain.  Bergen’s wooden houses wore graffiti like lipstick stains—playful, unexpected.  Then came the hail, sending me fleeing into McDonald’s.
+
 ![](/images/memories/Norway_doodle.jpg)
 {: .article-image}
-
-The tram rattled through streets washed in liquid silver by sudden rain.  Bergen’s wooden houses wore graffiti like lipstick stains—playful, unexpected.  Then came the hail, sending me fleeing into McDonald’s.
 
 When I emerged, the sky was a promise half-kept: blue gasping between clouds, I climbed toward the forest.
 
@@ -29,9 +29,15 @@ That this forest looks exactly like fairy tales promise. A kingdom of emerald w
 
 Troll carvings from Norwegian fairytales hid in the bark, placed to lure children deeper into the wild. At the viewpoint, tindal rays pierced the clouds like a spotlight for this small town.
 
+![](/images/memories/Norway_light.jpg)
+{: .article-image}
+
 “Last month,” he said, “these bushes dripped blueberries.”  He scavenged one orphaned berry for me.  It tasted like sunlight and soil - nothing like supermarket plastic.
 
 “First meal was McDonald’s?”  He feigned horror.  “Shaaaaame.  Try this.”  The reindeer sausage sang—smoky, gamey, with fruit jam—a surprising symphony of flavors.
 
-...
+
+
+
+**Date: 14/08/2024  Norway in a Nutshell Trip**
 
