@@ -31,6 +31,8 @@ Troll carvings from Norwegian fairytales hid in the bark, placed to lure childre
 
 ![](/images/memories/Norway_light.jpg)
 {: .article-image}
+![](/images/memories/Norway_bergen.jpg)
+{: .article-image}
 
 “Last month,” he said, “these bushes dripped blueberries.”  He scavenged one orphaned berry for me.  It tasted like sunlight and soil - nothing like supermarket plastic.
 
@@ -60,5 +62,17 @@ By Myrdal, the mountains tucked themselves into cloud quilts. I floated home thr
 ![](/images/memories/Norway_14_4.jpg)
 {: .article-image}
 ![](/images/memories/Norway_14_5.jpg)
+{: .article-image}
+
+**Date: 15/08/2024  Location: Bergen, Norway**
+
+![](/images/memories/norway_postcards.jpg)
+{: .article-image}
+Three hours writing postcards. Three hours pressing ink into paper, trying to trap the untrappable. Outside, Bergen wept its usual tears—a city of 300 rainy days a year. “You were lucky,” he said. “The first two days were stolen sunlight.”
+
+I ate one last reindeer hotdog, mailed paper souvenirs, and gifted a postcard to him—“Come back in spring,” he urged. “Try Odda. Try Stavanger. The Arctic never apologizes for its skies.”
+
+At the airport, I bought deer sausage, a taste to smuggle home. As the plane ascended, I finally saw it: clouds like rumpled bedsheets, the sun a careless jewel tossed among them—nothing like Bergen’s rain.
+![](/images/memories/Norway_aboveclouds.jpg)
 {: .article-image}
 
