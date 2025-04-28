@@ -57,6 +57,13 @@
     clear: both;
     list-style-type: none;
   }
+  /* Add styles for the dropdown menu */
+  .dropdown {
+    position: absolute; /* Position the dropdown */
+    z-index: 1000; /* Ensure it appears above other elements */
+    background: white; /* Optional: for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: for styling */
+  }
 }
 
 .masthead__menu-item {
