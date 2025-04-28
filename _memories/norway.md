@@ -68,11 +68,13 @@ By Myrdal, the mountains tucked themselves into cloud quilts. I floated home thr
 
 ![](/images/memories/norway_postcards.jpg)
 {: .article-image}
+
 Three hours writing postcards. Three hours pressing ink into paper, trying to trap the untrappable. Outside, Bergen wept its usual tears—a city of 300 rainy days a year. “You were lucky,” he said. “The first two days were stolen sunlight.”
 
 I ate one last reindeer hotdog, mailed paper souvenirs, and gifted a postcard to him—“Come back in spring,” he urged. “Try Odda. Try Stavanger. The Arctic never apologizes for its skies.”
 
 At the airport, I bought deer sausage, a taste to smuggle home. As the plane ascended, I finally saw it: clouds like rumpled bedsheets, the sun a careless jewel tossed among them—nothing like Bergen’s rain.
+
 ![](/images/memories/Norway_aboveclouds.jpg)
 {: .article-image}
 
