@@ -57,18 +57,18 @@
     clear: both;
     list-style-type: none;
   }
-  /* Add styles for the dropdown menu */
-  .hidden-links {
-    position: absolute; /* Position the dropdown */
-    z-index: 1000; /* Ensure it appears above the "long cover" */
-    background: white; /* Optional: for visibility */
-    box-shadow: $beige-color; /* Optional: for styling */
-  }
+  // .hidden-links {
+  //   position: absolute; /* Position the dropdown */
+  //   z-index: 1000; /* Ensure it appears above the "long cover" */
+  //   background: white; /* Optional: for visibility */
+  //   box-shadow: $beige-color; /* Optional: for styling */
+  // }
 
-  /* Ensure the hidden-links is visible when the hidden class is removed */
-  .hidden-links:not(.hidden) {
-    display: block; /* Ensure it’s visible when the hidden class is toggled off */
-  }
+  // /* Ensure the hidden-links is visible when the hidden class is removed */
+  // .hidden-links:not(.hidden) {
+  //   display: block; /* Ensure it’s visible when the hidden class is toggled off */
+  // }
+
 }
 
 .masthead__menu-item {
@@ -76,6 +76,7 @@
   list-style-type: none;
   white-space: nowrap;
   padding: 0.5em;
+
   &--lg {
     padding-right: 2em;
     font-weight: 700;
