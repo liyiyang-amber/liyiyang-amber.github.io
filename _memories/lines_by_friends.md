@@ -1,7 +1,7 @@
 ---
 title: "《就是很好玩儿》"
 excerpt: "此条用来记录lyy和她的朋友们的好玩儿语录"
-permalink: /memories/memories-1
+permalink: /memories/lines_by_friends
 date: 2020-07-26
 header:
   overlay_image: covers/
