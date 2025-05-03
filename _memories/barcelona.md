@@ -61,7 +61,7 @@ We chased the 87%-promised sunset, only to find the horizon blushing in shy wate
 ![](/images/memories/barcelona_b1.jpeg)
 {: .article-image}
 
-![](/images/memories/barcelona_b2.jpeg)
+![](/images/memories/barcelona_b2.JPG)
 {: .article-image}
 
 London awaited, the Tapas bar gave us one last communion of patatas bravas.  The plane climbed over France, where the sky burned orange-gold, like the inside of a clementine.  I pressed my forehead to the window and thought: This is how it ends — not with a sunset, but with the echo of one.
