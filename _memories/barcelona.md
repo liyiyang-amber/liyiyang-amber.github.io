@@ -33,35 +33,35 @@ The sun hung lazy over Barcelona, the kind of light that gilded the cracks in th
 
 The sea was Lana Del Rey-blue — the color of a 1950s convertible, of a love song's first reckless promise. We bought mint-chocolate ice cream from a shop where the wind kept trying to steal our napkins. The kind of moment that already feels like a memory — sticky fingers, the crinkle of the cone, the way the cold soothed our tongues. Then we were running, laughing into the salt-spray chaos, hair whipping our faces. The wind roared in our ears, and for once, we roared back. This is what happiness looks like, I thought — two girls turned feral by beauty, screaming at seagulls, spinning until the sky blurred into the sea. We were greedy with it. Eyes wide, hearts louder than the waves. Drinking in the blue like we could keep it. But the sea doesn't let you take anything — it just lets you borrow the feeling for a while. Not enough. Never enough.
 
-![](/images/memories/sea_1.jpeg)
+![](/images/memories/barcelona_sea1.jpeg)
 {: .article-image}
 
-![](/images/memories/sea_2.jpeg)
+![](/images/memories/barcelona_sea2.jpeg)
 {: .article-image}
 
-![](/images/memories/sea_3.jpeg)
+![](/images/memories/barcelona_sea3.jpeg)
 {: .article-image}
 
-![](/images/memories/sea_4.jpeg)
+![](/images/memories/barcelona_sea4.jpeg)
 {: .article-image}
 
 We followed a guide who spoke of Gaudí like a poet—'He believed columns should grow like trees, that light was God's handwriting.' The stained glass bled sunset onto marble, a concrete forest on fire. There was magic in how the light changed with the hours, how the seasons painted their stories across the stone. For one suspended moment, I understood devotion — the sacred geometry of faith and fractures. Then the crowd shifted, and the spell broke. Holiness is fleeting.
 
-![](/images/memories/s_1.jpeg)
+![](/images/memories/barcelona_s1.jpeg)
 {: .article-image}
 
-![](/images/memories/s_2.jpeg)
+![](/images/memories/barcelona_s2.jpeg)
 {: .article-image}
 
-![](/images/memories/s_3.jpeg)
+![](/images/memories/barcelona_s3.jpeg)
 {: .article-image}
 
 We chased the 87%-promised sunset, only to find the horizon blushing in shy watercolor — the faintest wash of lavender and shell-pink.  In that blue hour, the sea stood solemn and hushed, a beauty so perfect it stole our words.  My phone camera gasped and gave up.  Some beauty refuses to be evidence.
 
-![](/images/memories/b_1.jpeg)
+![](/images/memories/barcelona_b1.jpeg)
 {: .article-image}
 
-![](/images/memories/b_2.jpeg)
+![](/images/memories/barcelona_b2.jpeg)
 {: .article-image}
 
 London awaited, the Tapas bar gave us one last communion of patatas bravas.  The plane climbed over France, where the sky burned orange-gold, like the inside of a clementine.  I pressed my forehead to the window and thought: This is how it ends — not with a sunset, but with the echo of one.
