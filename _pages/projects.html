@@ -4,15 +4,38 @@ title: "Projects"
 permalink: /projects/
 author_profile: true
 ---
+{% include base_path %}
 
+<!-- <h2>Publications</h2><hr />
 {% if site.author.googlescholar %}
+  <p class="wordwrap">Also available on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+{% endif %}
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
+<h2>Talks and Presentations</h2><hr />
+{% if site.talkmap_link == true %}
+  <p><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+{% endif %}
+{% for post in site.talks reversed %}
+  {% include archive-single-talk.html %}
+{% endfor %} -->
+
+<h2>Posters</h2><hr />
+{% for post in site.posters reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
+
+<!-- {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
+{% include base_path %} -->
 
 <!-- New style rendering if project categories are defined -->
-{% if site.project_category %}
+<!-- {% if site.project_category %}
   {% for category in site.project_category  %}
     {% assign title_shown = false %}
     {% for post in site.projects reversed %}
@@ -33,4 +56,4 @@ author_profile: true
 {% endif %}
 
 
-
+ -->

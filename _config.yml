@@ -216,13 +216,16 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  projects:
+  publications:
     output: true
     permalink: /:collection/:path/
   memories:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  posters:
     output: true
     permalink: /:collection/:path/
 
