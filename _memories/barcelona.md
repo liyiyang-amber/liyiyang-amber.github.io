@@ -1,7 +1,6 @@
 ---
 title: "Barcelona Travel Log"
 excerpt: "'Cuz baby we were born to live fast, die young, be bad, have fun.'"
-collection: memories
 permalink: /memories/barcelona
 date: 2024-03-27
 header:

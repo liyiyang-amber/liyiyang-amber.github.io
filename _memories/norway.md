@@ -1,7 +1,6 @@
 ---
 title: "Norway Travel Log"
 excerpt: "'But here, we just call it Tuesday.'"
-collection: memories
 permalink: /memories/norway
 date: 2024-08-13
 header:

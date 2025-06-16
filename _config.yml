@@ -56,7 +56,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : # Username
+  instagram        : amberrrlyy_
   lastfm           : # Username
   linkedin         : "yiyang-li-amber"
   mastodon         : # URL
@@ -226,6 +226,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   posters:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
 
