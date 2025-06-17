@@ -26,13 +26,14 @@ Now in the following, you'll find a whimsical bit more about me:
   border-radius: 15px;
   background-color: rgba(170, 204, 238, 0.1);  
   padding: 20px;
-  font-family: 'Barlow', sans-serif;
   font-size: 18px;
   color: #333333;
-  text-align: center;
+  text-align: left;
+  line-height: 1.6;
+  font-style: italic;
 ">
-  'The woods are lovely, dark and deep.
-  But I have promises to keep.
-  And miles to go before I sleep.
-  And miles to go before I sleep...'
+  “The woods are lovely, dark and deep.<br>
+  But I have promises to keep,<br>
+  And miles to go before I sleep,<br>
+  And miles to go before I sleep...”
 </div>
