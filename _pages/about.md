@@ -20,20 +20,9 @@ Now in the following, you'll find a whimsical bit more about me:
 - 最喜欢的音乐剧是Hamilton
 - 抹茶爱好者
 
-
-<div style="
-  border: 1.5px solid #aaccee;
-  border-radius: 15px;
-  background-color: rgba(170, 204, 238, 0.1);  
-  padding: 20px;
-  font-size: 18px;
-  color: #333333;
-  text-align: left;
-  line-height: 1.6;
-  font-style: italic;
-">
+<div class="article-card">
   “The woods are lovely, dark and deep.<br>
-  But I have promises to keep,<br>
-  And miles to go before I sleep,<br>
+  But I have promises to keep.<br>
+  And miles to go before I sleep.<br>
   And miles to go before I sleep...”
 </div>

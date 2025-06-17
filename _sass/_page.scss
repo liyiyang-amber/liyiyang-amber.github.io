@@ -30,6 +30,19 @@
     }
   }
 }
+
+.article-card {
+  border: 1.5px solid #aaccee;
+  border-radius: 15px;
+  background-color: rgba(170, 204, 238, 0.1); 
+  padding: 20px;
+  font-size: 18px;
+  color: #333333;
+  text-align: left;
+  line-height: 1.6;
+  font-style: italic;
+}
+
 .page {
   @include breakpoint($large) {
     @include span(10 of 12 last);
