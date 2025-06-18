@@ -1,5 +1,6 @@
 ---
 title: "Rome Travel Log"
+layout: single
 excerpt: "'Veni, vidi, vici.'"
 permalink: /memories/rome
 date: 2025-05-30
