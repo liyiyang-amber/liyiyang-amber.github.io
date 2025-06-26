@@ -56,7 +56,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : amberrrlyy_
+  instagram        : # Username
   lastfm           : # Username
   linkedin         : "yiyang-li-amber"
   mastodon         : # URL
@@ -231,6 +231,10 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  travel:
+    output: true
+    permalink: /:collection/:path/
+
 
 
 # These settings control how pages and collections are included in the site

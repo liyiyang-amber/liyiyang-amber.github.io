@@ -1,0 +1,17 @@
+---
+layout: archive
+title: "Travel Log"
+excerpt: "I could have said something but I was quiet, because pilots don't make metaphors between life and sky."
+permalink: /travel/
+author_profile: true
+header: 
+  overlay_image: covers/Travel_cover.jpg
+  overlay_filter: 0.25
+---
+{% include base_path %}
+
+<div class="container">
+  {% for post in site.travel reversed%}
+  {% include archive-single-card.html %}
+  {% endfor %}
+</div>
