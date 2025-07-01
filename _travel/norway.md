@@ -1,5 +1,6 @@
 ---
 title: "Norway Travel Log"
+layout: single
 excerpt: "'But here, we just call it Tuesday.'"
 permalink: /memories/norway
 date: 2024-08-13
@@ -52,16 +53,32 @@ The Flåm Railway was the encore: waterfalls weaving through cliffs, their mist 
 
 By Myrdal, the mountains tucked themselves into cloud quilts. I floated home through a dream of steam and peaks.
 
-![](/images/memories/Norway_14_1.jpg)
-{: .article-image}
-![](/images/memories/norway_14_2.jpg)
-{: .article-image}
-![](/images/memories/Norway_14_3.jpg)
-{: .article-image}
-![](/images/memories/Norway_14_4.jpg)
-{: .article-image}
-![](/images/memories/Norway_14_5.jpg)
-{: .article-image}
+<div class="gallery-container">
+  <div class="gallery-scroll">
+    <div class="gallery-item">
+      <img src="/images/memories/Norway_14_1.jpg" alt="Norway memory 1" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/norway_14_2.jpg" alt="Norway memory 2" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Norway_14_3.jpg" alt="Norway memory 3" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Norway_14_4.jpg" alt="Norway memory 4" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Norway_14_5.jpg" alt="Norway memory 5" class="article-image">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 **Date: 15/08/2024  Location: Bergen, Norway**
 

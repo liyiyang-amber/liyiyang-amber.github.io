@@ -29,16 +29,25 @@ We wake late, expecting nothing from breakfast — the kind of morning where cof
 
 Capri is a lie in the best way — a postcard that forgot it’s supposed to be flat, all vertiginous cliffs and water so blue it hums. The island runs on cash and chaos: no AC, no logic, just lemonade served in glasses still sticky with sunlight. At Monte Solaro, the clouds roll in like a slow-motion tide, swallowing the island whole before exhaling it back into clarity. Then, just like that, the haze lifts. Clarity returns, the water now translucent as jelly, dotted with boats cutting lazy arcs. Swimmers bob like buoys, their laughter carried up the cliffs.
 
-![](/images/memories/Capri1.jpg)
-{: .article-image}
-![](/images/memories/Capri2.jpg)
-{: .article-image}
-![](/images/memories/Capri3.jpg)
-{: .article-image}
-![](/images/memories/Capri4.jpg)
-{: .article-image}
-![](/images/memories/Capri5.jpg)
-{: .article-image}
+<div class="gallery-container">
+  <div class="gallery-scroll">
+    <div class="gallery-item">
+      <img src="/images/memories/Capri1.jpg" alt="Capri 1" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Capri2.jpg" alt="Capri 2" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Capri3.jpg" alt="Capri 3" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Capri4.jpg" alt="Capri 4" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Capri5.jpg" alt="Capri 5" class="article-image">
+    </div>
+  </div>
+</div>
 
 And then — the other cable car floats past, strangers suspended in midair. I wave like a fool. They wave back. For a second, we’re all in the same dream. A postcard, yes, but one that smells of lemonade and sunscreen and feels alive under your fingertips.  
 
@@ -57,12 +66,17 @@ A day for surrender. We slept until noon, then wandered streets where lemons gre
 
 Later, the Sorrento cove we'd missed days prior: teenagers cannonballing off rocks, tourists basting in oil, the sea chewing lazily at the shore. The wind stole every photo attempt. It didn't matter. The haze clung to everything — the horizon, my hair, the memory of this place.
 
-![](/images/memories/Sorrento2.jpg)
-{: .article-image}
-![](/images/memories/Sorrento4.jpg)
-{: .article-image}
-![](/images/memories/Sorrento3.png)
-{: .article-image}
+<div class="gallery-container">
+  <div class="gallery-scroll">
+    <div class="gallery-item">
+      <img src="/images/memories/Sorrento2.jpg" alt="Sorrento 1" class="article-image">
+    </div>
+    <div class="gallery-item">
+      <img src="/images/memories/Sorrento4.jpg" alt="Sorrento 2" class="article-image">
+    </div>
+  </div>
+</div>
+
 
 Yes, the buses are late. Yes, the humidity glues your clothes to your skin. But the grandmothers will feed you cheese. A stranger toasts you with limoncello; the sea flickers like a mirage. The light will gild even the most stubborn cloud.  
 
