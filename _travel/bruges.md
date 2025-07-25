@@ -8,6 +8,7 @@ header:
   overlay_image: covers/Bruges_cover.jpg
   overlay_filter: 0.25
 ---
+
 **Date: 04/06/2025  Location: Bruges, Belgium**
 
 The city revealed itself in fragments: the gilded glow of sunrise over Lille’s train tracks, the way Bruges’ canals mirrored the sky — a liquid blue so perfect it felt like a trick. We rode a boat past storybook houses, their stepped gables leaning close as if whispering secrets. The boat tour was overcrowded, the guide’s rehearsed talks dissolving into the hum of engines and clicking cameras. Later, the waffles were cloying, and Google Maps Reviews (one star: "Waited an hour for service!!") etched our first bruise onto the trip.
