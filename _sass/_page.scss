@@ -31,6 +31,8 @@
   }
 }
 
+/* Article Card Styles
+   ========================================================================== */
 .article-card {
   border: 1.5px solid #aaccee;
   border-radius: 15px;
@@ -41,7 +43,52 @@
   text-align: left;
   line-height: 1.6;
   font-style: italic;
+  margin-bottom: 20px;
 }
+
+/* Hovered version of Article Card
+   ========================================================================== */
+.hovered_article_card {
+  border: 1.5px solid #aaccee;
+  border-radius: 15px;
+  background-color: rgba(170, 204, 238, 0.1); 
+  padding: 20px;
+  font-size: 18px;
+  color: #333333;
+  text-align: left;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.3s ease;
+}
+
+.hovered_article_card .visible-content {
+  transition: filter 0.3s ease;
+}
+
+.hovered_article_card .hidden-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(170, 204, 238, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hovered_article_card:hover .visible-content {
+  filter: blur(8px);  /* Heavy blur */
+  opacity: 0.2;
+}
+
+.hovered_article_card:hover .hidden-content {
+  opacity: 1;
+}
+
 
 .page {
   @include breakpoint($large) {
@@ -474,4 +521,78 @@
 .gallery-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+/*
+   Music Player
+   ========================================================================== */
+// Music Player Component
+.music-player {
+  background-color: rgba(70, 85, 95, 0.644); // Grey-blue translucent
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 1rem 1.5rem 1.5rem;
+  width: 100%;
+  max-width: 320px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(60, 75, 85, 0.8);
+  }
+
+  .song-info {
+    grid-column: 1 / span 2;
+    
+    .song-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .artist-name {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+  }
+
+  .progress-bar {
+    grid-column: 1 / span 2;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+
+    .progress-fill {
+      width: 30%; // Will be dynamically adjusted
+      height: 100%;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      border-radius: 2px;
+      transition: width 0.1s linear;
+    }
+  }
+
+  .progress-time, .total-time {
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .total-time {
+    text-align: right;
+  }
+
+  // Audio controls (for MP3 implementation)
+  audio {
+    grid-column: 1 / span 2;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
