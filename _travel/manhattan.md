@@ -28,66 +28,93 @@ From Edge, the city unfolded like a living thing—steel veins, glass skin, the 
 
 The Charging Bull stood polished by a thousand hopeful hands (may we all get rich). I walked Little Island, then the long march uptown — past Vessel’s skeletal curves, through Central Park, where the light turned the grass to gold. Dappled shadows stretched like memories of carriages and gas lamps that might’ve once danced here. (Ha! The "twenty-minute effect of a garden.")
 
-
-
-<div class="music-player">
-  <div class="player-card" style="background-image: url('/images/covers/Manhattan_cover.jpg')">
-    <div class="background-blur"></div>
-    <div class="player-overlay">
-      <div class="player-controls">
-        <div class="song-info">
-          <p>Manhattan Waltzes - Johann Stauss II.</p>
-        </div>
-        <div class="volume-control">
-          <span>♪</span>
-          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
-        </div>
-      </div>
-      <div class="progress-container">
-        <div class="progress-bar"></div>
-      </div>
-    </div>
-  </div>
-  <audio class="audio-element">
-    <source src="/audios/Manhattan_walzes.mp3" type="audio/mpeg">
-  </audio>
-</div>
+<div class="music-player"> <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')"> <div class="background-blur"></div> <div class="player-overlay"> <div class="player-controls"> <div class="song-info"> <p>Manhattan Waltzes – Johann Strauss II.</p> </div> <div class="volume-control"> <span>♪</span> <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7"> </div> </div> <div class="progress-container"> <div class="progress-bar"></div> </div> </div> </div> <audio class="audio-element" preload="auto"> <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg"> <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio> </div>
 
 <script>
 document.querySelectorAll('.music-player').forEach(player => {
-  const audio = player.querySelector('audio');
+  const audio = player.querySelector('.audio-element') || player.querySelector('audio');
   const progressBar = player.querySelector('.progress-bar');
   const progressContainer = player.querySelector('.progress-container');
   const volumeSlider = player.querySelector('.volume-slider');
-  
-  // Initialize volume
-  audio.volume = volumeSlider.value;
 
-  // Play/Pause on click (excluding controls)
+  if (!audio) {
+    console.error('Audio element not found in player');
+    return;
+  }
+
+  // Initialize volume
+  audio.volume = volumeSlider ? volumeSlider.value : 0.7;
+
+  // Add playing class management
+  audio.addEventListener('play', () => {
+    player.classList.add('playing');
+  });
+
+  audio.addEventListener('pause', () => {
+    player.classList.remove('playing');
+  });
+
+  audio.addEventListener('ended', () => {
+    player.classList.remove('playing');
+  });
+
+  // Play/Pause on click
   player.addEventListener('click', (e) => {
     if (!e.target.closest('.progress-container') && !e.target.closest('.volume-control')) {
-      audio.paused ? audio.play() : audio.pause();
+      console.log('Player clicked, audio paused:', audio.paused);
+      if (audio.paused) {
+        audio.play().catch(error => {
+          console.error('Playback failed:', error);
+        });
+      } else {
+        audio.pause();
+      }
     }
   });
 
   // Progress bar updates
   audio.addEventListener('timeupdate', () => {
-    progressBar.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
+    if (audio.duration) {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
   });
 
   // Click to seek
-  progressContainer.addEventListener('click', (e) => {
-    const rect = progressContainer.getBoundingClientRect();
-    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-  });
+  if (progressContainer) {
+    progressContainer.addEventListener('click', (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickRatio = clickX / rect.width;
+      if (audio.duration) {
+        audio.currentTime = clickRatio * audio.duration;
+      }
+    });
+  }
 
   // Volume control
-  volumeSlider.addEventListener('input', () => {
-    audio.volume = volumeSlider.value;
+  if (volumeSlider) {
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+    });
+  }
+
+  // Error handling
+  audio.addEventListener('error', (e) => {
+    console.error('Audio error:', e);
+    console.error('Error details:', audio.error);
+  });
+
+  // Loading states
+  audio.addEventListener('loadstart', () => {
+    console.log('Audio loading started');
+  });
+
+  audio.addEventListener('canplaythrough', () => {
+    console.log('Audio can play through');
   });
 });
 </script>
-
 
 
 A year later, a friend insisted I listen to "Manhattan Walze" by Johann Strauss II. — that buoyant, spinning melody meant to soundtrack a city I’d only known as gridlock and grit. At first, it made no sense: how could a song so light, so untethered, belong to this jagged maze of scaffolding and honking cabs? Where was there room to waltz here???
