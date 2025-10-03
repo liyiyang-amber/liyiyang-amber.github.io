@@ -18,7 +18,6 @@ The city greeted me with its usual chaos—endless customs lines, subway delays 
 But then, the steakhouse spinach—creamy, garlicky, perfect—and the buildings. God, the buildings. When the sun finally broke through, Manhattan turned into a postcard: sharp-edged towers against a blue so bright it hurt.
 
 
-
 **Edge & The Sunset That Almost Made Me Forgive NYC**
 
 From Edge, the city unfolded like a living thing—steel veins, glass skin, the Hudson a shimmering wound — its skyline aflame where the sun drowned in the river. For the first time, I didn’t hate New York. Later, MoMA’s white cubes and Summit’s dizzying mirrors made art feel like a game I wasn’t sure I was winning. But then, sunset. The sun bled red over New Jersey, and for a second, I understood why people stay.
@@ -27,6 +26,31 @@ From Edge, the city unfolded like a living thing—steel veins, glass skin, the 
 **Wall Street Bulls, Tiny Islands, and Central Park’s Golden Hour**
 
 The Charging Bull stood polished by a thousand hopeful hands (may we all get rich). I walked Little Island, then the long march uptown — past Vessel’s skeletal curves, through Central Park, where the light turned the grass to gold. Dappled shadows stretched like memories of carriages and gas lamps that might’ve once danced here. (Ha! The "twenty-minute effect of a garden.")
+
+<!-- 
+<div class="music-player">
+  <div class="player-card" style="background-image: url('/images/covers/Manhattan_cover.jpg')">
+    <div class="background-blur"></div>
+    <div class="player-overlay">
+      <div class="player-controls">
+        <div class="song-info">
+          <p>Manhattan Waltzes - Johann Strauss II.</p>
+        </div>
+        <div class="volume-control">
+          <span>♪</span>
+          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+  <audio class="audio-element">
+    <source src="/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div> -->
 
 <div class="music-player"> <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')"> <div class="background-blur"></div> <div class="player-overlay"> <div class="player-controls"> <div class="song-info"> <p>Manhattan Waltzes – Johann Strauss II.</p> </div> <div class="volume-control"> <span>♪</span> <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7"> </div> </div> <div class="progress-container"> <div class="progress-bar"></div> </div> </div> </div> <audio class="audio-element" preload="auto"> <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg"> <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.ogg" type="audio/ogg"> Your browser does not support the audio element. </audio> </div>
 
@@ -117,6 +141,7 @@ document.querySelectorAll('.music-player').forEach(player => {
 </script>
 
 
+
 A year later, a friend insisted I listen to "Manhattan Walze" by Johann Strauss II. — that buoyant, spinning melody meant to soundtrack a city I’d only known as gridlock and grit. At first, it made no sense: how could a song so light, so untethered, belong to this jagged maze of scaffolding and honking cabs? Where was there room to waltz here???
 
 But then I saw old Manhattan through the music:
@@ -129,3 +154,4 @@ But then I saw old Manhattan through the music:
 Maybe the waltz wasn’t about the city as it is, but as it once dreamed of being — a place where, when night fell, the gas lamps would tame the chaos, the carriages would part, and two lovers could spin through the streets, past half-built skyscrapers, all the way to the park…
 
 Before the concrete, before the noise—back when Manhattan was still a waltz.
+
