@@ -568,8 +568,9 @@
       right: 0;
       padding: 1.5em;
       background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
-      transform: translateY(100%);
-      opacity: 0;
+      // Make controls always visible but subtle when not hovered
+      transform: translateY(0);
+      opacity: 0.6;
       transition: all 0.3s ease;
       z-index: 2;
       
@@ -621,6 +622,11 @@
           align-items: center;
           gap: 8px;
           
+          span {
+            color: white;
+            font-size: 1.2em;
+          }
+          
           input[type="range"] {
             width: 80px;
             height: 3px;
@@ -637,6 +643,16 @@
               border-radius: 50%;
               cursor: pointer;
             }
+            
+            // Firefox support
+            &::-moz-range-thumb {
+              width: 12px;
+              height: 12px;
+              background: white;
+              border-radius: 50%;
+              cursor: pointer;
+              border: none;
+            }
           }
         }
       }
@@ -652,7 +668,6 @@
       }
       
       .player-overlay {
-        transform: translateY(0);
         opacity: 1;
         
         .progress-bar::after {
@@ -662,10 +677,11 @@
     }
     
     &::after {
-      opacity: 0;
+      opacity: 0.3;
     }
   }
 
+  // Play button indicator - make it more visible when paused
   &::after {
     content: "▶";
     position: absolute;
@@ -681,7 +697,27 @@
     pointer-events: none;
   }
 
-  
+  // Hide play button when playing
+  &.playing::after {
+    opacity: 0;
+  }
+
+  // Show pause indicator when playing
+  &.playing:hover::before {
+    content: "⏸";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    opacity: 0.3;
+    text-shadow: 0 0 15px rgba(0,0,0,0.7);
+    transition: all 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+  }
+
   audio {
     display: none;
   }
