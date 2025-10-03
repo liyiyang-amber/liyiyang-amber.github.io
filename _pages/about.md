@@ -7,14 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-Hi, my name is Li Yiyang (Amber), a first-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
+Hi, my name is Li Yiyang (Amber), a second-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for stochastic multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
 
 **Oh right—before I forget, my core identity in the following years: PhD student!!!!!!!**
 
 <div class="article-card">
 I once read a sentence in a book for PhD students that stuck with me:<br>
 "You will experience periods of self-doubt which you must come through with the clear aim of becoming a competent professional researcher.<br>
-But I couldn't think of a more fulfilling or pleasure way of spending my time. It's almost instinctive."
+But I couldn't think of a more fulfilling or pleasure way of spending my time.<br>
+It's almost instinctive."
 </div>
 
 
