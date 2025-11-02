@@ -52,7 +52,29 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
   </audio>
 </div> -->
 
-<div class="music-player"> <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')"> <div class="background-blur"></div> <div class="player-overlay"> <div class="player-controls"> <div class="song-info"> <p>Manhattan Waltzes – Johann Strauss II.</p> </div> <div class="volume-control"> <span>♪</span> <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7"> </div> </div> <div class="progress-container"> <div class="progress-bar"></div> </div> </div> </div> <audio class="audio-element" preload="metadata"> <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio> </div>
+<div class="music-player">
+  <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')">
+    <div class="background-blur"></div>
+    <div class="player-overlay">
+      <div class="player-controls">
+        <div class="song-info">
+          <p>Manhattan Waltzes – Johann Strauss II.</p>
+        </div>
+        <div class="volume-control">
+          <span>♪</span>
+          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+  <audio class="audio-element" preload="metadata">
+    <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 <script>
 document.querySelectorAll('.music-player').forEach(player => {
