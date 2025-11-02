@@ -66,28 +66,8 @@ document.querySelectorAll('.music-player').forEach(player => {
     return;
   }
 
-
-  function ensureAudioCanPlay() {
-    // If the audio is already ready, simulate the event
-    if (audio.readyState > 3) { 
-      console.log('Audio already ready, can play through');
-      handleCanPlayThrough();
-    }
-  }
-
-  function handleCanPlayThrough() {
-    console.log('Audio can play through');
-    // Optionally pre-load a tiny bit to ensure activation
-    audio.currentTime = 0;
-  }
-
-  audio.addEventListener('canplay', ensureAudioCanPlay);
-  audio.addEventListener('canplaythrough', handleCanPlayThrough);
-  audio.addEventListener('loadedmetadata', ensureAudioCanPlay); // For Safari
-
   // Initialize volume
   audio.volume = volumeSlider ? volumeSlider.value : 0.7;
-  audio.load()
 
   // Add playing class management
   audio.addEventListener('play', () => {
@@ -106,19 +86,10 @@ document.querySelectorAll('.music-player').forEach(player => {
   player.addEventListener('click', (e) => {
     if (!e.target.closest('.progress-container') && !e.target.closest('.volume-control')) {
       console.log('Player clicked, audio paused:', audio.paused);
-      if (typeof audio.resume === 'function') {
-        audio.resume();
-      }
       if (audio.paused) {
-        // audio.play().catch(error => {
-        //   console.error('Playback failed:', error);
-        // });
-        // Use a promise to handle the play() call
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            console.error('Playback failed:', error);
-          });
+        audio.play().catch(error => {
+          console.error('Playback failed:', error);
+        });
       } else {
         audio.pause();
       }
