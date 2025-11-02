@@ -66,6 +66,10 @@ document.querySelectorAll('.music-player').forEach(player => {
     return;
   }
 
+  console.log('Audio player initialized');
+  console.log('Audio src:', audio.querySelector('source')?.src);
+  console.log('Audio readyState:', audio.readyState);
+
   // Initialize volume
   audio.volume = volumeSlider ? volumeSlider.value : 0.7;
 
@@ -86,10 +90,25 @@ document.querySelectorAll('.music-player').forEach(player => {
   player.addEventListener('click', (e) => {
     if (!e.target.closest('.progress-container') && !e.target.closest('.volume-control')) {
       console.log('Player clicked, audio paused:', audio.paused);
+      console.log('Audio readyState:', audio.readyState);
+      console.log('Audio src:', audio.currentSrc);
+      
       if (audio.paused) {
-        audio.play().catch(error => {
-          console.error('Playback failed:', error);
-        });
+        // Ensure audio is loaded
+        if (audio.readyState === 0) {
+          audio.load();
+        }
+        
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log('Playback started successfully');
+          }).catch(error => {
+            console.error('Playback failed:', error);
+            console.error('Error name:', error.name);
+            console.error('Error message:', error.message);
+          });
+        }
       } else {
         audio.pause();
       }
@@ -134,8 +153,28 @@ document.querySelectorAll('.music-player').forEach(player => {
     console.log('Audio loading started');
   });
 
+  audio.addEventListener('loadedmetadata', () => {
+    console.log('Audio metadata loaded, duration:', audio.duration);
+  });
+
+  audio.addEventListener('canplay', () => {
+    console.log('Audio can play');
+  });
+
   audio.addEventListener('canplaythrough', () => {
     console.log('Audio can play through');
+  });
+
+  audio.addEventListener('stalled', () => {
+    console.warn('Audio loading stalled');
+  });
+
+  audio.addEventListener('suspend', () => {
+    console.log('Audio loading suspended');
+  });
+
+  audio.addEventListener('waiting', () => {
+    console.log('Audio waiting for data');
   });
 });
 </script>
