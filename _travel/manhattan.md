@@ -53,7 +53,7 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
 </div> -->
 
 <div class="music-player">
-  <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')">
+  <div class="player-card" style="background-image: url('{{ '/images/covers/Manhattan_cover.jpg' | relative_url }}')">
     <div class="background-blur"></div>
     <div class="player-overlay">
       <div class="player-controls">
@@ -70,8 +70,8 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
       </div>
     </div>
   </div>
-  <audio class="audio-element" preload="metadata">
-    <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
+  <audio class="audio-element" preload="metadata" playsinline>
+    <source src="{{ '/audios/Manhattan_waltzes.mp3' | relative_url }}" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -89,7 +89,8 @@ document.querySelectorAll('.music-player').forEach(player => {
   }
 
   console.log('Audio player initialized');
-  console.log('Audio src:', audio.querySelector('source')?.src);
+  const srcEl = audio.querySelector('source');
+  console.log('Audio src:', srcEl ? srcEl.src : null);
   console.log('Audio readyState:', audio.readyState);
 
   // Initialize volume
