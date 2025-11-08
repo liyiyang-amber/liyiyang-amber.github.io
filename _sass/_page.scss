@@ -573,7 +573,6 @@
       opacity: 0.6;
       transition: all 0.3s ease;
       z-index: 2;
-      pointer-events: none; // Allow clicks to pass through to player-card
       
       .progress-container {
         width: 100%;
@@ -581,7 +580,6 @@
         background: rgba(255,255,255,0.2);
         margin: 10px 0;
         cursor: pointer;
-        pointer-events: auto; // Re-enable pointer events for progress bar
         
         .progress-bar {
           height: 100%;
@@ -623,7 +621,6 @@
           display: flex;
           align-items: center;
           gap: 8px;
-          pointer-events: auto; // Re-enable pointer events for volume control
           
           span {
             color: white;

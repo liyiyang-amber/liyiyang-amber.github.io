@@ -52,7 +52,7 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
   </audio>
 </div> -->
 
-<div class="music-player">
+<div class="music-player" id="manhattan-player">
   <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')">
     <div class="background-blur"></div>
     <div class="player-overlay">
@@ -70,15 +70,22 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
       </div>
     </div>
   </div>
-  <audio class="audio-element" preload="metadata" playsinline>
+  <audio class="audio-element" preload="metadata">
     <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
 
 <script>
-document.querySelectorAll('.music-player').forEach(player => {
-  const audio = player.querySelector('.audio-element') || player.querySelector('audio');
+(function() {
+  // Only initialize if not already initialized
+  const player = document.getElementById('manhattan-player');
+  if (!player || player.dataset.initialized === 'true') {
+    return;
+  }
+  player.dataset.initialized = 'true';
+
+  const audio = player.querySelector('.audio-element');
   const progressBar = player.querySelector('.progress-bar');
   const progressContainer = player.querySelector('.progress-container');
   const volumeSlider = player.querySelector('.volume-slider');
@@ -89,77 +96,82 @@ document.querySelectorAll('.music-player').forEach(player => {
     return;
   }
 
-  console.log('Audio player initialized');
-  console.log('Audio src:', audio.querySelector('source')?.src);
-  console.log('Audio readyState:', audio.readyState);
+  console.log('🎵 Manhattan Music Player initialized');
+  console.log('📂 Audio src:', audio.querySelector('source')?.src);
+  console.log('⏸️ Audio readyState:', audio.readyState);
 
   // Initialize volume
   audio.volume = volumeSlider ? volumeSlider.value : 0.7;
+  
+  // Preload audio
+  audio.load();
 
   // Add playing class management
   audio.addEventListener('play', () => {
     player.classList.add('playing');
+    console.log('▶️ Playing');
   });
 
   audio.addEventListener('pause', () => {
     player.classList.remove('playing');
+    console.log('⏸️ Paused');
   });
 
   audio.addEventListener('ended', () => {
     player.classList.remove('playing');
+    console.log('⏹️ Ended');
   });
 
   // Function to toggle play/pause
   const togglePlayPause = (e) => {
-    // Ignore clicks on interactive elements
+    // Ignore clicks on controls
     if (e.target.closest('.progress-container') || e.target.closest('.volume-control')) {
       return;
     }
     
-    console.log('Player clicked, audio paused:', audio.paused);
-    console.log('Audio readyState:', audio.readyState);
-    console.log('Audio src:', audio.currentSrc);
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('👆 Player clicked');
     
     if (audio.paused) {
-      // Ensure audio is loaded
-      if (audio.readyState === 0) {
-        audio.load();
-      }
+      console.log('🎬 Attempting to play...');
+      console.log('📊 Current state:', {
+        readyState: audio.readyState,
+        networkState: audio.networkState,
+        src: audio.currentSrc
+      });
       
       const playPromise = audio.play();
       if (playPromise !== undefined) {
-        playPromise.then(() => {
-          console.log('Playback started successfully');
-        }).catch(error => {
-          console.error('Playback failed:', error);
-          console.error('Error name:', error.name);
-          console.error('Error message:', error.message);
-        });
+        playPromise
+          .then(() => {
+            console.log('✅ Playback started successfully!');
+          })
+          .catch(error => {
+            console.error('❌ Playback failed:', error);
+            // Show user-friendly error
+            alert('Unable to play audio. Please try clicking again or check your browser settings.');
+          });
       }
     } else {
+      console.log('⏸️ Pausing...');
       audio.pause();
     }
   };
 
-  // Add both click and touchend handlers for better mobile support
-  player.addEventListener('click', togglePlayPause);
-  player.addEventListener('touchend', (e) => {
-    e.preventDefault(); // Prevent double-firing with click
+  // Add event listeners with proper event handling
+  playerCard.addEventListener('click', togglePlayPause);
+  
+  // Better mobile support
+  playerCard.addEventListener('touchend', (e) => {
+    e.preventDefault();
     togglePlayPause(e);
-  });
-
-  // Also add handler to the card itself as backup
-  if (playerCard) {
-    playerCard.addEventListener('click', togglePlayPause);
-    playerCard.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      togglePlayPause(e);
-    });
-  }
+  }, { passive: false });
 
   // Progress bar updates
   audio.addEventListener('timeupdate', () => {
-    if (audio.duration) {
+    if (audio.duration && isFinite(audio.duration)) {
       const progress = (audio.currentTime / audio.duration) * 100;
       progressBar.style.width = `${progress}%`;
     }
@@ -167,80 +179,69 @@ document.querySelectorAll('.music-player').forEach(player => {
 
   // Click to seek
   if (progressContainer) {
-    progressContainer.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent triggering play/pause
-      const rect = progressContainer.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const clickRatio = clickX / rect.width;
-      if (audio.duration) {
-        audio.currentTime = clickRatio * audio.duration;
-      }
-    });
-    
-    // Touch support for seeking
-    progressContainer.addEventListener('touchend', (e) => {
+    const seekAudio = (e) => {
       e.stopPropagation();
-      const touch = e.changedTouches[0];
       const rect = progressContainer.getBoundingClientRect();
-      const clickX = touch.clientX - rect.left;
-      const clickRatio = clickX / rect.width;
-      if (audio.duration) {
+      const clickX = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+      const clickRatio = Math.max(0, Math.min(1, clickX / rect.width));
+      if (audio.duration && isFinite(audio.duration)) {
         audio.currentTime = clickRatio * audio.duration;
+        console.log('⏩ Seeked to:', (clickRatio * 100).toFixed(1), '%');
       }
-    });
+    };
+    
+    progressContainer.addEventListener('click', seekAudio);
+    progressContainer.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      seekAudio(e);
+    }, { passive: false });
   }
 
   // Volume control
   if (volumeSlider) {
-    volumeSlider.addEventListener('input', (e) => {
-      e.stopPropagation(); // Prevent triggering play/pause
+    const updateVolume = (e) => {
+      e.stopPropagation();
       audio.volume = volumeSlider.value;
-    });
+      console.log('🔊 Volume:', (audio.volume * 100).toFixed(0) + '%');
+    };
     
-    volumeSlider.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent triggering play/pause
-    });
+    volumeSlider.addEventListener('input', updateVolume);
+    volumeSlider.addEventListener('change', updateVolume);
     
-    volumeSlider.addEventListener('touchend', (e) => {
-      e.stopPropagation(); // Prevent triggering play/pause
-    });
+    // Prevent propagation of click events
+    volumeSlider.addEventListener('click', (e) => e.stopPropagation());
+    volumeSlider.addEventListener('touchend', (e) => e.stopPropagation());
   }
 
-  // Error handling
+  // Enhanced error handling
   audio.addEventListener('error', (e) => {
-    console.error('Audio error:', e);
-    console.error('Error details:', audio.error);
+    console.error('❌ Audio error:', e);
+    const err = audio.error;
+    if (err) {
+      const errorMessages = {
+        1: 'MEDIA_ERR_ABORTED - Playback was aborted',
+        2: 'MEDIA_ERR_NETWORK - Network error occurred',
+        3: 'MEDIA_ERR_DECODE - Audio decoding failed',
+        4: 'MEDIA_ERR_SRC_NOT_SUPPORTED - Audio format not supported or file not found'
+      };
+      console.error('Error code:', err.code, '-', errorMessages[err.code] || 'Unknown error');
+      console.error('Audio src attempted:', audio.currentSrc);
+    }
   });
 
-  // Loading states
-  audio.addEventListener('loadstart', () => {
-    console.log('Audio loading started');
-  });
+  // Loading states logging
+  audio.addEventListener('loadstart', () => console.log('📥 Loading started'));
+  audio.addEventListener('loadedmetadata', () => console.log('✅ Metadata loaded, duration:', audio.duration, 's'));
+  audio.addEventListener('loadeddata', () => console.log('✅ Data loaded'));
+  audio.addEventListener('canplay', () => console.log('▶️ Can play'));
+  audio.addEventListener('canplaythrough', () => console.log('✅ Can play through'));
+  audio.addEventListener('stalled', () => console.warn('⚠️ Loading stalled'));
+  audio.addEventListener('suspend', () => console.log('⏸️ Loading suspended'));
+  audio.addEventListener('waiting', () => console.log('⏳ Waiting for data'));
+  audio.addEventListener('playing', () => console.log('🎶 Actually playing now'));
 
-  audio.addEventListener('loadedmetadata', () => {
-    console.log('Audio metadata loaded, duration:', audio.duration);
-  });
-
-  audio.addEventListener('canplay', () => {
-    console.log('Audio can play');
-  });
-
-  audio.addEventListener('canplaythrough', () => {
-    console.log('Audio can play through');
-  });
-
-  audio.addEventListener('stalled', () => {
-    console.warn('Audio loading stalled');
-  });
-
-  audio.addEventListener('suspend', () => {
-    console.log('Audio loading suspended');
-  });
-
-  audio.addEventListener('waiting', () => {
-    console.log('Audio waiting for data');
-  });
-});
+  console.log('✅ Player setup complete');
+})();
 </script>
 
 
