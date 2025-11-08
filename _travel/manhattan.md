@@ -70,7 +70,7 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
       </div>
     </div>
   </div>
-  <audio class="audio-element" preload="metadata">
+  <audio class="audio-element" preload="metadata" playsinline>
     <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -82,6 +82,7 @@ document.querySelectorAll('.music-player').forEach(player => {
   const progressBar = player.querySelector('.progress-bar');
   const progressContainer = player.querySelector('.progress-container');
   const volumeSlider = player.querySelector('.volume-slider');
+  const playerCard = player.querySelector('.player-card');
 
   if (!audio) {
     console.error('Audio element not found in player');
@@ -108,34 +109,53 @@ document.querySelectorAll('.music-player').forEach(player => {
     player.classList.remove('playing');
   });
 
-  // Play/Pause on click
-  player.addEventListener('click', (e) => {
-    if (!e.target.closest('.progress-container') && !e.target.closest('.volume-control')) {
-      console.log('Player clicked, audio paused:', audio.paused);
-      console.log('Audio readyState:', audio.readyState);
-      console.log('Audio src:', audio.currentSrc);
-      
-      if (audio.paused) {
-        // Ensure audio is loaded
-        if (audio.readyState === 0) {
-          audio.load();
-        }
-        
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            console.log('Playback started successfully');
-          }).catch(error => {
-            console.error('Playback failed:', error);
-            console.error('Error name:', error.name);
-            console.error('Error message:', error.message);
-          });
-        }
-      } else {
-        audio.pause();
-      }
+  // Function to toggle play/pause
+  const togglePlayPause = (e) => {
+    // Ignore clicks on interactive elements
+    if (e.target.closest('.progress-container') || e.target.closest('.volume-control')) {
+      return;
     }
+    
+    console.log('Player clicked, audio paused:', audio.paused);
+    console.log('Audio readyState:', audio.readyState);
+    console.log('Audio src:', audio.currentSrc);
+    
+    if (audio.paused) {
+      // Ensure audio is loaded
+      if (audio.readyState === 0) {
+        audio.load();
+      }
+      
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          console.log('Playback started successfully');
+        }).catch(error => {
+          console.error('Playback failed:', error);
+          console.error('Error name:', error.name);
+          console.error('Error message:', error.message);
+        });
+      }
+    } else {
+      audio.pause();
+    }
+  };
+
+  // Add both click and touchend handlers for better mobile support
+  player.addEventListener('click', togglePlayPause);
+  player.addEventListener('touchend', (e) => {
+    e.preventDefault(); // Prevent double-firing with click
+    togglePlayPause(e);
   });
+
+  // Also add handler to the card itself as backup
+  if (playerCard) {
+    playerCard.addEventListener('click', togglePlayPause);
+    playerCard.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      togglePlayPause(e);
+    });
+  }
 
   // Progress bar updates
   audio.addEventListener('timeupdate', () => {
@@ -148,8 +168,21 @@ document.querySelectorAll('.music-player').forEach(player => {
   // Click to seek
   if (progressContainer) {
     progressContainer.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent triggering play/pause
       const rect = progressContainer.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
+      const clickRatio = clickX / rect.width;
+      if (audio.duration) {
+        audio.currentTime = clickRatio * audio.duration;
+      }
+    });
+    
+    // Touch support for seeking
+    progressContainer.addEventListener('touchend', (e) => {
+      e.stopPropagation();
+      const touch = e.changedTouches[0];
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = touch.clientX - rect.left;
       const clickRatio = clickX / rect.width;
       if (audio.duration) {
         audio.currentTime = clickRatio * audio.duration;
@@ -159,8 +192,17 @@ document.querySelectorAll('.music-player').forEach(player => {
 
   // Volume control
   if (volumeSlider) {
-    volumeSlider.addEventListener('input', () => {
+    volumeSlider.addEventListener('input', (e) => {
+      e.stopPropagation(); // Prevent triggering play/pause
       audio.volume = volumeSlider.value;
+    });
+    
+    volumeSlider.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent triggering play/pause
+    });
+    
+    volumeSlider.addEventListener('touchend', (e) => {
+      e.stopPropagation(); // Prevent triggering play/pause
     });
   }
 
