@@ -53,7 +53,7 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
 </div> -->
 
 <div class="music-player">
-  <div class="player-card" style="background-image: url('{{ '/images/covers/Manhattan_cover.jpg' | relative_url }}')">
+  <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')">
     <div class="background-blur"></div>
     <div class="player-overlay">
       <div class="player-controls">
@@ -70,8 +70,8 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
       </div>
     </div>
   </div>
-  <audio class="audio-element" preload="metadata" playsinline>
-    <source src="{{ '/audios/Manhattan_waltzes.mp3' | relative_url }}?v={{ site.time | date: '%s' }}" type="audio/mpeg">
+  <audio class="audio-element" preload="metadata">
+    <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -89,24 +89,7 @@ document.querySelectorAll('.music-player').forEach(player => {
   }
 
   console.log('Audio player initialized');
-  const srcEl = audio.querySelector('source');
-  const audioSrc = srcEl ? srcEl.src : (audio.currentSrc || audio.src || null);
-  console.log('Audio src:', audioSrc);
-
-  // Network diagnostics: verify the file is reachable in production
-  if (audioSrc && window.fetch) {
-    try {
-      fetch(audioSrc, { method: 'HEAD', cache: 'no-store' })
-        .then(resp => {
-          console.log('Audio HEAD status:', resp.status, 'content-type:', resp.headers.get('content-type'));
-        })
-        .catch(err => {
-          console.error('Audio HEAD failed:', err);
-        });
-    } catch (e) {
-      console.warn('Fetch HEAD not available:', e);
-    }
-  }
+  console.log('Audio src:', audio.querySelector('source')?.src);
   console.log('Audio readyState:', audio.readyState);
 
   // Initialize volume
@@ -146,12 +129,6 @@ document.querySelectorAll('.music-player').forEach(player => {
             console.error('Playback failed:', error);
             console.error('Error name:', error.name);
             console.error('Error message:', error.message);
-            // Fallback: expose native controls if user-gesture or policy blocks playback
-            if (error.name === 'NotAllowedError' || error.name === 'AbortError') {
-              audio.controls = true;
-              audio.style.display = 'block';
-              console.log('Enabled native controls as a fallback');
-            }
           });
         }
       } else {
@@ -159,9 +136,6 @@ document.querySelectorAll('.music-player').forEach(player => {
       }
     }
   });
-
-  // Dedicated play/pause button (helps with stricter autoplay policies)
-  // (Removed explicit play button per request; click anywhere on the card still toggles)
 
   // Progress bar updates
   audio.addEventListener('timeupdate', () => {
@@ -193,13 +167,7 @@ document.querySelectorAll('.music-player').forEach(player => {
   // Error handling
   audio.addEventListener('error', (e) => {
     console.error('Audio error:', e);
-    const err = audio.error;
-    if (err) {
-      console.error('Error details:', err, 'code:', err.code);
-      // Map MediaError codes to readable info
-      const map = { 1: 'Aborted', 2: 'Network', 3: 'Decode', 4: 'Src not supported' };
-      console.error('MediaError:', map[err.code] || 'Unknown');
-    }
+    console.error('Error details:', audio.error);
   });
 
   // Loading states
