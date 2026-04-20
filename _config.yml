@@ -226,6 +226,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  presentations:
+    output: true
+    permalink: /:collection/:path/
   posters:
     output: true
     permalink: /:collection/:path/

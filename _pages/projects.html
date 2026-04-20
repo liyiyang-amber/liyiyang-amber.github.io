@@ -22,6 +22,11 @@ author_profile: true
   {% include archive-single-talk.html %}
 {% endfor %} -->
 
+<h2>Presentations</h2><hr />
+{% for post in site.presentations reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
 <h2>Posters</h2><hr />
 {% for post in site.posters reversed %}
   {% include archive-single.html %}
