@@ -1,11 +1,32 @@
 ---
 permalink: /
-title: "Hi there"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+<div class="polaroid-frame polaroid-frame--no-rotation polaroid-frame--animated">
+  <div class="polaroid-container">
+    <div class="photo-wrapper">
+      <img src="/images/polaroid_1.JPG" alt="Amber polaroid portrait">
+    </div>
+    <div class="caption">
+      It’s beautiful how this deep normality settles down over me. I’m not bored or unhappy, I’m still so strange and wild.
+    </div>
+  </div>
+</div>
+
+<div class="about-content--blur-on-intro" markdown="1">
+
+
+
+
+
+
+
+## Hi there
 
 Hi, my name is Li Yiyang (Amber), a second-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for stochastic multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
 
@@ -55,4 +76,6 @@ Now in the following, you'll find a whimsical bit more about me:
   But I have promises to keep.<br>
   And miles to go before I sleep.<br>
   And miles to go before I sleep...”
+</div>
+
 </div>

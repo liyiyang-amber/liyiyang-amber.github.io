@@ -55,25 +55,36 @@ $sidebar-link-max-width     : 250px;
    Colors
    ========================================================================== */
 
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
 $snow-color                 : snow;
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$bg-cream                   : #faf8f5;
+$polaroid-frame             : #f5f3ee;
+$photo-bg                   : #e8e6e1;
 
-$primary-color              : #7a8288;
+$nav-link                   : #8b7355;
+$nav-hover                  : #5d4e3a;
+$heading-color              : #5d4e3a;
+$body-text                  : #6b5d52;
+$hover-grayish              : mix($photo-bg, $body-text, 85%);
+
+$gray                       : #9b9085;
+$dark-gray                  : mix(#000, $gray, 35%);
+$darker-gray                : mix(#000, $gray, 55%);
+$light-gray                 : mix(#fff, $gray, 45%);
+$lighter-gray               : mix(#fff, $gray, 80%);
+
+$body-color                 : $polaroid-frame;
+$background-color           : $bg-cream;
+$code-background-color      : $polaroid-frame;
+$code-background-color-dark : $light-gray;
+$text-color                 : $body-text;
+$border-color               : $photo-bg;
+
+$primary-color              : $nav-link;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
+$info-color                 : $nav-link;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -106,11 +117,11 @@ $beige-darker-text-color: #3d211a;
 
 
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color                 : $nav-link;
+$link-color-hover           : $nav-hover;
+$link-color-visited         : mix(#000, $link-color, 15%);
+$masthead-link-color        : $nav-link;
+$masthead-link-color-hover  : $nav-hover;
 
 
 /*

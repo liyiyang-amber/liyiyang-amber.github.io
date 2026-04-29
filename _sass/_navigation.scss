@@ -259,7 +259,7 @@
     padding: 5px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    background: #fff;
+  background: $body-color;
     box-shadow: 0 0 10px rgba(#000, 0.25);
     z-index: index 1000;
 
@@ -295,7 +295,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #fff transparent;
+      border-color: $body-color transparent;
       display: block;
       z-index: 1;
     }
@@ -377,7 +377,7 @@
   color: $gray;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: #fff;
+  background-color: $body-color;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
@@ -409,8 +409,8 @@
     text-decoration-line: none !important;
 
     &:hover {
-      color: #000;
-      background: $lighter-gray;
+      color: $link-color-hover;
+      background: $hover-grayish;
     }
   }
 

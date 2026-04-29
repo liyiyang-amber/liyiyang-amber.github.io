@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: $masthead-height 0 0;
   padding-bottom: 9em;
+  background-color: $background-color;
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
@@ -26,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
+  color: $heading-color;
 }
 
 h1 {
@@ -248,8 +250,8 @@ figcaption {
     transition: $global-transition;
 
     &:hover {
-      color: #000;
-      border-bottom-color: #000;
+      color: $link-color-hover;
+      border-bottom-color: $link-color-hover;
     }
   }
 }
