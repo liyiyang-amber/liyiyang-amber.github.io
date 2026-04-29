@@ -10,7 +10,7 @@ redirect_from:
 <div class="polaroid-frame polaroid-frame--no-rotation polaroid-frame--animated">
   <div class="polaroid-container">
     <div class="photo-wrapper">
-      <img src="/images/polaroid_1.JPG" alt="Amber polaroid portrait">
+  <img src="{{ '/images/polaroid_1.jpg' | relative_url }}" alt="Amber polaroid portrait">
     </div>
     <div class="caption">
       It’s beautiful how this deep normality settles down over me. I’m not bored or unhappy, I’m still so strange and wild.
