@@ -68,7 +68,6 @@ Now in the following, you'll find a whimsical bit more about me:
 - 喜欢阳光（但是怕晒）看到很绝的光影会哇哇大叫然后拍照
 - 多洛米蒂是精神老家
 - 喜欢蓝天白云 喜欢日出
-- 最喜欢的音乐剧是Hamilton
 - 抹茶爱好者
 
 <div class="article-card">
