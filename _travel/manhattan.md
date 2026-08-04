@@ -27,34 +27,13 @@ From Edge, the city unfolded like a living thing—steel veins, glass skin, the 
 
 The Charging Bull stood polished by a thousand hopeful hands (may we all get rich). I walked Little Island, then the long march uptown — past Vessel’s skeletal curves, through Central Park, where the light turned the grass to gold. Dappled shadows stretched like memories of carriages and gas lamps that might’ve once danced here. (Ha! The "twenty-minute effect of a garden.")
 
-<!-- 
-<div class="music-player">
-  <div class="player-card" style="background-image: url('/images/covers/Manhattan_cover.jpg')">
-    <div class="background-blur"></div>
-    <div class="player-overlay">
-      <div class="player-controls">
-        <div class="song-info">
-          <p>Manhattan Waltzes - Johann Strauss II.</p>
-        </div>
-        <div class="volume-control">
-          <span>♪</span>
-          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
-        </div>
-      </div>
-      <div class="progress-container">
-        <div class="progress-bar"></div>
-      </div>
-    </div>
-  </div>
-  <audio class="audio-element">
-    <source src="/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div> -->
-
 <div class="music-player" id="manhattan-player">
-  <div class="player-card" style="background-image: url('{{ site.baseurl }}/images/covers/Manhattan_cover.jpg')">
+  <div class="player-card" style="background-image: url('{{ '/images/covers/Manhattan_cover.jpg' | relative_url }}')">
     <div class="background-blur"></div>
+    <button class="play-toggle" type="button" aria-label="Play Manhattan Waltzes" aria-pressed="false">
+      <span class="play-icon" aria-hidden="true">▶</span>
+      <span class="screen-reader-text play-status">Play</span>
+    </button>
     <div class="player-overlay">
       <div class="player-controls">
         <div class="song-info">
@@ -70,15 +49,14 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
       </div>
     </div>
   </div>
-  <audio class="audio-element" preload="metadata">
-    <source src="{{ site.baseurl }}/audios/Manhattan_waltzes.mp3" type="audio/mpeg">
+  <audio class="audio-element fallback-audio" controls preload="metadata">
+    <source src="{{ '/audios/Manhattan_waltzes.mp3' | relative_url }}" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
 
 <script>
 (function() {
-  // Only initialize if not already initialized
   const player = document.getElementById('manhattan-player');
   if (!player || player.dataset.initialized === 'true') {
     return;
@@ -90,157 +68,127 @@ The Charging Bull stood polished by a thousand hopeful hands (may we all get ric
   const progressContainer = player.querySelector('.progress-container');
   const volumeSlider = player.querySelector('.volume-slider');
   const playerCard = player.querySelector('.player-card');
+  const playToggle = player.querySelector('.play-toggle');
+  const playIcon = player.querySelector('.play-icon');
+  const playStatus = player.querySelector('.play-status');
 
-  if (!audio) {
-    console.error('Audio element not found in player');
+  if (!audio || !playerCard || !playToggle) {
     return;
   }
 
-  console.log('🎵 Manhattan Music Player initialized');
-  console.log('📂 Audio src:', audio.querySelector('source')?.src);
-  console.log('⏸️ Audio readyState:', audio.readyState);
+  player.classList.add('is-enhanced');
+  audio.controls = false;
 
-  // Initialize volume
-  audio.volume = volumeSlider ? volumeSlider.value : 0.7;
-  
-  // Preload audio
-  audio.load();
+  const updatePlayState = () => {
+    const isPlaying = !audio.paused && !audio.ended;
+    player.classList.toggle('playing', isPlaying);
+    playToggle.setAttribute('aria-pressed', String(isPlaying));
+    playToggle.setAttribute('aria-label', isPlaying ? 'Pause Manhattan Waltzes' : 'Play Manhattan Waltzes');
 
-  // Add playing class management
-  audio.addEventListener('play', () => {
-    player.classList.add('playing');
-    console.log('▶️ Playing');
-  });
+    if (playIcon) {
+      playIcon.textContent = isPlaying ? '❚❚' : '▶';
+    }
 
-  audio.addEventListener('pause', () => {
-    player.classList.remove('playing');
-    console.log('⏸️ Paused');
-  });
+    if (playStatus) {
+      playStatus.textContent = isPlaying ? 'Pause' : 'Play';
+    }
+  };
 
-  audio.addEventListener('ended', () => {
-    player.classList.remove('playing');
-    console.log('⏹️ Ended');
-  });
+  const showNativeFallback = () => {
+    player.classList.remove('is-enhanced', 'playing');
+    player.classList.add('playback-error');
+    audio.controls = true;
+  };
 
-  // Function to toggle play/pause
-  const togglePlayPause = (e) => {
-    // Ignore clicks on controls
-    if (e.target.closest('.progress-container') || e.target.closest('.volume-control')) {
+  const playAudio = () => {
+    if (audio.ended) {
+      audio.currentTime = 0;
+    }
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch((error) => {
+        console.warn('Manhattan audio playback failed. Showing native controls.', error);
+        showNativeFallback();
+      });
+    }
+  };
+
+  const togglePlayPause = (event) => {
+    if (!player.classList.contains('is-enhanced')) {
       return;
     }
-    
-    e.preventDefault();
-    e.stopPropagation();
-    
-    console.log('👆 Player clicked');
-    
-    if (audio.paused) {
-      console.log('🎬 Attempting to play...');
-      console.log('📊 Current state:', {
-        readyState: audio.readyState,
-        networkState: audio.networkState,
-        src: audio.currentSrc
-      });
-      
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            console.log('✅ Playback started successfully!');
-          })
-          .catch(error => {
-            console.error('❌ Playback failed:', error);
-            // Show user-friendly error
-            alert('Unable to play audio. Please try clicking again or check your browser settings.');
-          });
-      }
+
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    if (audio.paused || audio.ended) {
+      playAudio();
     } else {
-      console.log('⏸️ Pausing...');
       audio.pause();
     }
   };
 
-  // Add event listeners with proper event handling
-  playerCard.addEventListener('click', togglePlayPause);
-  
-  // Better mobile support
-  playerCard.addEventListener('touchend', (e) => {
-    e.preventDefault();
-    togglePlayPause(e);
-  }, { passive: false });
-
-  // Progress bar updates
-  audio.addEventListener('timeupdate', () => {
-    if (audio.duration && isFinite(audio.duration)) {
-      const progress = (audio.currentTime / audio.duration) * 100;
-      progressBar.style.width = `${progress}%`;
+  const updateProgress = () => {
+    if (progressBar && audio.duration && isFinite(audio.duration)) {
+      progressBar.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
     }
-  });
+  };
 
-  // Click to seek
-  if (progressContainer) {
-    const seekAudio = (e) => {
-      e.stopPropagation();
-      const rect = progressContainer.getBoundingClientRect();
-      const clickX = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
-      const clickRatio = Math.max(0, Math.min(1, clickX / rect.width));
-      if (audio.duration && isFinite(audio.duration)) {
-        audio.currentTime = clickRatio * audio.duration;
-        console.log('⏩ Seeked to:', (clickRatio * 100).toFixed(1), '%');
-      }
-    };
-    
-    progressContainer.addEventListener('click', seekAudio);
-    progressContainer.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      seekAudio(e);
-    }, { passive: false });
+  if (volumeSlider) {
+    const initialVolume = Number(volumeSlider.value);
+    audio.volume = Number.isNaN(initialVolume) ? 0.7 : initialVolume;
   }
 
-  // Volume control
+  audio.load();
+
+  audio.addEventListener('play', updatePlayState);
+  audio.addEventListener('pause', updatePlayState);
+  audio.addEventListener('ended', updatePlayState);
+  audio.addEventListener('timeupdate', updateProgress);
+  audio.addEventListener('loadedmetadata', updateProgress);
+  audio.addEventListener('error', showNativeFallback);
+
+  playToggle.addEventListener('click', togglePlayPause);
+  playerCard.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest('.progress-container, .volume-control, .play-toggle, .fallback-audio')) {
+      return;
+    }
+
+    togglePlayPause(event);
+  });
+
+  if (progressContainer) {
+    progressContainer.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickRatio = Math.max(0, Math.min(1, clickX / rect.width));
+
+      if (audio.duration && isFinite(audio.duration)) {
+        audio.currentTime = clickRatio * audio.duration;
+        updateProgress();
+      }
+    });
+  }
+
   if (volumeSlider) {
     const updateVolume = (e) => {
       e.stopPropagation();
-      audio.volume = volumeSlider.value;
-      console.log('🔊 Volume:', (audio.volume * 100).toFixed(0) + '%');
+      audio.volume = Number(volumeSlider.value);
     };
-    
+
     volumeSlider.addEventListener('input', updateVolume);
     volumeSlider.addEventListener('change', updateVolume);
-    
-    // Prevent propagation of click events
     volumeSlider.addEventListener('click', (e) => e.stopPropagation());
-    volumeSlider.addEventListener('touchend', (e) => e.stopPropagation());
   }
 
-  // Enhanced error handling
-  audio.addEventListener('error', (e) => {
-    console.error('❌ Audio error:', e);
-    const err = audio.error;
-    if (err) {
-      const errorMessages = {
-        1: 'MEDIA_ERR_ABORTED - Playback was aborted',
-        2: 'MEDIA_ERR_NETWORK - Network error occurred',
-        3: 'MEDIA_ERR_DECODE - Audio decoding failed',
-        4: 'MEDIA_ERR_SRC_NOT_SUPPORTED - Audio format not supported or file not found'
-      };
-      console.error('Error code:', err.code, '-', errorMessages[err.code] || 'Unknown error');
-      console.error('Audio src attempted:', audio.currentSrc);
-    }
-  });
-
-  // Loading states logging
-  audio.addEventListener('loadstart', () => console.log('📥 Loading started'));
-  audio.addEventListener('loadedmetadata', () => console.log('✅ Metadata loaded, duration:', audio.duration, 's'));
-  audio.addEventListener('loadeddata', () => console.log('✅ Data loaded'));
-  audio.addEventListener('canplay', () => console.log('▶️ Can play'));
-  audio.addEventListener('canplaythrough', () => console.log('✅ Can play through'));
-  audio.addEventListener('stalled', () => console.warn('⚠️ Loading stalled'));
-  audio.addEventListener('suspend', () => console.log('⏸️ Loading suspended'));
-  audio.addEventListener('waiting', () => console.log('⏳ Waiting for data'));
-  audio.addEventListener('playing', () => console.log('🎶 Actually playing now'));
-
-  console.log('✅ Player setup complete');
+  updatePlayState();
 })();
 </script>
 
@@ -258,4 +206,3 @@ But then I saw old Manhattan through the music:
 Maybe the waltz wasn’t about the city as it is, but as it once dreamed of being — a place where, when night fell, the gas lamps would tame the chaos, the carriages would part, and two lovers could spin through the streets, past half-built skyscrapers, all the way to the park…
 
 Before the concrete, before the noise—back when Manhattan was still a waltz.
-

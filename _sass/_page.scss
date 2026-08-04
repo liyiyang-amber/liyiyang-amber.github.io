@@ -691,7 +691,7 @@ body:has(.polaroid-frame--animated) {
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    cursor: pointer;
+    cursor: default;
 
     .background-blur {
       position: absolute;
@@ -706,7 +706,43 @@ body:has(.polaroid-frame--animated) {
       pointer-events: none;
     }
 
+    .play-toggle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 3em;
+      height: 3em;
+      padding: 0;
+      color: white;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 50%;
+      box-shadow: 0 0 18px rgba(0,0,0,0.35);
+      line-height: 1;
+      z-index: 3;
+      transition: all 0.3s ease;
+
+      &:hover,
+      &:focus {
+        background: rgba(0,0,0,0.5);
+      }
+
+      &:focus {
+        outline: 2px solid rgba(255,255,255,0.9);
+        outline-offset: 3px;
+      }
+
+      .play-icon {
+        font-size: 1.35em;
+      }
+    }
+
     .player-overlay {
+      display: none;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -863,6 +899,20 @@ body:has(.polaroid-frame--animated) {
     }
   }
 
+  &.is-enhanced {
+    .player-card {
+      cursor: pointer;
+    }
+
+    .play-toggle {
+      display: flex;
+    }
+
+    .player-overlay {
+      display: block;
+    }
+  }
+
   &:hover {
     .player-card {
       box-shadow: 0 8px 25px rgba(100, 120, 140, 0.4);
@@ -879,50 +929,39 @@ body:has(.polaroid-frame--animated) {
         }
       }
     }
-    
-    &::after {
-      opacity: 0.3;
+  }
+
+  &.playing {
+    .play-toggle {
+      opacity: 0;
     }
   }
 
-  // Play button indicator - make it more visible when paused
-  &::after {
-    content: "▶";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: clamp(1.8em, 6vw, 2.5em);
-    opacity: 0.8;
-    text-shadow: 0 0 15px rgba(0,0,0,0.7);
-    transition: all 0.3s ease;
-    z-index: 1;
-    pointer-events: none;
+  &.playing:hover,
+  &.playing:focus-within {
+    .play-toggle {
+      opacity: 0.75;
+    }
   }
 
-  // Hide play button when playing
-  &.playing::after {
-    opacity: 0;
+  &.playback-error {
+    .player-card {
+      cursor: default;
+    }
+
+    .play-toggle,
+    .player-overlay {
+      display: none;
+    }
   }
 
-  // Show pause indicator when playing
-  &.playing:hover::before {
-    content: "⏸";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: clamp(1.8em, 6vw, 2.5em);
-    opacity: 0.3;
-    text-shadow: 0 0 15px rgba(0,0,0,0.7);
-    transition: all 0.3s ease;
-    z-index: 1;
-    pointer-events: none;
+  .fallback-audio {
+    display: block;
+    width: 100%;
+    margin-top: 0.75em;
   }
 
-  audio {
+  &.is-enhanced .fallback-audio {
     display: none;
   }
 }
