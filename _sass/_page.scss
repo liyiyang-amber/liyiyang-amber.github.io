@@ -16,9 +16,13 @@
   }
 }
 
-.article-image {
+.article-image,
+.article-image-captioned {
   display: block;
   text-align: center;
+}
+
+.article-image {
   img {
     max-width: 75%;
     margin: 0.5em auto;
@@ -27,6 +31,43 @@
     transition: all 0.5s cubic-bezier(.33,.11,.12,.99);
     &:hover {
       scale: 105%;
+    }
+  }
+}
+
+.article-image-captioned {
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 75%;
+    margin: 0.5em auto;
+    overflow: hidden;
+    border-radius: 1em;
+    transition: all 0.5s cubic-bezier(.33,.11,.12,.99);
+
+    &:hover {
+      scale: 105%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Caption line anchored to the lower-right of the image */
+    .image-caption {
+      position: absolute;
+      bottom: 0.55em;
+      right: 0.75em;
+      font-size: 0.68rem;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.82);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+      font-style: italic;
+      pointer-events: none;
+      max-width: 60%;
+      text-align: right;
     }
   }
 }
