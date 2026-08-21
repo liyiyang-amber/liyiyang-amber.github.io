@@ -1,0 +1,379 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign journey = page.journey %}
+{% assign days = journey.days | default: empty %}
+{% assign places = journey.places | default: empty %}
+{% assign route_legs = journey.route_legs | default: empty %}
+{% assign content_status = journey.content_status | default: "itinerary" %}
+{% assign has_rail = false %}
+{% assign has_cable_car = false %}
+{% assign has_bus = false %}
+{% assign has_rideshare = false %}
+{% assign has_hike = false %}
+{% assign has_journey_sidebar = false %}
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  {% assign has_journey_sidebar = true %}
+{% endif %}
+{% for route_leg in route_legs %}
+  {% case route_leg.mode %}
+    {% when "rail" %}{% assign has_rail = true %}
+    {% when "cable_car" %}{% assign has_cable_car = true %}
+    {% when "bus" %}{% assign has_bus = true %}
+    {% when "rideshare" %}{% assign has_rideshare = true %}
+    {% when "hike" %}{% assign has_hike = true %}
+  {% endcase %}
+{% endfor %}
+
+<main id="main" class="travel-journey-shell" role="main">
+  <article
+    class="travel-journey"
+    data-travel-journey
+    data-content-status="{{ content_status | escape }}"
+    {% if journey.route_geojson %}data-route-url="{{ journey.route_geojson | relative_url }}"{% endif %}
+  >
+    <header class="travel-journey__header">
+      <div class="travel-journey__heading">
+        {% if journey.eyebrow %}
+          <p class="travel-journey__eyebrow">{{ journey.eyebrow | escape }}</p>
+        {% endif %}
+        <h1 class="travel-journey__title">{{ page.title | escape }}</h1>
+      </div>
+
+      <div class="travel-journey__meta">
+        {% if journey.period %}<p>{{ journey.period | escape }}</p>{% endif %}
+        <div class="travel-journey__key" aria-label="Map key">
+          <span><i class="travel-journey__waypoint-key" aria-hidden="true"></i> place</span>
+        </div>
+      </div>
+    </header>
+
+    {% if places.size > 0 %}
+      <section class="travel-map-section" aria-labelledby="travel-map-instructions">
+        <p id="travel-map-instructions" class="travel-map-section__instructions">
+          <span class="travel-map-section__desktop-instruction">Hover or focus a place for a preview &mdash; click to scroll; select a route for details</span>
+          <span class="travel-map-section__touch-instruction">Tap a place once to preview and again to scroll; tap a route for details</span>
+        </p>
+
+        <div class="travel-map-frame">
+          <div
+            id="travel-map"
+            class="travel-map"
+            data-travel-map
+            role="region"
+            aria-label="Interactive map of {{ page.title | escape }}"
+          ></div>
+          <div class="travel-map-tooltip" data-map-tooltip hidden></div>
+          <p class="travel-map-status" data-map-status role="status" hidden></p>
+          <noscript>
+            <p class="travel-map-status travel-map-status--static">
+              The interactive map needs JavaScript. The complete itinerary remains available below.
+            </p>
+          </noscript>
+        </div>
+
+        {% if route_legs.size > 0 %}
+          <div class="travel-route-controls" data-route-controls aria-label="Route modes">
+            <span class="travel-route-controls__label">Show routes</span>
+            {% if has_rail %}
+              <button type="button" data-route-mode-toggle="rail" aria-pressed="true" disabled>
+                <i class="travel-route-swatch travel-route-swatch--rail" aria-hidden="true"></i>Rail
+              </button>
+            {% endif %}
+            {% if has_cable_car %}
+              <button type="button" data-route-mode-toggle="cable_car" aria-pressed="true" disabled>
+                <i class="travel-route-swatch travel-route-swatch--cable-car" aria-hidden="true"></i>Cable car
+              </button>
+            {% endif %}
+            {% if has_bus %}
+              <button type="button" data-route-mode-toggle="bus" aria-pressed="true" disabled>
+                <i class="travel-route-swatch travel-route-swatch--bus" aria-hidden="true"></i>Bus
+              </button>
+            {% endif %}
+            {% if has_rideshare %}
+              <button type="button" data-route-mode-toggle="rideshare" aria-pressed="true" disabled>
+                <i class="travel-route-swatch travel-route-swatch--rideshare" aria-hidden="true"></i>Car
+              </button>
+            {% endif %}
+            {% if has_hike %}
+              <button type="button" data-route-mode-toggle="hike" aria-pressed="true" disabled>
+                <i class="travel-route-swatch travel-route-swatch--hike" aria-hidden="true"></i>Hike
+              </button>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <nav class="travel-day-strip" aria-label="Journey days">
+          {% for day in days %}
+            <a
+              class="travel-day-strip__item"
+              href="#journey-{{ day.id }}"
+              data-day-trigger="{{ day.id }}"
+            >
+              <span class="travel-day-strip__date">{{ day.date | date: "%b %d" }}</span>
+              <span class="travel-day-strip__name">Day {{ forloop.index }}</span>
+            </a>
+          {% endfor %}
+        </nav>
+      </section>
+
+      <div class="travel-journey__editorial-shell{% if has_journey_sidebar %} travel-journey__editorial-shell--with-sidebar{% endif %}">
+        {% if has_journey_sidebar %}
+          {% include sidebar.html %}
+        {% endif %}
+
+        <div class="travel-journey__editorial-main">
+      <section class="travel-itinerary" aria-labelledby="travel-itinerary-title">
+        <div class="travel-itinerary__inner">
+          <header class="travel-section-heading">
+            <p class="travel-journey__eyebrow">The itinerary</p>
+            <h2 id="travel-itinerary-title">Ten days across the Alps</h2>
+          </header>
+
+          <div class="travel-itinerary__days">
+            {% for day in days %}
+              <section
+                id="journey-{{ day.id }}"
+                class="travel-day"
+                data-journey-day
+                data-day-id="{{ day.id }}"
+                data-day-number="{{ forloop.index }}"
+                data-day-date="{{ day.date | date: "%B %d, %Y" }}"
+                data-place-ids="{{ day.place_ids | join: " " | escape }}"
+              >
+                <header class="travel-day__header">
+                  <span class="travel-day__number">{{ forloop.index }}</span>
+                  <div>
+                    <p>{{ day.date | date: "%A, %B %d" }}</p>
+                    <h3>Day {{ forloop.index }}</h3>
+                  </div>
+                </header>
+                <ol class="travel-day__route" aria-label="Places visited on day {{ forloop.index }}">
+                  {% for place_id in day.place_ids %}
+                    {% for place in places %}
+                      {% if place.id == place_id %}
+                        <li>
+                          <a href="#journey-place-{{ place.id }}">
+                            {{ place.name | escape }}
+                          </a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                </ol>
+
+                {% assign day_route_count = 0 %}
+                {% for route_leg in route_legs %}
+                  {% if route_leg.day_id == day.id %}{% assign day_route_count = day_route_count | plus: 1 %}{% endif %}
+                {% endfor %}
+                {% if day_route_count > 0 %}
+                  <h4 class="travel-day__connections-title">Travel connections</h4>
+                  <ol class="travel-day__connections" aria-label="Travel connections on day {{ forloop.index }}">
+                    {% for route_leg in route_legs %}
+                      {% if route_leg.day_id == day.id %}
+                        {% case route_leg.mode %}
+                          {% when "rail" %}{% assign route_mode_label = "Rail" %}
+                          {% when "cable_car" %}{% assign route_mode_label = "Cable car" %}
+                          {% when "bus" %}{% assign route_mode_label = "Bus" %}
+                          {% when "rideshare" %}{% assign route_mode_label = "Car" %}
+                          {% when "hike" %}{% assign route_mode_label = "Hike" %}
+                          {% else %}{% assign route_mode_label = "Connection" %}
+                        {% endcase %}
+                        <li
+                          class="travel-route-leg travel-route-leg--{{ route_leg.mode | default: "unmapped" | replace: "_", "-" }}{% if route_leg.status == "not_mapped" %} travel-route-leg--unmapped{% endif %}"
+                          data-journey-route
+                          data-route-id="{{ route_leg.id | escape }}"
+                          data-route-day-id="{{ route_leg.day_id | escape }}"
+                          data-route-sequence="{{ route_leg.sequence }}"
+                          data-route-status="{{ route_leg.status | escape }}"
+                          {% if route_leg.feature_id %}data-route-feature-id="{{ route_leg.feature_id | escape }}"{% endif %}
+                          {% if route_leg.mode %}data-route-mode="{{ route_leg.mode | escape }}"{% endif %}
+                          data-route-mode-label="{{ route_mode_label | escape }}"
+                          data-route-label="{{ route_leg.label | escape }}"
+                          {% if route_leg.source_label %}data-route-source-label="{{ route_leg.source_label | escape }}"{% endif %}
+                          {% if route_leg.source_url %}data-route-source-url="{{ route_leg.source_url | escape }}"{% endif %}
+                          {% if route_leg.external_label %}data-route-external-label="{{ route_leg.external_label | escape }}"{% endif %}
+                          {% if route_leg.external_url %}data-route-external-url="{{ route_leg.external_url | escape }}"{% endif %}
+                          {% if route_leg.note %}data-route-note="{{ route_leg.note | escape }}"{% endif %}
+                        >
+                          <div class="travel-route-leg__summary">
+                            {% if route_leg.status == "mapped" %}
+                              <a href="#travel-map" data-route-trigger="{{ route_leg.id | escape }}">
+                                <i class="travel-route-swatch travel-route-swatch--{{ route_leg.mode | replace: "_", "-" }}" aria-hidden="true"></i>
+                                <span><strong>{{ route_mode_label }}</strong>{{ route_leg.label | escape }}</span>
+                              </a>
+                            {% else %}
+                              <span class="travel-route-leg__unmapped">
+                                <i class="travel-route-swatch travel-route-swatch--unmapped" aria-hidden="true"></i>
+                                <span><strong>{{ route_mode_label }}</strong>{{ route_leg.label | escape }}</span>
+                              </span>
+                            {% endif %}
+                          </div>
+                          {% if route_leg.source_label or route_leg.note %}
+                            <p>
+                              {% if route_leg.source_label %}{{ route_leg.source_label | escape }}{% endif %}
+                              {% if route_leg.note %}<span>{{ route_leg.note | escape }}</span>{% endif %}
+                            </p>
+                          {% endif %}
+                          {% if route_leg.source_url or route_leg.external_url or route_leg.context_url %}
+                            <div class="travel-route-leg__links">
+                              {% if route_leg.source_url %}<a href="{{ route_leg.source_url }}" rel="noopener noreferrer">Route source</a>{% endif %}
+                              {% if route_leg.external_url %}<a href="{{ route_leg.external_url }}" rel="noopener noreferrer">{{ route_leg.external_label | default: "Route reference" | escape }}</a>{% endif %}
+                              {% if route_leg.context_url %}<a href="{{ route_leg.context_url }}" rel="noopener noreferrer">Network context</a>{% endif %}
+                            </div>
+                          {% endif %}
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ol>
+                {% endif %}
+              </section>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="travel-place-directory travel-place-directory--editorial" aria-labelledby="travel-place-directory-title">
+        <div class="travel-place-directory__inner">
+          <header class="travel-section-heading">
+            <p class="travel-journey__eyebrow">The places</p>
+            <h2 id="travel-place-directory-title">Waypoints along the journey</h2>
+          </header>
+
+          <div class="travel-place-grid">
+            {% for place in places %}
+              {% capture visit_dates %}{% for day in days %}{% if day.place_ids contains place.id %}Day {{ forloop.index }} · {{ day.date | date: "%b %d" }}||{% endif %}{% endfor %}{% endcapture %}
+              {% assign has_place_copy = false %}
+              {% if place.excerpt or place.journal %}{% assign has_place_copy = true %}{% endif %}
+              {% assign has_place_content = false %}
+              {% if place.cover or has_place_copy or place.photos.size > 0 %}{% assign has_place_content = true %}{% endif %}
+              <article
+                id="journey-place-{{ place.id }}"
+                class="travel-place-card travel-place-card--editorial{% unless has_place_content %} travel-place-card--empty{% endunless %}"
+                data-journey-place
+                data-place-id="{{ place.id }}"
+                data-marker-label="{{ forloop.index }}"
+                data-latitude="{{ place.latitude }}"
+                data-longitude="{{ place.longitude }}"
+                data-visit-dates="{{ visit_dates | strip | escape }}"
+              >
+                <header class="travel-place-card__header">
+                  <span class="travel-place-card__marker" aria-hidden="true">{{ forloop.index }}</span>
+                  <div>
+                    <p data-place-visits>
+                      {% for day in days %}{% if day.place_ids contains place.id %}<span>Day {{ forloop.index }} · {{ day.date | date: "%b %d" }}</span>{% endif %}{% endfor %}
+                    </p>
+                    <h3 data-place-name tabindex="-1">{{ place.name | escape }}</h3>
+                  </div>
+                </header>
+
+                {% if place.cover or has_place_copy %}
+                  <div class="travel-place-card__feature{% unless place.cover %} travel-place-card__feature--copy-only{% endunless %}{% unless has_place_copy %} travel-place-card__feature--image-only{% endunless %}">
+                    {% if place.cover %}
+                      <figure class="travel-place-card__cover">
+                        <img
+                          src="{{ place.cover | relative_url }}"
+                          alt="{{ place.cover_alt | escape }}"
+                          loading="lazy"
+                          decoding="async"
+                          data-place-cover
+                        >
+                      </figure>
+                    {% endif %}
+
+                    {% if has_place_copy %}
+                      <div class="travel-place-card__copy">
+                        {% if place.excerpt %}
+                          <p class="travel-place-card__excerpt" data-place-excerpt>{{ place.excerpt | escape }}</p>
+                        {% endif %}
+
+                        {% if place.journal %}
+                          <div class="travel-place-card__prose" data-place-journal>
+                            {{ place.journal | markdownify }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+
+                {% if place.photos and place.photos.size > 0 %}
+                  <div
+                    class="gallery-container"
+                    data-place-gallery
+                    role="region"
+                    aria-label="More photographs from {{ place.name | escape }}"
+                    tabindex="0"
+                  >
+                    <div class="gallery-scroll">
+                      {% for photo in place.photos %}
+                        <div class="gallery-item">
+                          <img
+                            class="article-image"
+                            src="{{ photo.medium | relative_url }}"
+                            srcset="{{ photo.thumb | relative_url }} 480w, {{ photo.medium | relative_url }} 960w, {{ photo.full | relative_url }} 1600w"
+                            sizes="480px"
+                            alt="{{ photo.alt | escape }}"
+                            loading="lazy"
+                            decoding="async"
+                          >
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+        </div>
+      </div>
+
+      <dialog class="travel-dialog travel-day-dialog" data-day-dialog aria-labelledby="travel-day-dialog-title">
+        <div class="travel-dialog__panel">
+          <header class="travel-dialog__header">
+            <div>
+              <p class="travel-dialog__eyebrow" data-day-dialog-date></p>
+              <h2 id="travel-day-dialog-title" data-day-dialog-title></h2>
+            </div>
+            <button type="button" class="travel-dialog__close" data-dialog-close>Close</button>
+          </header>
+          <div class="travel-dialog__body">
+            <p class="travel-dialog__intro">Places in travel order</p>
+            <ol class="travel-day-dialog__route" data-day-dialog-route></ol>
+            <a class="travel-dialog__section-link" href="#" data-day-dialog-link>
+              View day in the itinerary <span aria-hidden="true">&darr;</span>
+            </a>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog class="travel-dialog travel-route-dialog" data-route-dialog aria-labelledby="travel-route-dialog-title">
+        <div class="travel-dialog__panel">
+          <header class="travel-dialog__header">
+            <div>
+              <p class="travel-dialog__eyebrow" data-route-dialog-mode></p>
+              <h2 id="travel-route-dialog-title" data-route-dialog-title></h2>
+            </div>
+            <button type="button" class="travel-dialog__close" data-dialog-close>Close</button>
+          </header>
+          <div class="travel-dialog__body">
+            <p class="travel-route-dialog__source" data-route-dialog-source></p>
+            <p class="travel-route-dialog__note" data-route-dialog-note hidden></p>
+            <div class="travel-route-dialog__links">
+              <a href="#" data-route-dialog-source-link rel="noopener noreferrer">Open route source</a>
+              <a href="#" data-route-dialog-external-link rel="noopener noreferrer" hidden></a>
+            </div>
+            <a class="travel-dialog__section-link" href="#" data-route-dialog-day-link>
+              View this day in the itinerary <span aria-hidden="true">&darr;</span>
+            </a>
+          </div>
+        </div>
+      </dialog>
+    {% endif %}
+  </article>
+</main>

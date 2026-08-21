@@ -1,3 +1,8 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+{% if page.layout == 'travel-journey' %}
+  <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/travel-journey.js' | relative_url }}"></script>
+{% endif %}
+
 {% include analytics.html %}

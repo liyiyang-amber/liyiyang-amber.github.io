@@ -216,6 +216,21 @@
 
 }
 
+.card--text-only {
+  --bg-filter-opacity: 0;
+  border: 1px solid rgba(61, 90, 76, 0.18);
+  background-color: #e7e3d6;
+  background-image:
+    radial-gradient(circle at 82% 18%, rgba(61, 90, 76, 0.13), transparent 28%),
+    linear-gradient(135deg, #f2ede0 0%, #dce3d7 100%);
+
+  h3,
+  p {
+    color: #2b4136;
+    text-shadow: none;
+  }
+}
+
 /*
    List view
    ========================================================================== */

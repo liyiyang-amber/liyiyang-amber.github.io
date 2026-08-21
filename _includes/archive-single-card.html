@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-
 {% include base_path %}
 
+{% assign teaser = nil %}
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
   {% if post.header.overlay_image %}
     {% capture teaser %}{{ post.header.overlay_image }}{% endcapture %}
-  {% else %}
+  {% elsif site.teaser %}
     {% assign teaser = site.teaser %}
   {% endif %}
 {% endif %}
@@ -17,13 +16,18 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
-{% if teaser contains "://" %}
-  {% assign teaser = {{ teaser }} %}
+{% assign card_class = "card" %}
+{% assign ovl_address = nil %}
+{% if teaser %}
+  {% if teaser contains "://" %}
+    {% assign teaser_path = teaser %}
+  {% else %}
+    {% assign teaser_path = teaser | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+  {% assign ovl_address = ")" | prepend: teaser_path | prepend: "--bg-img: url(" %}
 {% else %}
-  {% assign teaser = teaser | prepend: "/images/" | prepend: base_path %}
+  {% assign card_class = card_class | append: " card--text-only" %}
 {% endif %}
-
-{% assign ovl_address = ")" | prepend: teaser | prepend: "--bg-img: url(" %}
 
 
 {% if post.link %}
@@ -32,7 +36,7 @@
   {% assign post_link = post.url | prepend: base_path %}
 {% endif %}
 
-<a class="card" href={{ post_link }} style="{{ ovl_address }}">
+<a class="{{ card_class }}" href="{{ post_link }}"{% if ovl_address %} style="{{ ovl_address }}"{% endif %}>
   <span></span>
     <div class="content">
       <h3>{{ title }}</h3>
@@ -41,7 +45,7 @@
           {% endif %}
       <div class="sci">
         {% if post.excerpt %}
-        <p itemprop="description">{{ post.excerpt | markdownify }}</p>
+        <p itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
         {% endif %}
       </div>
     </div>
