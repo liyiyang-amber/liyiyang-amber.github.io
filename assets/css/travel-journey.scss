@@ -817,7 +817,7 @@ $journey-line: rgba(28, 25, 21, 0.12);
 
 .travel-place-card__feature {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(270px, 0.9fr);
+  grid-template-columns: minmax(0, 600px) minmax(270px, 1fr);
   align-items: start;
   gap: clamp(32px, 5vw, 72px);
 }
@@ -828,7 +828,7 @@ $journey-line: rgba(28, 25, 21, 0.12);
 }
 
 .travel-place-card__feature--image-only .travel-place-card__cover {
-  width: min(100%, 720px);
+  width: min(100%, 600px);
 }
 
 .travel-place-card__feature--copy-only .travel-place-card__copy {
@@ -839,6 +839,7 @@ $journey-line: rgba(28, 25, 21, 0.12);
   display: block;
   margin: 0;
   overflow: hidden;
+  aspect-ratio: 4 / 3;
   border-radius: 7px;
   background: #c8bfa8;
 }
@@ -846,9 +847,9 @@ $journey-line: rgba(28, 25, 21, 0.12);
 .travel-place-card__cover img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  max-height: min(48vh, 460px);
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .travel-place-card__copy {
@@ -1103,6 +1104,10 @@ body.travel-dialog-open {
     gap: 26px;
   }
 
+  .travel-place-card__feature--image-only .travel-place-card__cover {
+    width: 100%;
+  }
+
   .travel-place-card__copy {
     max-width: 780px;
     padding-top: 0;
@@ -1111,10 +1116,6 @@ body.travel-dialog-open {
 }
 
 @media (max-width: 720px) {
-  .travel-place-card__cover img {
-    max-height: none;
-  }
-
   .travel-journey__header {
     display: block;
   }

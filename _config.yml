@@ -288,6 +288,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _travel
+  - scope:
+      path: ""
+      type: travel
+    values:
+      author_profile: true
   # _talks
   - scope:
       path: ""

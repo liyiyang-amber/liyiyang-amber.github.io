@@ -406,38 +406,164 @@ journey:
       name: Oeschinensee
       latitude: 46.4984951
       longitude: 7.7268429
+      cover: /images/memories/swiss-dolomites/oeschinensee-1600.webp
+      cover_alt: Turquoise Oeschinensee beneath gray cliffs and evergreen forest
+      photos:
+        - thumb: /images/memories/swiss-dolomites/oeschinensee-1-480.webp
+          medium: /images/memories/swiss-dolomites/oeschinensee-1-960.webp
+          full: /images/memories/swiss-dolomites/oeschinensee-1-1600.webp
+          alt: Oeschinensee below layered cliffs and cascading waterfalls
+          caption: Waterfalls above Oeschinensee
+          captured_on: 2024-06-16
+        - thumb: /images/memories/swiss-dolomites/oeschinensee-2-480.webp
+          medium: /images/memories/swiss-dolomites/oeschinensee-2-960.webp
+          full: /images/memories/swiss-dolomites/oeschinensee-2-1600.webp
+          alt: Rocky alpine cliffs and waterfalls rising above Oeschinensee
+          caption: Cliffs above the lake
+          captured_on: 2024-06-16
+        - thumb: /images/memories/swiss-dolomites/oeschinensee-3-480.webp
+          medium: /images/memories/swiss-dolomites/oeschinensee-3-960.webp
+          full: /images/memories/swiss-dolomites/oeschinensee-3-1600.webp
+          alt: Turquoise Oeschinensee with a rocky shore, conifers, and a small boat
+          caption: Oeschinensee from the hiking trail
+          captured_on: 2024-06-16
+        - thumb: /images/memories/swiss-dolomites/oeschinensee-4-480.webp
+          medium: /images/memories/swiss-dolomites/oeschinensee-4-960.webp
+          full: /images/memories/swiss-dolomites/oeschinensee-4-1600.webp
+          alt: Clouds and mountains reflected in the turquoise water of Oeschinensee
+          caption: Reflections on Oeschinensee
+          captured_on: 2024-06-16
+        - thumb: /images/memories/swiss-dolomites/oeschinensee-5-480.webp
+          medium: /images/memories/swiss-dolomites/oeschinensee-5-960.webp
+          full: /images/memories/swiss-dolomites/oeschinensee-5-1600.webp
+          alt: Oeschinensee glowing turquoise beneath layered cliffs and waterfalls
+          caption: Turquoise lake and cliffs
+          captured_on: 2024-06-16
     - id: spiez
       name: Spiez
       latitude: 46.6865846
       longitude: 7.6800353
+      cover: /images/memories/swiss-dolomites/spiez-1600.webp
+      cover_alt: Spiez Castle, vineyards, and Lake Thun beneath the mountains
     - id: interlaken
       name: Interlaken Ost
       latitude: 46.6904478
       longitude: 7.8689965
+      cover: /images/memories/swiss-dolomites/interlaken-1600.webp
+      cover_alt: A church spire and Swiss flags in Interlaken with a snowy mountain beyond
     - id: iseltwald
       name: Iseltwald
       latitude: 46.7104598
       longitude: 7.9634571
+      cover: /images/memories/swiss-dolomites/iseltwald-1600.webp
+      cover_alt: Lakeside buildings and boats reflected in Lake Brienz at Iseltwald
     - id: murren
       name: Mürren
       latitude: 46.5636889
       longitude: 7.8971188
+      cover: /images/memories/swiss-dolomites/murren-1600.webp
+      cover_alt: Clouds drifting across snow-covered mountains above the green slopes near Mürren
+      photos:
+        - thumb: /images/memories/swiss-dolomites/murren-1-480.webp
+          medium: /images/memories/swiss-dolomites/murren-1-960.webp
+          full: /images/memories/swiss-dolomites/murren-1-1600.webp
+          alt: A snow-covered mountain framed by evergreen trees and an alpine shed near Mürren
+          caption: Mountain view near Mürren
+          captured_on: 2024-06-17
+        - thumb: /images/memories/swiss-dolomites/murren-2-480.webp
+          medium: /images/memories/swiss-dolomites/murren-2-960.webp
+          full: /images/memories/swiss-dolomites/murren-2-1600.webp
+          alt: A snow-covered mountain ridge above dark forest and a distant waterfall near Mürren
+          caption: Snowy ridge above the valley
+          captured_on: 2024-06-17
+        - thumb: /images/memories/swiss-dolomites/murren-3-480.webp
+          medium: /images/memories/swiss-dolomites/murren-3-960.webp
+          full: /images/memories/swiss-dolomites/murren-3-1600.webp
+          alt: Distant snow-covered peaks above green pastures and chalets near Mürren
+          caption: Pastures beneath the peaks
+          captured_on: 2024-06-17
     - id: lauterbrunnen
       name: Lauterbrunnen
       latitude: 46.5983618
       longitude: 7.9080357
+      cover: /images/memories/swiss-dolomites/lauterbrunnen-1600.webp
+      cover_alt: Lauterbrunnen church and village below snow-covered mountains framed by cliffs
+      photos:
+        - thumb: /images/memories/swiss-dolomites/lauterbrunnen-1-480.webp
+          medium: /images/memories/swiss-dolomites/lauterbrunnen-1-960.webp
+          full: /images/memories/swiss-dolomites/lauterbrunnen-1-1600.webp
+          alt: Staubbach Falls dropping from a sheer cliff beside Lauterbrunnen village
+          caption: Staubbach Falls
+          captured_on: 2024-06-17
     - id: wengen
       name: Wengen
       latitude: 46.6050081
       longitude: 7.9208650
+      cover: /images/memories/swiss-dolomites/wengen-1600.webp
+      cover_alt: Wengen chalets and green meadows beneath snow-covered mountains
+      photos:
+        - thumb: /images/memories/swiss-dolomites/wengen-1-480.webp
+          medium: /images/memories/swiss-dolomites/wengen-1-960.webp
+          full: /images/memories/swiss-dolomites/wengen-1-1600.webp
+          alt: A sunlit snow-covered mountain rising above chalet rooftops in Wengen
+          caption: Mountain view from Wengen
+          captured_on: 2024-06-19
+        - thumb: /images/memories/swiss-dolomites/wengen-2-480.webp
+          medium: /images/memories/swiss-dolomites/wengen-2-960.webp
+          full: /images/memories/swiss-dolomites/wengen-2-1600.webp
+          alt: The moon above snow-covered mountains at blue hour in Wengen
+          caption: Moon over the mountains
+          captured_on: 2024-06-18
     - id: mannlichen
       name: Männlichen
       latitude: 46.6181397
       longitude: 7.9380395
+      cover: /images/memories/swiss-dolomites/mannlichen-1600.webp
+      cover_alt: Snow-covered peaks beyond the Männlichen mountain station and green slopes
+      photos:
+        - thumb: /images/memories/swiss-dolomites/mannlichen-1-480.webp
+          medium: /images/memories/swiss-dolomites/mannlichen-1-960.webp
+          full: /images/memories/swiss-dolomites/mannlichen-1-1600.webp
+          alt: A broad snow-covered mountain range beyond the green ridge at Männlichen
+          caption: Panorama from Männlichen
+          captured_on: 2024-06-18
+        - thumb: /images/memories/swiss-dolomites/mannlichen-2-480.webp
+          medium: /images/memories/swiss-dolomites/mannlichen-2-960.webp
+          full: /images/memories/swiss-dolomites/mannlichen-2-1600.webp
+          alt: Snow-covered peaks with a Swiss flagpole in the foreground at Männlichen
+          caption: Swiss flag and alpine peaks
+          captured_on: 2024-06-18
+        - thumb: /images/memories/swiss-dolomites/mannlichen-3-480.webp
+          medium: /images/memories/swiss-dolomites/mannlichen-3-960.webp
+          full: /images/memories/swiss-dolomites/mannlichen-3-1600.webp
+          alt: A snow-covered mountain framed by a window inside the Männlichen station
+          caption: Mountain framed by the station window
+          captured_on: 2024-06-18
     - id: grindelwald
       name: Grindelwald
       latitude: 46.6245321
       longitude: 8.0325427
+      cover: /images/memories/swiss-dolomites/grindelwald-1600.webp
+      cover_alt: Snow-covered peaks above Grindelwald with green alpine slopes and a small reservoir
+      photos:
+        - thumb: /images/memories/swiss-dolomites/grindelwald-1-480.webp
+          medium: /images/memories/swiss-dolomites/grindelwald-1-960.webp
+          full: /images/memories/swiss-dolomites/grindelwald-1-1600.webp
+          alt: Green meadows and chalets in Grindelwald below a snow-streaked mountain face
+          caption: Meadows and chalets in Grindelwald
+          captured_on: 2024-06-18
+        - thumb: /images/memories/swiss-dolomites/grindelwald-2-480.webp
+          medium: /images/memories/swiss-dolomites/grindelwald-2-960.webp
+          full: /images/memories/swiss-dolomites/grindelwald-2-1600.webp
+          alt: A hiker photographing snow-covered peaks from a mountain path above Grindelwald
+          caption: Mountain path above Grindelwald
+          captured_on: 2024-06-18
+        - thumb: /images/memories/swiss-dolomites/grindelwald-3-480.webp
+          medium: /images/memories/swiss-dolomites/grindelwald-3-960.webp
+          full: /images/memories/swiss-dolomites/grindelwald-3-1600.webp
+          alt: Snow-covered peaks and alpine paths above Grindelwald
+          caption: Snowy peaks above Grindelwald
+          captured_on: 2024-06-18
     - id: brixen
       name: Brixen / Bressanone
       latitude: 46.7100050
