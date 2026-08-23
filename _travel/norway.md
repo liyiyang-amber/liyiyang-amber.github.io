@@ -4,6 +4,8 @@ layout: single
 excerpt: "'But here, we just call it Tuesday.'"
 permalink: /memories/norway
 date: 2024-08-13
+github_updated_at: 2025-07-01T22:00:21+08:00
+about_first_log: true
 header:
   overlay_image: covers/Norway_cover.jpg
   overlay_filter: 0.25
@@ -93,4 +95,3 @@ At the airport, I bought deer sausage, a taste to smuggle home. As the plane asc
 
 ![](/images/memories/Norway_aboveclouds.jpg)
 {: .article-image}
-

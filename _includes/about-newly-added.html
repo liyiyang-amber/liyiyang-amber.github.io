@@ -1,0 +1,25 @@
+{% assign about_recent_items = site.travel | concat: site.presentations | concat: site.posters | concat: site.projects %}
+{% assign about_recent_items = about_recent_items | where_exp: "item", "item.github_updated_at != nil" | sort: "github_updated_at" | reverse %}
+
+<section class="about-newly-added" aria-labelledby="about-newly-added-heading">
+  <h2 class="about-newly-added__heading" id="about-newly-added-heading">
+    <span aria-hidden="true">●</span> Newly Added
+  </h2>
+  <ul class="about-newly-added__list">
+    {% for item in about_recent_items limit: 3 %}
+      {% if item.collection == "travel" %}
+        {% assign about_item_category = "Travel Log" %}
+      {% else %}
+        {% assign about_item_category = "Projects" %}
+      {% endif %}
+      <li class="about-newly-added__item">
+        <a href="{{ item.url | relative_url }}">
+          <span class="about-newly-added__title">{{ item.title }}</span>
+          <span class="about-newly-added__meta">
+            {{ about_item_category }} · Edited at <time datetime="{{ item.github_updated_at | date_to_xmlschema }}">{{ item.github_updated_at | date: "%B %-d, %Y" }}</time>
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

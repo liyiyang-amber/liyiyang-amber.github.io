@@ -4,6 +4,7 @@ layout: single
 excerpt: "'Summertime, and the livin’s easy…'"
 permalink: /memories/southitaly
 date: 2024-08-04
+github_updated_at: 2025-07-01T22:00:21+08:00
 header:
   overlay_image: covers/SI_cover.jpg
   overlay_filter: 0.25
@@ -81,5 +82,4 @@ Later, the Sorrento cove we'd missed days prior: teenagers cannonballing off roc
 Yes, the buses are late. Yes, the humidity glues your clothes to your skin. But the grandmothers will feed you cheese. A stranger toasts you with limoncello; the sea flickers like a mirage. The light will gild even the most stubborn cloud.  
 
 Maybe this is why people romanticize Italy.
-
 

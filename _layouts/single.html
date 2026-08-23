@@ -14,7 +14,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main"{% if page.about_features %} class="about-features-layout"{% endif %} role="main">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">

@@ -4,6 +4,7 @@ layout: single
 excerpt: "'Cuz baby we were born to live fast, die young, be bad, have fun.'"
 permalink: /memories/barcelona
 date: 2024-03-27
+github_updated_at: 2025-07-01T22:00:21+08:00
 header:
   overlay_image: covers/barcelona_cover.jpg
   overlay_filter: 0.25

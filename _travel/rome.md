@@ -4,6 +4,7 @@ layout: single
 excerpt: "'Veni, vidi, vici.'"
 permalink: /memories/rome
 date: 2025-05-30
+github_updated_at: 2025-07-01T22:00:21+08:00
 header:
   overlay_image: covers/Rome_cover.jpg
   overlay_filter: 0.25

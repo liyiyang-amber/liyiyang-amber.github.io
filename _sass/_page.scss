@@ -189,6 +189,7 @@
 body:has(.polaroid-frame--animated) {
   .masthead,
   .sidebar,
+  .about-newly-added,
   .page__title,
   .about-content--blur-on-intro {
     animation: aboutUnblur 2.5s ease forwards;
@@ -200,12 +201,97 @@ body:has(.polaroid-frame--animated) {
   body:has(.polaroid-frame--animated) {
     .masthead,
     .sidebar,
+    .about-newly-added,
     .page__title,
     .about-content--blur-on-intro {
       animation: none;
       filter: none;
       opacity: 1;
     }
+  }
+}
+
+/* About-page first-log feature
+   ========================================================================== */
+.about-first-log {
+  margin-top: 3rem;
+}
+
+.page__content .about-first-log__heading {
+  margin: 0 0 1.35rem;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid $border-color;
+  border-bottom: 0;
+  color: $nav-link;
+  font-family: $sans-serif;
+  font-size: $type-size-5;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  span {
+    margin-right: 0.45em;
+  }
+}
+
+.page__content a.about-first-log__card {
+  display: block;
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+  color: $text-color;
+  text-decoration: none;
+  border: 1px solid mix($nav-link, #fff, 24%);
+  border-radius: $border-radius * 2;
+  background: rgba($nav-link, 0.055);
+  box-shadow: 0 10px 30px rgba($heading-color, 0.045);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: none;
+    border-color: mix($nav-link, #fff, 42%);
+    box-shadow: 0 14px 34px rgba($heading-color, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-link;
+    outline-offset: 3px;
+  }
+}
+
+.about-first-log__meta,
+.about-first-log__title,
+.about-first-log__excerpt {
+  display: block;
+}
+
+.about-first-log__meta {
+  color: $nav-link;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about-first-log__title {
+  margin-top: 0.65rem;
+  color: $heading-color;
+  font-family: $header-font-family;
+  font-size: $type-size-3;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.about-first-log__excerpt {
+  margin-top: 0.85rem;
+  color: $gray;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page__content a.about-first-log__card {
+    transition: none;
   }
 }
 

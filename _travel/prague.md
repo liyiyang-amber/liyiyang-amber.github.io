@@ -4,6 +4,7 @@ layout: single
 excerpt: "'There are violets in your eyes, there are guns that blaze around you...'"
 permalink: /memories/prague
 date: 2024-08-01
+github_updated_at: 2025-07-23T22:25:15+08:00
 header:
   overlay_image: covers/Prague_cover.jpg
   overlay_filter: 0.25

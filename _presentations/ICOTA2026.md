@@ -5,6 +5,7 @@ collection: presentations
 permalink: /presentations/ICOTA2026/
 excerpt: "International Conference on Optimization: Techniques and Applications, Shanghai, China, 2026"
 date: 2026-04-11
+github_updated_at: 2026-04-20T13:47:09+08:00
 venue: "ICOTA 2026"
 location: "Shanghai, China"
 ---

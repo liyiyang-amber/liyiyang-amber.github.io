@@ -302,3 +302,114 @@
     }
   }
 }
+
+/* About-page author and recent-content stack
+   ========================================================================== */
+.about-sidebar-stack {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include breakpoint($large) {
+    @include span(2 of 12);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    margin-bottom: 1em;
+
+    > .sidebar {
+      float: none;
+      position: static;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    max-width: $sidebar-link-max-width;
+  }
+}
+
+.about-newly-added {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: $border-radius * 2;
+  background: rgba(#fff, 0.72);
+  box-shadow: 0 10px 30px rgba($heading-color, 0.07);
+  font-family: $sans-serif;
+}
+
+.about-newly-added__heading {
+  margin: 0 0 1.25rem;
+  color: $nav-link;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  span {
+    margin-right: 0.45em;
+    font-size: 0.72em;
+  }
+}
+
+.about-newly-added__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-newly-added__item {
+  margin: 0;
+
+  & + & {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.65rem 0.55rem;
+    color: $text-color;
+    text-decoration: none;
+    white-space: normal;
+    border-radius: $border-radius;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: $nav-hover;
+      background-color: $beige-color;
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $nav-link;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.about-newly-added__title,
+.about-newly-added__meta {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.about-newly-added__title {
+  font-size: $type-size-5;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.about-newly-added__meta {
+  margin-top: 0.25rem;
+  color: $gray;
+  font-size: $type-size-6;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-newly-added__item a {
+    transition: none;
+  }
+}

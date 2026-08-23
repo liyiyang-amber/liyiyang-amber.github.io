@@ -4,6 +4,7 @@ layout: single
 excerpt: "'With your golden grills, true love never dies.'"
 permalink: /memories/east_america
 date: 2026-07-23
+github_updated_at: 2026-08-16T17:11:55+08:00
 header:
   overlay_image: covers/NYC_cover.jpg
   overlay_filter: 0.25
@@ -87,7 +88,6 @@ And the park filled with old Chinese songs, as a few people started doing tai ch
 The sky did its thing — blue fading to peach, peach bleeding into lavender, the water of the harbour shimmering like crumpled tinfoil. Manhattan sat across the bay, tiny and sharp.
 
 Manhattan still feels like magic - second time here, still believing 'Every man gets his wish.' here.
-
 
 
 

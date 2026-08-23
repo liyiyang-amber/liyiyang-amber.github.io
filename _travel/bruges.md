@@ -4,6 +4,7 @@ layout: single
 excerpt: "'Was that not the way it ought to be? The beauty of Bruges lay in being dead.'"
 permalink: /memories/bruges
 date: 2025-06-06
+github_updated_at: 2025-07-25T22:24:12+08:00
 header:
   overlay_image: covers/Bruges_cover.jpg
   overlay_filter: 0.25
@@ -83,4 +84,3 @@ At sunset, we wandered into the longest blue hour I’ve ever known. By nine, th
 P.S. The boatmen no longer row by hand, and the Belfort costs more than five euros. Ken haunted me. A killer who wept at altarpieces, who hesitated. Maybe he hadn’t chosen the job. Maybe it chose him, the way Bruges chose us: gently, inevitably, leaving us with nothing but a sugar-dusted memory and the unanswerable why.
 
  
-

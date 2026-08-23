@@ -8,6 +8,7 @@ Life is old there, older than the trees,<br>
 Younger than the heartache freezing in the breeze.'"
 permalink: /memories/swiss-dolomites/
 date: 2024-06-15
+github_updated_at: 2026-08-23T11:54:56+08:00
 header:
   overlay_image: covers/Swissdo_cover.jpg
   overlay_filter: 0.25

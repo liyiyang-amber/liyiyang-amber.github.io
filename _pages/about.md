@@ -2,6 +2,7 @@
 permalink: /
 title: ""
 author_profile: true
+about_features: true
 redirect_from: 
   - /about/
   - /about.html
@@ -76,5 +77,23 @@ Now in the following, you'll find a whimsical bit more about me:
   And miles to go before I sleep.<br>
   And miles to go before I sleep...”
 </div>
+
+{% assign about_first_log = site.travel | where: "about_first_log", true | first %}
+{% if about_first_log %}
+<section class="about-first-log" aria-labelledby="about-first-log-heading">
+  <h2 class="about-first-log__heading" id="about-first-log-heading">
+    <span aria-hidden="true">&#10022;</span> The Very First Log
+  </h2>
+  <a class="about-first-log__card" href="{{ about_first_log.url | relative_url }}">
+    <span class="about-first-log__meta">
+      Travel Log · <time datetime="{{ about_first_log.date | date_to_xmlschema }}">{{ about_first_log.date | date: "%B %-d, %Y" }}</time>
+    </span>
+    <span class="about-first-log__title">{{ about_first_log.title }}</span>
+    {% if about_first_log.excerpt %}
+      <span class="about-first-log__excerpt">{{ about_first_log.excerpt | markdownify | strip_html | strip_newlines }}</span>
+    {% endif %}
+  </a>
+</section>
+{% endif %}
 
 </div>

@@ -4,6 +4,7 @@ layout: single
 excerpt: "'Fresh out of f***s forever.'"
 permalink: /memories/manhattan
 date: 2024-06-10
+github_updated_at: 2026-08-04T01:08:17-04:00
 header:
   overlay_image: covers/Manhattan_cover.jpg
   overlay_filter: 0.25
