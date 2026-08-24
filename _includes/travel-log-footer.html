@@ -1,0 +1,78 @@
+{% assign travel_items = site.travel | sort: "date" | reverse %}
+{% assign travel_count = travel_items | size %}
+{% assign current_travel_index = 0 %}
+
+{% for travel_item in travel_items %}
+  {% if travel_item.url == page.url %}
+    {% assign current_travel_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign recommendation_count = travel_count | minus: 1 %}
+{% if recommendation_count > 2 %}
+  {% assign recommendation_count = 2 %}
+{% endif %}
+
+<div class="travel-log-footer travel-log-footer--{{ page.layout | default: 'single' | slugify }}">
+  <div class="travel-log-footer__inner">
+    {% include leave-note.html variant="travel" id_prefix="travel-note" source_name="travel_log" %}
+
+    {% if recommendation_count > 0 %}
+      <section class="travel-read-next" aria-labelledby="travel-read-next-title">
+        <h2 id="travel-read-next-title" class="travel-read-next__title">Read Next</h2>
+
+        <div class="travel-read-next__cards">
+          {% for offset in (1..recommendation_count) %}
+            {% assign recommendation_index = current_travel_index | plus: offset %}
+            {% if recommendation_index >= travel_count %}
+              {% assign recommendation_index = recommendation_index | minus: travel_count %}
+            {% endif %}
+            {% assign recommendation = travel_items[recommendation_index] %}
+            {% assign card_image = recommendation.header.teaser | default: recommendation.header.overlay_image %}
+            {% assign card_title = recommendation.title | markdownify | strip_html | strip_newlines | remove: " Travel Log" %}
+            {% assign card_excerpt = recommendation.excerpt | replace: "<br>", " " | replace: "<br />", " " | markdownify | strip_html | strip_newlines %}
+
+            {% if card_image %}
+              {% assign card_image_first_character = card_image | slice: 0, 1 %}
+              {% if card_image contains "://" %}
+                {% assign card_image_url = card_image %}
+              {% elsif card_image_first_character == "/" %}
+                {% assign card_image_url = card_image | relative_url %}
+              {% else %}
+                {% assign card_image_url = card_image | prepend: "/images/" | relative_url %}
+              {% endif %}
+            {% endif %}
+
+            <a
+              class="travel-read-next-card{% unless card_image %} travel-read-next-card--text-only{% endunless %}"
+              href="{{ recommendation.url | relative_url }}"
+            >
+              {% if card_image %}
+                <img
+                  class="travel-read-next-card__image"
+                  src="{{ card_image_url }}"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                >
+              {% endif %}
+              <span class="travel-read-next-card__overlay" aria-hidden="true"></span>
+              <span class="travel-read-next-card__content">
+                <span class="travel-read-next-card__title">{{ card_title | escape }}</span>
+                {% if card_excerpt %}
+                  <span class="travel-read-next-card__excerpt">{{ card_excerpt | escape }}</span>
+                {% endif %}
+                {% if recommendation.date %}
+                  <time
+                    class="travel-read-next-card__date"
+                    datetime="{{ recommendation.date | date_to_xmlschema }}"
+                  >{{ recommendation.date | date: "%b %Y" }}</time>
+                {% endif %}
+              </span>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  </div>
+</div>

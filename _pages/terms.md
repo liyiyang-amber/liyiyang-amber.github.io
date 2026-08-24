@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-modified: 2016-06-06
+modified: 2026-08-23
 ---
 
 {% include base_path %}
@@ -11,7 +11,13 @@ modified: 2016-06-06
 
 The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+I do not publish personal information submitted through this site. Information is shared with service providers only when needed to operate a feature you choose to use, as described below.
+
+### Private Notes
+
+The private "Leave a note" form on travel logs and the About page is processed by [Formspree](https://formspree.io/). The form asks for your name and message, and lets you provide an email address if you would like a reply. It also includes the title and URL of the page where the note was submitted.
+
+Submissions are stored in the site owner's Formspree account and delivered privately by email. They are not displayed publicly on this website. Formspree may also process technical request information needed to operate and secure its service. For details, see [Formspree's Privacy Policy](https://formspree.io/legal/privacy-policy/).
 
 ### Log Files
 
@@ -28,7 +34,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ### Cookies and Web Beacons
 
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](http://disqus.com) the next time you leave a comment.
+This site does not currently provide a public on-site commenting system. Third-party services used by the site may set cookies or process technical request information according to their own privacy policies.
 
 Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
 

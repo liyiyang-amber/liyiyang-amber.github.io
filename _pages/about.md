@@ -3,6 +3,7 @@ permalink: /
 title: ""
 author_profile: true
 about_features: true
+leave_note: true
 redirect_from: 
   - /about/
   - /about.html

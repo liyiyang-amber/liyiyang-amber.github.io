@@ -71,7 +71,9 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
-      {% include post_pagination.html %}
+      {% unless page.collection == 'travel' %}
+        {% include post_pagination.html %}
+      {% endunless %}
     </div>
 
     {% if site.comments.provider and page.comments %}
@@ -93,3 +95,15 @@ layout: default
     </div>
   {% endif %}
 </div>
+
+{% if page.leave_note %}
+  <div class="about-leave-note">
+    <div class="about-leave-note__inner">
+      {% include leave-note.html variant="about" id_prefix="about-note" source_name="source_page" source_value="About" %}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.collection == 'travel' %}
+  {% include travel-log-footer.html %}
+{% endif %}

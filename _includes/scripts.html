@@ -5,4 +5,11 @@
   <script src="{{ '/assets/js/travel-journey.js' | relative_url }}"></script>
 {% endif %}
 
+{% if site.travel_notes.form_id %}
+  {% if page.collection == 'travel' or page.leave_note %}
+    <script src="{{ '/assets/vendor/formspree/formspree-ajax-1.1.5.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/travel-log-footer.js' | relative_url }}"></script>
+  {% endif %}
+{% endif %}
+
 {% include analytics.html %}

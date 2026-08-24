@@ -1,0 +1,96 @@
+{% assign note_id_prefix = include.id_prefix | default: "travel-note" %}
+{% assign note_source_name = include.source_name | default: "travel_log" %}
+{% assign note_source_value = include.source_value | default: page.title | markdownify | strip_html | strip_newlines %}
+
+<section class="travel-note{% if include.variant %} travel-note--{{ include.variant | slugify }}{% endif %}" aria-labelledby="{{ note_id_prefix }}-title">
+  <header class="travel-note__header">
+    <h2 id="{{ note_id_prefix }}-title">Leave a note</h2>
+    <p>Drop me a note &mdash; about a place, a memory, or just to say hello.</p>
+  </header>
+
+  {% if site.travel_notes.form_id %}
+    <form
+      id="{{ note_id_prefix }}-form"
+      class="travel-note__form"
+      action="https://formspree.io/f/{{ site.travel_notes.form_id | escape }}"
+      method="post"
+      accept-charset="UTF-8"
+      data-leave-note-form
+      data-formspree-id="{{ site.travel_notes.form_id | escape }}"
+    >
+      <div class="travel-note__status travel-note__status--success" data-fs-success role="status" aria-live="polite">
+        Thank you &mdash; your note is on its way.
+      </div>
+      <div class="travel-note__status travel-note__status--error" data-fs-error="" role="alert">
+        I couldn&rsquo;t send that note. Your message is still here, so please try again.
+      </div>
+
+      <div class="travel-note__fields">
+        <div class="travel-note__field">
+          <label for="{{ note_id_prefix }}-name">Name</label>
+          <input
+            id="{{ note_id_prefix }}-name"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            autocomplete="name"
+            maxlength="120"
+            required
+            data-fs-field
+            aria-describedby="{{ note_id_prefix }}-name-error"
+          >
+          <span id="{{ note_id_prefix }}-name-error" class="travel-note__field-error" data-fs-error="name"></span>
+        </div>
+
+        <div class="travel-note__field">
+          <label for="{{ note_id_prefix }}-email">Email <span>(optional)</span></label>
+          <input
+            id="{{ note_id_prefix }}-email"
+            type="email"
+            name="email"
+            placeholder="you@somewhere.com"
+            autocomplete="email"
+            maxlength="254"
+            data-fs-field
+            aria-describedby="{{ note_id_prefix }}-email-error {{ note_id_prefix }}-email-help"
+          >
+          <span id="{{ note_id_prefix }}-email-error" class="travel-note__field-error" data-fs-error="email"></span>
+          <span id="{{ note_id_prefix }}-email-help" class="travel-note__field-help">Used only if you would like a reply.</span>
+        </div>
+
+        <div class="travel-note__field travel-note__field--message">
+          <label for="{{ note_id_prefix }}-message">Message</label>
+          <textarea
+            id="{{ note_id_prefix }}-message"
+            name="message"
+            rows="5"
+            placeholder="Something you saw, somewhere you&rsquo;ve been, or just hello."
+            maxlength="5000"
+            required
+            data-fs-field
+            aria-describedby="{{ note_id_prefix }}-message-error"
+          ></textarea>
+          <span id="{{ note_id_prefix }}-message-error" class="travel-note__field-error" data-fs-error="message"></span>
+        </div>
+      </div>
+
+      <div class="travel-note__trap" aria-hidden="true">
+        <label for="{{ note_id_prefix }}-company">Leave this field empty</label>
+        <input id="{{ note_id_prefix }}-company" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <input type="hidden" name="{{ note_source_name | escape }}" value="{{ note_source_value | escape }}">
+      <input type="hidden" name="page_url" value="{{ page.url | absolute_url | escape }}">
+
+      <button class="travel-note__submit" type="submit" data-fs-submit-btn>Send</button>
+      <p class="travel-note__privacy">
+        Notes are private. Submission is processed by Formspree; see the
+        <a href="{{ '/terms/' | relative_url }}">privacy policy</a>.
+      </p>
+    </form>
+  {% else %}
+    <p class="travel-note__unavailable" role="status">
+      Notes are temporarily unavailable while the private delivery form is being connected.
+    </p>
+  {% endif %}
+</section>
