@@ -604,12 +604,100 @@ body.leave-note-page .page__footer {
 
 @media (max-width: 640px) {
   .travel-log-footer__inner {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .about-leave-note {
+    margin-top: 2rem;
   }
 
   .about-leave-note__inner {
-    padding: 3rem 1.25rem 4rem;
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+
+  .travel-note__header h2 {
+    font-size: 1.55rem;
+  }
+
+  .travel-note__header p {
+    margin-top: 0.45rem;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .travel-note__form {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 0.75rem;
+    margin-top: 0.8rem;
+  }
+
+  .travel-note__status,
+  .travel-note__fields {
+    grid-column: 1 / -1;
+  }
+
+  .travel-note__fields {
+    row-gap: 0.75rem;
+  }
+
+  .travel-note__field label {
+    font-size: 0.62rem;
+  }
+
+  .travel-note__field label span {
+    font-size: 0.56rem;
+  }
+
+  .travel-note__field input,
+  .travel-note__field textarea {
+    margin-top: 0.2rem;
+    padding: 0.35rem 0 0.45rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .travel-note__field textarea {
+    height: 3.5rem;
+    min-height: 3.5rem;
+  }
+
+  .travel-note__field-error,
+  .travel-note__field-help {
+    margin-top: 0.2rem;
+    font-size: 0.64rem;
+    line-height: 1.35;
+  }
+
+  .travel-note__status {
+    margin-bottom: 0.75rem;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .travel-note__submit {
+    grid-column: 1;
+    align-self: end;
+    min-width: 6.25rem;
+    min-height: 2.75rem;
+    margin-top: 0.75rem;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  .travel-note__privacy {
+    grid-column: 2;
+    align-self: end;
+    margin: 0.75rem 0 0;
+    font-size: 0.64rem;
+    line-height: 1.4;
+  }
+
+  .travel-read-next {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
   }
 
   .travel-read-next__title {
