@@ -341,15 +341,25 @@
 }
 
 .about-newly-added__heading {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0 0 1.25rem;
-  color: $nav-link;
+  padding: 0.65em 0.75em;
+  color: $bg-cream;
+  background: $nav-link;
+  border-radius: 999px;
   font-family: $sans-serif;
   font-size: $type-size-6;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
 
   span {
+    flex: 0 0 auto;
     margin-right: 0.45em;
+    color: #aaccee;
     font-size: 0.72em;
   }
 }
