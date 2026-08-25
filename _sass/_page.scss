@@ -211,6 +211,60 @@ body:has(.polaroid-frame--animated) {
   }
 }
 
+/* About-page projects call to action
+   ========================================================================== */
+.page__content .about-projects-cta {
+  margin: -0.15rem 0 1.75rem;
+}
+
+.page__content a.about-projects-cta__link {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.62em 1em;
+  color: $nav-link;
+  font-family: $global-font-family;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid mix($nav-link, #fff, 35%);
+  border-radius: 999px;
+  background: rgba($nav-link, 0.055);
+  transition: color 0.2s ease, border-color 0.2s ease,
+              background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: $nav-hover;
+    text-decoration: none;
+    border-color: mix($nav-link, #fff, 55%);
+    background: rgba($nav-link, 0.1);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-link;
+    outline-offset: 3px;
+  }
+}
+
+.about-projects-cta__icon {
+  flex: 0 0 auto;
+  font-size: 0.9em;
+}
+
+.about-projects-cta__arrow {
+  flex: 0 0 auto;
+  margin-left: 0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page__content a.about-projects-cta__link {
+    transition: none;
+  }
+}
+
 /* About-page first-log feature
    ========================================================================== */
 .about-first-log {

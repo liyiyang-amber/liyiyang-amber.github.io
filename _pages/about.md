@@ -32,7 +32,15 @@ redirect_from:
 
 Hi, my name is Li Yiyang (Amber), a second-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for stochastic multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
 
-**Oh right—before I forget, my core identity in the following years: PhD student!!!!!!!**
+<p class="about-projects-cta">
+  <a class="about-projects-cta__link" href="{{ '/projects/' | relative_url }}">
+    <span class="about-projects-cta__icon" aria-hidden="true">&#128300;</span>
+    <span>See my PhD projects</span>
+    <span class="about-projects-cta__arrow" aria-hidden="true">&rarr;</span>
+  </a>
+</p>
+
+
 
 <div class="article-card">
 I once read a sentence in a book for PhD students that stuck with me:<br>
