@@ -21,6 +21,134 @@
     });
   }
 
+  function attachTrackpadPinchZoom(map, mapElement) {
+    var zoomStep = 0.25;
+    var wheelPixelsPerZoomLevel = 60;
+    var pendingWheelZoom = 0;
+    var wheelFrame = null;
+    var wheelAnchor = null;
+    var gestureActive = false;
+    var gestureStartZoom = 0;
+    var gestureAnchor = null;
+    var cleanedUp = false;
+    var wheelListenerOptions = { passive: false };
+    var gestureListenerOptions = { passive: false };
+
+    function clampZoom(zoom) {
+      var minZoom = map.getMinZoom();
+      var maxZoom = map.getMaxZoom();
+      if (Number.isFinite(minZoom)) zoom = Math.max(minZoom, zoom);
+      if (Number.isFinite(maxZoom)) zoom = Math.min(maxZoom, zoom);
+      return zoom;
+    }
+
+    function snapZoom(zoom) {
+      return Math.round(zoom / zoomStep) * zoomStep;
+    }
+
+    function pointFromEvent(event) {
+      var rect = mapElement.getBoundingClientRect();
+      if (Number.isFinite(event.clientX) && Number.isFinite(event.clientY)) {
+        var x = event.clientX - rect.left;
+        var y = event.clientY - rect.top;
+        if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+          return window.L.point(x, y);
+        }
+      }
+      return window.L.point(rect.width / 2, rect.height / 2);
+    }
+
+    function normalizedWheelDelta(event) {
+      var delta = event.deltaY;
+      if (event.deltaMode === 1) delta *= 16;
+      else if (event.deltaMode === 2) delta *= mapElement.clientHeight || window.innerHeight;
+      return Math.max(-240, Math.min(240, delta));
+    }
+
+    function applyWheelZoom() {
+      wheelFrame = null;
+      if (!map || !wheelAnchor || Math.abs(pendingWheelZoom) < zoomStep / 2) return;
+
+      var currentZoom = map.getZoom();
+      var targetZoom = snapZoom(clampZoom(currentZoom + pendingWheelZoom));
+      var appliedZoom = targetZoom - currentZoom;
+      if (appliedZoom === 0) {
+        pendingWheelZoom = 0;
+        return;
+      }
+
+      pendingWheelZoom -= appliedZoom;
+      map.setZoomAround(wheelAnchor, targetZoom, { animate: false });
+    }
+
+    function onWheel(event) {
+      if (!event.ctrlKey) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (gestureActive) return;
+
+      wheelAnchor = pointFromEvent(event);
+      pendingWheelZoom += -normalizedWheelDelta(event) / wheelPixelsPerZoomLevel;
+      if (wheelFrame === null) wheelFrame = window.requestAnimationFrame(applyWheelZoom);
+    }
+
+    function onGestureStart(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      gestureActive = true;
+      gestureStartZoom = map.getZoom();
+      gestureAnchor = pointFromEvent(event);
+      pendingWheelZoom = 0;
+      if (wheelFrame !== null) {
+        window.cancelAnimationFrame(wheelFrame);
+        wheelFrame = null;
+      }
+    }
+
+    function onGestureChange(event) {
+      if (!gestureActive) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (!Number.isFinite(event.scale) || event.scale <= 0) return;
+
+      gestureAnchor = pointFromEvent(event);
+      var targetZoom = snapZoom(clampZoom(map.getScaleZoom(event.scale, gestureStartZoom)));
+      map.setZoomAround(gestureAnchor, targetZoom, { animate: false });
+    }
+
+    function onGestureEnd(event) {
+      if (!gestureActive) return;
+      event.preventDefault();
+      event.stopPropagation();
+      gestureActive = false;
+      gestureAnchor = null;
+    }
+
+    function cleanup() {
+      if (cleanedUp) return;
+      cleanedUp = true;
+      if (wheelFrame !== null) window.cancelAnimationFrame(wheelFrame);
+      mapElement.removeEventListener("wheel", onWheel, wheelListenerOptions);
+      mapElement.removeEventListener("gesturestart", onGestureStart, gestureListenerOptions);
+      mapElement.removeEventListener("gesturechange", onGestureChange, gestureListenerOptions);
+      mapElement.removeEventListener("gestureend", onGestureEnd, gestureListenerOptions);
+      window.removeEventListener("pagehide", cleanup);
+      map.off("unload", cleanup);
+    }
+
+    mapElement.addEventListener("wheel", onWheel, wheelListenerOptions);
+    if (
+      typeof window.GestureEvent !== "undefined" &&
+      (!window.navigator || !window.navigator.maxTouchPoints)
+    ) {
+      mapElement.addEventListener("gesturestart", onGestureStart, gestureListenerOptions);
+      mapElement.addEventListener("gesturechange", onGestureChange, gestureListenerOptions);
+      mapElement.addEventListener("gestureend", onGestureEnd, gestureListenerOptions);
+    }
+    window.addEventListener("pagehide", cleanup);
+    map.on("unload", cleanup);
+  }
+
   ready(function () {
     var root = document.querySelector("[data-travel-journey]");
     if (!root) return;
@@ -441,12 +569,15 @@
 
     map = window.L.map(mapElement, {
       zoomControl: true,
+      zoomSnap: 0.25,
+      zoomDelta: 1,
       scrollWheelZoom: false,
       dragging: true,
       touchZoom: true,
       doubleClickZoom: true,
       keyboard: true,
     });
+    attachTrackpadPinchZoom(map, mapElement);
 
     var tileErrors = 0;
     var tileLayer = window.L.tileLayer(
