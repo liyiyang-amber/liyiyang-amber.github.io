@@ -15,7 +15,10 @@ redirect_from:
   <img src="{{ '/images/polaroid_1.jpg' | relative_url }}" alt="Amber polaroid portrait">
     </div>
     <div class="caption">
-      It’s beautiful how this deep normality settles down over me. I’m not bored or unhappy, I’m still so strange and wild.
+      It's beautiful,<br>
+      how this deep normality settles down over me.<br>
+      I'm not bored or unhappy,<br>
+      I'm still so strange and wild.
     </div>
   </div>
 </div>

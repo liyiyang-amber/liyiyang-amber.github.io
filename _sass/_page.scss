@@ -116,7 +116,6 @@
     width: 100%;
     background-color: $polaroid-frame;
     padding: 1rem;
-    padding-bottom: 4rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     transform: rotate(-1deg);
 
@@ -136,14 +135,12 @@
     }
 
     .caption {
-      position: absolute;
-      bottom: 0.75rem;
-      right: 1rem;
-      max-width: 200px;
+      width: 100%;
+      margin: 0.5rem 0 0;
       text-align: right;
       color: $heading-color;
       opacity: 0.8;
-      font-family: "Lora", serif;
+      font-family: "Lora", $caption-font-family;
       font-style: italic;
       font-size: 0.7rem;
       line-height: 1.3;
