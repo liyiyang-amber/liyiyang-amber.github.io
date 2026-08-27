@@ -348,6 +348,33 @@ $journey-line: rgba(28, 25, 21, 0.12);
   letter-spacing: 0.01em;
 }
 
+.travel-map-tooltip__action {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.travel-map-tooltip__action:hover,
+.travel-map-tooltip__action:focus-visible {
+  text-decoration: underline;
+}
+
+.travel-map-tooltip__action:focus-visible {
+  outline: 2px solid rgba(61, 90, 76, 0.55);
+  outline-offset: 3px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .travel-map-tooltip {
+    pointer-events: auto;
+  }
+
+  .travel-map-tooltip__action {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+}
+
 .travel-map-status {
   position: absolute;
   z-index: 900;

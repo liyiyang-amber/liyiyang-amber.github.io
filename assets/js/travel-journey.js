@@ -648,7 +648,7 @@
       var visitSummary = document.createElement("span");
       var visits = document.createElement("p");
       var excerpt = document.createElement("p");
-      var action = document.createElement("p");
+      var action = document.createElement("a");
       body.className = "travel-map-tooltip__body";
       heading.className = "travel-map-tooltip__heading";
       name.textContent = place.name;
@@ -659,7 +659,18 @@
       excerpt.className = "travel-map-tooltip__excerpt";
       excerpt.textContent = place.excerpt;
       action.className = "travel-map-tooltip__action";
+      action.href = "#journey-place-" + place.id;
       action.textContent = "↓ Click to scroll to this place";
+      action.addEventListener("click", function (event) {
+        event.preventDefault();
+        scrollToPlace(place.id);
+      });
+      action.addEventListener("blur", function () {
+        window.setTimeout(function () {
+          if (tooltip && tooltip.contains(document.activeElement)) return;
+          hidePlaceTooltip(place.id, true);
+        }, 0);
+      });
       heading.appendChild(name);
       heading.appendChild(visitSummary);
       body.appendChild(heading);
@@ -773,7 +784,10 @@
         element.setAttribute("aria-label", "Preview and scroll to " + place.name);
         element.addEventListener("focus", activate);
         element.addEventListener("blur", function () {
-          hidePlaceTooltip(place.id, true);
+          window.setTimeout(function () {
+            if (tooltip && tooltip.contains(document.activeElement)) return;
+            hidePlaceTooltip(place.id, true);
+          }, 0);
         });
         element.addEventListener("keydown", function (event) {
           if (event.key === "Enter" || event.key === " ") {
@@ -787,7 +801,7 @@
 
     document.addEventListener("pointerdown", function (event) {
       if (!touchPreviewPlaceId) return;
-      if (event.target.closest && event.target.closest(".travel-marker-icon")) return;
+      if (event.target.closest && event.target.closest(".travel-marker-icon, [data-map-tooltip]")) return;
       clearPlacePreview();
     });
 
