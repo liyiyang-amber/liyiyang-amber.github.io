@@ -3,62 +3,80 @@ layout: archive
 title: "Projects"
 permalink: /projects/
 author_profile: true
+hide_title: true
 ---
-{% include base_path %}
+<div class="projects-index">
+  <section class="projects-section" aria-labelledby="projects-publications-heading">
+    <h2 id="projects-publications-heading" class="projects-section__heading">Publications</h2>
 
-<!-- <h2>Publications</h2><hr />
-{% if site.author.googlescholar %}
-  <p class="wordwrap">Also available on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
-{% endif %}
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+    <div class="projects-section__items">
+      {% assign publication_items = site.publications | sort: "date" | reverse %}
+      {% for post in publication_items %}
+        <article class="projects-entry projects-entry--publication" aria-labelledby="publication-title-{{ forloop.index }}">
+          <div class="projects-entry__badge">ARXIV</div>
 
-<h2>Talks and Presentations</h2><hr />
-{% if site.talkmap_link == true %}
-  <p><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-{% endif %}
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %} -->
+          <div class="projects-entry__body">
+            <h3 id="publication-title-{{ forloop.index }}" class="projects-entry__title">
+              <a href="{{ post.paperurl }}">{{ post.title }}</a>
+            </h3>
 
-<h2>Presentations</h2><hr />
-{% for post in site.presentations reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+            <p class="projects-entry__authors">{{ post.authors | join: ", " }}</p>
 
-<h2>Posters</h2><hr />
-{% for post in site.posters reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+            <div class="projects-entry__meta">
+              <span>
+                <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
+              </span>
+              <span class="projects-entry__separator" aria-hidden="true">&middot;</span>
+              <span>{{ post.publication_type }}</span>
+              <span class="projects-entry__separator" aria-hidden="true">&middot;</span>
+              <a href="{{ post.paperurl }}">
+                <i class="fa fa-link" aria-hidden="true"></i>
+                <span class="sr-only">View </span>arXiv:{{ post.arxiv_id }}
+              </a>
+            </div>
 
+            {% if post.tags %}
+              <ul class="projects-entry__tags" aria-label="Topics">
+                {% for tag in post.tags %}
+                  <li>{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
 
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+  <section class="projects-section" aria-labelledby="projects-presentations-heading">
+    <h2 id="projects-presentations-heading" class="projects-section__heading">Presentations</h2>
 
-{% include base_path %} -->
+    <div class="projects-section__items">
+      {% assign presentation_items = site.presentations | concat: site.posters | sort: "date" | reverse %}
+      {% for post in presentation_items %}
+        <article class="projects-entry projects-entry--presentation" aria-labelledby="presentation-title-{{ forloop.index }}">
+          <div class="projects-entry__badge">
+            {% if post.collection == "presentations" %}TALK{% else %}POSTER{% endif %}
+          </div>
 
-<!-- New style rendering if project categories are defined -->
-<!-- {% if site.project_category %}
-  {% for category in site.project_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.projects reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.projects reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+          <div class="projects-entry__body">
+            <h3 id="presentation-title-{{ forloop.index }}" class="projects-entry__title">
+              <a href="{{ post.url | relative_url }}">
+                <span class="projects-entry__event">{{ post.venue }} &ndash;</span>
+                {{ post.display_title | default: post.title }}
+              </a>
+            </h3>
 
+            <p class="projects-entry__date">
+              <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            </p>
 
- -->
+            <p class="projects-entry__venue">{{ post.event_name }}, {{ post.location }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
