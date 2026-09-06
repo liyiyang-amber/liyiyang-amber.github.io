@@ -33,7 +33,7 @@ redirect_from:
 
 ## Hi there
 
-Hi, my name is Li Yiyang (Amber), a second-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for stochastic multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
+Hi, my name is Li Yiyang (Amber), a third-year PhD student in Applied Mathematics at The Hong Kong Polytechnic University. My research is centred on developing advanced solutions for stochastic multi-objective optimisation problems, aiming to bridge the gap between theoretical mathematics and practical applications in ML and other fields. I hold a BSc in Mathematics and an MSc in Statistics (Data Science) from Imperial College London.
 
 <p class="about-projects-cta">
   <a class="about-projects-cta__link" href="{{ '/projects/' | relative_url }}">
