@@ -31,6 +31,10 @@
 {% endif %}
 
 
+{% if page.invisible_cities %}
+<link rel="stylesheet" href="{{ '/assets/css/invisible-cities.css' | relative_url }}">
+{% endif %}
+
 <!-- Support for MatJax -->
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

@@ -1,0 +1,948 @@
+{
+  "quote": "Every time I describe a city I am saying something about Venice.",
+  "default_filter": "brightness(0.18) contrast(1.2) grayscale(0.35)",
+  "artwork": {
+    "path": "/images/invisible-cities/venice-1500.jpg",
+    "alt": "Venice, 1500 — Jacopo de’ Barbari",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacopo_de%27_Barbari_-_View_of_Venice_-_Google_Art_Project.jpg"
+  },
+  "categories": [
+    {
+      "id": "theme-1",
+      "name": "Cities & Memory",
+      "color": "#c8a84b",
+      "filter": "sepia(0.95) brightness(0.55) contrast(1.15)",
+      "excerpt": "The city does not tell its past, but contains it like the lines of a hand, written in the corners of the streets, the gratings of the windows, the banisters of the steps. Venice is the supreme city of memory: every stone is a palimpsest, every campo a theatre of something that happened centuries before you arrived. Calvino's cities of memory are cities that have become indistinguishable from their histories — not ruins, but accumulations.",
+      "illustration": "<path d=\"M8,72 L8,40 Q8,10 50,10 Q92,10 92,40 L92,72\" />\n      <path d=\"M20,72 L20,44 Q20,22 50,22 Q80,22 80,44 L80,72\" />\n      <path d=\"M32,72 L32,48 Q32,34 50,34 Q68,34 68,48 L68,72\" />\n      <line x1=\"3\" y1=\"72\" x2=\"97\" y2=\"72\" />",
+      "cities": [
+        {
+          "id": "diomira",
+          "name": "Diomira",
+          "index": 1,
+          "description": "But the special quality of this city for the man who arrives there on a September evening, when the days are growing shorter and the multicolored lamps are lighted all at once at the doors of the food stalls and from a terrace a woman's voice cries ooh!, is that he feels envy toward those who now believe they have once before lived an evening identical to this and who think they were happy, that time.",
+          "etymology": "From the Italian dimora — dwelling, abode, the place where one stays.",
+          "venice": "Venice chose to dwell in the impossible: not on solid ground, but on wooden piles driven into lagoon mud. Diomira's silver domes and evening lamps are the memory of arriving somewhere you already know.",
+          "source": {
+            "city": "Diomira",
+            "pages": [
+              7,
+              7
+            ]
+          }
+        },
+        {
+          "id": "isidora",
+          "name": "Isidora",
+          "index": 2,
+          "description": "Isidora, therefore, is the city of his dreams: with one difference. The dreamed-of city contained him as a young man; he arrives at Isidora in his old age. In the square there is the wall where the old men sit and watch the young go by; he is seated in a row with them. Desires are already memories.",
+          "etymology": "From Greek Isis + doron: gift of Isis, the Egyptian goddess of memory, magic, and rebirth.",
+          "venice": "Venice received gifts from every direction — Byzantine gold, Arabic glass, Flemish cloth. Isidora is the city you desired as a young man and arrive in as an old one: the gap between Venice dreamed and Venice visited.",
+          "source": {
+            "city": "Isidora",
+            "pages": [
+              8,
+              8
+            ]
+          }
+        },
+        {
+          "id": "zaira",
+          "name": "Zaira",
+          "index": 3,
+          "description": "The city, however, does not tell its past, but contains it like the lines of a hand, written in the corners of the streets, the gratings of the windows, the banisters of the steps, the antennae of the lightning rods, the poles of the flags, every segment marked in turn with scratches, indentations, scrolls.",
+          "etymology": "From Arabic zahira — blooming, shining, brilliant. A name of light across the Islamic world.",
+          "venice": "Venice glows differently every hour. Zaira holds its past not in monuments but in the invisible geometry of relationships between things — the height of a column, the arc of a bridge — exactly as Venice holds centuries in the angle of a calle.",
+          "source": {
+            "city": "Zaira",
+            "pages": [
+              11,
+              11
+            ]
+          }
+        },
+        {
+          "id": "zora",
+          "name": "Zora",
+          "index": 4,
+          "description": "This city which cannot be expunged from the mind is like an armature, a honeycomb in whose cells each of us can place the things he wants to remember: names of famous men, virtues, numbers, vegetable and mineral classifications, dates of battles, constellations, parts of speech. Between each idea and each point of the itinerary an affinity or a contrast can be established, serving as an immediate aid to memory.",
+          "etymology": "From Slavic zora — dawn, aurora. The first light that fixes the day.",
+          "venice": "Venice at dawn, seen from the Riva degli Schiavoni, becomes Zora: fixed in the eye like a grid that cannot be erased. Every traveller carries their Venice away with them as an internal map they never stop consulting.",
+          "source": {
+            "city": "Zora",
+            "pages": [
+              15,
+              16
+            ]
+          }
+        },
+        {
+          "id": "maurilia",
+          "name": "Maurilia",
+          "index": 5,
+          "description": "In Maurilia, the traveler is invited to visit the city and, at the same time, to examine some old post cards that show it as it used to be: the same identical square with a hen in the place of the bus station, a bandstand in the place of the overpass, two young ladies with white parasols in the place of the munitions factory.",
+          "etymology": "From Latin Maurus — Moorish, dark-complexioned. Venice traded deeply with the Moorish world; its name carries that exchange.",
+          "venice": "Maurilia is the city of old postcards — and Venice is the most postcard-ed city on earth. Every image of Venice shows a Venice that is already a little past: the acqua alta that wasn't there, the scaffolding just removed, the light that will not return.",
+          "source": {
+            "city": "Maurilia",
+            "pages": [
+              30,
+              30
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-2",
+      "name": "Cities & Desire",
+      "color": "#c86b6b",
+      "filter": "brightness(0.68) saturate(2.2) hue-rotate(340deg) contrast(1.1)",
+      "excerpt": "The city of desire exists before the traveller arrives in it. He has already dreamed it, furnished it, populated it. Then he arrives and finds it different — or finds it exactly as he imagined, which is worse. Venice is the city of desire above all others: it has been dreamed by so many people for so long that the dream has become load-bearing architecture. It is impossible to arrive in Venice for the first time.",
+      "illustration": "<polygon points=\"40,34 50,14 60,34\" />\n      <rect x=\"43\" y=\"34\" width=\"14\" height=\"34\" />\n      <line x1=\"3\" y1=\"68\" x2=\"97\" y2=\"68\" />\n      <line x1=\"50\" y1=\"24\" x2=\"18\" y2=\"6\" stroke-width=\"1\" />\n      <line x1=\"50\" y1=\"24\" x2=\"82\" y2=\"6\" stroke-width=\"1\" />\n      <line x1=\"50\" y1=\"24\" x2=\"6\" y2=\"32\" stroke-width=\"1\" />\n      <line x1=\"50\" y1=\"24\" x2=\"94\" y2=\"32\" stroke-width=\"1\" />\n      <line x1=\"50\" y1=\"24\" x2=\"8\" y2=\"50\" stroke-width=\"0.8\" />\n      <line x1=\"50\" y1=\"24\" x2=\"92\" y2=\"50\" stroke-width=\"0.8\" />",
+      "cities": [
+        {
+          "id": "dorotea",
+          "name": "Dorotea",
+          "index": 1,
+          "description": "There are two ways of describing the city of Dorothea: you can say that four aluminum towers rise from its walls flanking seven gates with spring-operated drawbridges that span the moat whose water feeds four green canals which cross the city, dividing it into nine quarters, each with three hundred houses and seven hundred chimneys.",
+          "etymology": "From Greek doron + theos — gift of God. A name of arrival, of something given rather than earned.",
+          "venice": "Venice was not planned but fled-to: a city born from disaster, from the Huns driving people into the lagoon. Dorotea, with its seven gates and gardenia-scented air, is a city that arrived as a gift no one ordered.",
+          "source": {
+            "city": "Dorothea",
+            "pages": [
+              9,
+              9
+            ]
+          }
+        },
+        {
+          "id": "anastasia",
+          "name": "Anastasia",
+          "index": 2,
+          "description": "The city appears to you as a whole where no desire is lost and of which you are a part, and since it enjoys everything you do not enjoy, you can do nothing but inhabit this desire and be content. Such is the power, sometimes called malignant, sometimes benign, that Anastasia, the treacherous city, possesses; if for eight hours a day you work as a cutter of agate, onyx, chrysoprase, your labor which gives form to desire takes from desire its form, and you believe you are enjoying Anastasia wholly when you are only its slave.",
+          "etymology": "From Greek anastasis — resurrection, rising up again. The city that rises after every fall.",
+          "venice": "Venice has died many times — by plague, by conquest, by flood, by slow depopulation — and resurrected each time. Anastasia is the city that enslaves you through desire: Venice is the city that enslaves you through beauty, which is the same thing.",
+          "source": {
+            "city": "Anastasia",
+            "pages": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "id": "despina",
+          "name": "Despina",
+          "index": 3,
+          "description": "Each city receives its form from the desert it opposes; and so the camel driver and the sailor see Despina, a border city between two deserts.",
+          "etymology": "From Greek despina — mistress, lady, she who commands. The feminine of despot.",
+          "venice": "Seen from the sea, Venice looks like a ship. Seen from land (from Mestre, from the causeway), it looks like a mirage. Despina is the border city between two deserts; Venice is the border city between two worlds — East and West, water and land, past and present.",
+          "source": {
+            "city": "Despina",
+            "pages": [
+              18,
+              18
+            ]
+          }
+        },
+        {
+          "id": "fedora",
+          "name": "Fedora",
+          "index": 4,
+          "description": "In the center of Fedora, that gray stone metropolis, stands a metal building with a crystal globe in every room. Looking into each globe, you see a blue city, the model of a different Fedora. These are the forms the city could have taken if, for one reason or another, it had not become what we see today. In every age someone, looking at Fedora as it was, imagined a way of making it the ideal city, but while he constructed his miniature model, Fedora was already no longer the same as before, and what had been until yesterday a possible future became only a toy in a glass globe.",
+          "etymology": "Russian form of Theodora — gift of God. In Italian, fedora also means faith.",
+          "venice": "Venice could have been many things — a mainland power, a land empire, a Byzantine province. Instead it became itself. Fedora's crystal globes each contain a Venice-that-might-have-been. The Venetians chose the lagoon and that choice made everything.",
+          "source": {
+            "city": "Fedora",
+            "pages": [
+              32,
+              32
+            ]
+          }
+        },
+        {
+          "id": "zobeide",
+          "name": "Zobeide",
+          "index": 5,
+          "description": "They tell this tale of its foundation: men of various nations had an identical dream. They saw a woman running at night through an unknown city; she was seen from behind, with long hair, and she was naked. They dreamed of pursuing her. As they twisted and turned, each of them lost her. After the dream they set out in search of that city; they never found it, but they found one another; they decided to build a city like the one in the dream.",
+          "etymology": "From Arabic Zubaydah — a historical Abbasid queen and patron of the arts, name meaning 'cream of the butter', richness itself.",
+          "venice": "Venice was built by people fleeing the same catastrophe, each arriving from a different direction, each following a different route to the same refuge. Zobeide is built from a shared dream: Venice was built from a shared fear, which is the same architecture.",
+          "source": {
+            "city": "Zobeide",
+            "pages": [
+              45,
+              45
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-3",
+      "name": "Cities & Signs",
+      "color": "#7bc8c8",
+      "filter": "brightness(0.45) contrast(2.6) grayscale(0.3)",
+      "excerpt": "In the city of signs, nothing exists simply as itself — every object points elsewhere. Venice is perhaps the most legible city in the world: the winged lion, the gondola's prow-iron, the Byzantine tessera, the Gothic lancet window. But the city's signs form a language no one fully reads. You know you are being addressed; you cannot be certain what is being said.",
+      "illustration": "<path d=\"M8,40 Q28,14 50,14 Q72,14 92,40 Q72,66 50,66 Q28,66 8,40Z\" />\n      <circle cx=\"50\" cy=\"40\" r=\"13\" />\n      <circle cx=\"50\" cy=\"40\" r=\"4\" />\n      <line x1=\"50\" y1=\"5\" x2=\"50\" y2=\"12\" />\n      <line x1=\"50\" y1=\"68\" x2=\"50\" y2=\"75\" />\n      <line x1=\"5\" y1=\"40\" x2=\"12\" y2=\"40\" />\n      <line x1=\"88\" y1=\"40\" x2=\"95\" y2=\"40\" />\n      <line x1=\"16\" y1=\"16\" x2=\"21\" y2=\"21\" />\n      <line x1=\"84\" y1=\"16\" x2=\"79\" y2=\"21\" />\n      <line x1=\"16\" y1=\"64\" x2=\"21\" y2=\"59\" />\n      <line x1=\"84\" y1=\"64\" x2=\"79\" y2=\"59\" />",
+      "cities": [
+        {
+          "id": "tamara",
+          "name": "Tamara",
+          "index": 1,
+          "description": "However the city may really be, beneath this thick coating of signs, whatever it may contain or conceal, you leave Tamara without having discovered it. Outside, the land stretches, empty, to the horizon; the sky opens, with speeding clouds. In the shape that chance and wind give the clouds, you are already intent on recognizing figures: a sailing ship, a hand, an elephant.",
+          "etymology": "From Hebrew tamar — palm tree, date palm. In the Bible, a name of resilience and shelter.",
+          "venice": "Venice is the most sign-dense city in the world: every surface declares something — an albergo, a church, a guild, a family, a republic. Tamara leaves you unable to see the city beneath its signs. Venice has the same problem: the city is almost entirely composed of its own self-representation.",
+          "source": {
+            "city": "Tamara",
+            "pages": [
+              14,
+              14
+            ]
+          }
+        },
+        {
+          "id": "zirma",
+          "name": "Zirma",
+          "index": 2,
+          "description": "Travelers return from the city of Zirma with distinct memories: a blind black man shouting in the crowd, a lunatic teetering on a skyscraper's cornice, a girl walking with a puma on a leash. Actually many of the blind men who tap their canes on Zirma's cobblestones are black; in every skyscraper there is someone going mad; all lunatics spend hours on cornices; there is no puma that some girl does not raise, as a whim. The city is redundant: it repeats itself so that something will stick in the mind.",
+          "etymology": "Possibly from zemra in Albanian — heart, core. Or perhaps simply invented, a sound that carries strangeness.",
+          "venice": "Venice too is held together by contradictions: a merchant republic that was also a police state, a city of masks that was obsessively surveilled. Zirma's travelers return with incompatible memories; Venice produces incompatible Venices in everyone who visits it.",
+          "source": {
+            "city": "Zirma",
+            "pages": [
+              19,
+              19
+            ]
+          }
+        },
+        {
+          "id": "hypatia",
+          "name": "Hypatia",
+          "index": 3,
+          "description": "The philosopher was seated on the lawn. He said: \"Signs form a language, but not the one you think you know.\"\n\nI realized I had to free myself from the images which in the past had announced to me the things I sought: only then would I succeed in understanding the language of Hypatia.",
+          "etymology": "Named for Hypatia of Alexandria (c. 360–415 AD) — mathematician, philosopher, the last great librarian of the ancient world, murdered by a Christian mob.",
+          "venice": "Venice was Europe's library. Its printing presses, established in the late 15th century, made the texts of antiquity available for the first time in centuries. Hypatia's city of illegible signs mirrors Venice's city of signs you recognise but cannot quite decode.",
+          "source": {
+            "city": "Hypatia",
+            "pages": [
+              48,
+              48
+            ]
+          }
+        },
+        {
+          "id": "euphemia",
+          "name": "Euphemia",
+          "index": 4,
+          "description": "And you know that in the long journey ahead of you, when to keep awake against the camel's swaying or the junk's rocking, you start summoning up your memories one by one, your wolf will have become another wolf, your sister a different sister, your battle other battles, on your return from Euphemia, the city where memory is traded at every solstice and at every equinox.",
+          "etymology": "From Greek euphemia — good speech, well-spoken, auspicious words. A name of blessed utterance.",
+          "venice": "Venice's Rialto was the centre of the medieval world's information network: merchants trading not just goods but intelligence, memory, news. Euphemia is the city where you exchange memories instead of goods — which is precisely what Venice's greatest industry has always been.",
+          "source": {
+            "city": "Euphemia",
+            "pages": [
+              36,
+              37
+            ]
+          }
+        },
+        {
+          "id": "pyrrha",
+          "name": "Pyrrha",
+          "index": 5,
+          "description": "My mind goes on containing a great number of cities I have never seen and will never see, names that bear with them a figure or a fragment or glimmer of an imagined figure: Getullia, Odile, Euphrasia, Margara. The city high above the bay is also there still, with the square enclosing the well, but I can no longer call it by a name, nor remember how I could ever have given it a name that means something entirely different.",
+          "etymology": "From Greek pyrrhos — flame-coloured, red. Pyrrha was the wife of Deucalion, the Greek flood survivor, who repopulated the world after the deluge.",
+          "venice": "The name resonates perfectly for Venice: a city that rebuilt itself from flood, that chose water over land, that owes its existence to the same catastrophe Pyrrha survived. Every acqua alta is a re-enactment. Every time Venice survives, it restores the city from scratch.",
+          "source": {
+            "city": "Pyrrha",
+            "pages": [
+              92,
+              93
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-4",
+      "name": "Cities & Eyes",
+      "color": "#b8c87b",
+      "filter": "brightness(0.6) hue-rotate(180deg) saturate(1.8) contrast(1.2)",
+      "excerpt": "The same city presents itself differently to different eyes — and to the same pair of eyes on different days. Venice seen from the water is not Venice seen from the rooftops; Venice seen in February fog is not Venice seen in August glare. Calvino's cities of eyes are cities that have made their multiplicity explicit: they do not pretend to be singular. They show all their faces at once, and leave the choosing to you.",
+      "illustration": "<path d=\"M4,28 Q21,12 38,28 Q21,44 4,28Z\" />\n      <circle cx=\"21\" cy=\"28\" r=\"7\" />\n      <circle cx=\"21\" cy=\"28\" r=\"2.5\" />\n      <path d=\"M62,28 Q79,12 96,28 Q79,44 62,28Z\" />\n      <circle cx=\"79\" cy=\"28\" r=\"7\" />\n      <circle cx=\"79\" cy=\"28\" r=\"2.5\" />\n      <path d=\"M10,56 Q21,62 38,56\" stroke-width=\"1\" />\n      <path d=\"M62,56 Q79,62 90,56\" stroke-width=\"1\" />\n      <path d=\"M10,63 Q21,69 38,63\" stroke-width=\"0.8\" />\n      <path d=\"M62,63 Q79,69 90,63\" stroke-width=\"0.8\" />",
+      "cities": [
+        {
+          "id": "valdrada",
+          "name": "Valdrada",
+          "index": 1,
+          "description": "The ancients built Valdrada on the shores of a lake, with houses all verandas one above the other, and high streets whose railed parapets look out over the water. Thus the traveler, arriving, sees two cities: one erect above the lake, and the other reflected, upside down. Nothing exists or happens in the one Valdrada that the other Valdrada does not repeat, because the city was so constructed that its every point would be reflected in its mirror, and the Valdrada down in the water contains not only all the flutings and juttings of the facades that rise above the lake, but also the rooms' interiors with ceilings and floors, the perspective of the halls, the mirrors of the wardrobes.",
+          "etymology": "Possibly from Italian val (valley) and Latin ripa (bank) — the bank of the valley, the threshold between water and land.",
+          "venice": "Venice is Valdrada. Every canal holds Venice upside down. When you look at a Venetian reflection, you see another city — identical but reversed, trembling, made of light rather than stone. The Venetians live between these two cities without choosing either.",
+          "source": {
+            "city": "Valdrada",
+            "pages": [
+              53,
+              53
+            ]
+          }
+        },
+        {
+          "id": "zemrude",
+          "name": "Zemrude",
+          "index": 2,
+          "description": "It is the mood of the beholder which gives the city of Zemrude its form. If you go by whistling, your nose a-tilt behind the whistle, you will know it from below: window sills, flapping curtains, fountains. If you walk along hanging your head, your nails dug into the palms of your hands, your gaze will be held on the ground, in the gutters, the manhole covers, the fish scales, wastepaper.",
+          "etymology": "A compressed, invented name — possibly echoing zemra (Albanian: heart) with a Slavic ending, suggesting something Central European and melancholy.",
+          "venice": "Venice is always the city of your emotional state. Arrived happy, you see the gold on the mosaics. Arrived tired, you see the crumbling plaster, the flood marks on the doors, the vaporetto crush. Zemrude is Venice made explicit: the city of subjective perception.",
+          "source": {
+            "city": "Zemrude",
+            "pages": [
+              66,
+              66
+            ]
+          }
+        },
+        {
+          "id": "bauci",
+          "name": "Bauci",
+          "index": 3,
+          "description": "After a seven days' march through woodland, the traveler directed toward Baucis cannot see the city and yet he has arrived. The slender stilts that rise from the ground at a great distance from one another and are lost above the clouds support the city. You climb them with ladders. On the ground the inhabitants rarely show themselves: having already everything they need up there, they prefer not to come down.",
+          "etymology": "From Baucis of Greek mythology — the old woman who, with her husband Philemon, was transformed into a linden tree. A name of deep rootedness and radical transformation.",
+          "venice": "Venice refuses contact with the earth it is built on. Its piles descend into the mud but the city hovers above the water, refusing to touch. Bauci's inhabitants look down at earth through spyglasses; Venice's inhabitants look out at water and see themselves.",
+          "source": {
+            "city": "Baucis",
+            "pages": [
+              77,
+              77
+            ]
+          }
+        },
+        {
+          "id": "phyllis",
+          "name": "Phyllis",
+          "index": 4,
+          "description": "Millions of eyes look up at windows, bridges, capers, and they might be scanning a blank page. Many are the cities like Phyllis, which elude the gaze of all, except the man who catches them by surprise.",
+          "etymology": "From Greek phyllon — leaf, green bough. A name of natural abundance, of things that grow organically.",
+          "venice": "Every Venetian eventually stops seeing Venice. The tourists see it; the residents walk past it. Phyllis is the city you memorise so thoroughly you no longer look at it — and Venice is the city so thoroughly memorised by the world that the world has stopped seeing it fresh.",
+          "source": {
+            "city": "Phyllis",
+            "pages": [
+              91,
+              91
+            ]
+          }
+        },
+        {
+          "id": "moriana",
+          "name": "Moriana",
+          "index": 5,
+          "description": "When you have forded the river, when you have crossed the mountain pass, you suddenly find before you the city of Moriana, its alabaster gates transparent in the sunlight, its coral columns supporting pediments encrusted with serpentine, its villas all of glass like aquariums where the shadows of dancing girls with silvery scales swim beneath the medusa-shaped chandeliers. If this is not your first journey, you already know that cities like this have an obverse: you have only to walk in a semicircle and you will come into view of Moriana's hidden face, an expanse of rusting sheet metal, sackcloth, planks bristling with spikes, pipes black with soot, piles of tins, blind walls with fading signs, frames of staved-in straw chairs, ropes good only for hanging oneself from a rotten beam.",
+          "etymology": "Possibly from Italian moriana — Moorish, from the south, dark. A name carrying the memory of Venice's trade across the Mediterranean.",
+          "venice": "Venice shows the world a face of pale marble and Byzantine gold. Walk around to its back — the industrial waterfront, the flood-damaged ground floors, the empty apartments — and find Moriana's sheet metal and sackcloth. Every beautiful city has this obverse.",
+          "source": {
+            "city": "Moriana",
+            "pages": [
+              105,
+              105
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-5",
+      "name": "Cities & Names",
+      "color": "#c8a07b",
+      "filter": "grayscale(1) brightness(0.38) contrast(2.1)",
+      "excerpt": "A city lives a double life — the life of its stones and canals, and the life of its name. Venice has more names than almost any other city: La Serenissima, Queen of the Adriatic, City of Bridges, City of Masks, the Floating City. Each name conjures a different Venice. Calvino understood that the name of a city is never merely a label; it is a second city, built from language, that coexists with the first.",
+      "illustration": "<path d=\"M90,6 Q96,18 74,36 L28,74 Q26,76 28,78 Q30,80 32,78 L78,40 Q98,22 94,6 Q92,8 90,6Z\" />\n      <path d=\"M28,78 Q16,82 12,74\" />\n      <path d=\"M8,56 Q20,52 32,56 Q42,60 52,56\" stroke-width=\"1\" />\n      <path d=\"M8,63 Q22,59 36,63 Q46,67 56,63\" stroke-width=\"0.8\" />\n      <path d=\"M8,70 Q18,66 28,70\" stroke-width=\"0.6\" />",
+      "cities": [
+        {
+          "id": "aglaura",
+          "name": "Aglaura",
+          "index": 1,
+          "description": "Therefore, the inhabitants still believe they live in an Aglaura which grows only with the name Aglaura and they do not notice the Aglaura that grows on the ground. And even I, who would like to keep the two cities distinct in my memory, can speak only of the one, because the recollection of the other, in the lack of words to fix it, has been lost.",
+          "etymology": "From Greek aglaos — bright, shining, splendid. One of the Athenian daughters of Cecrops in Greek myth.",
+          "venice": "Venice exists so thoroughly in its descriptions — in Canaletto, Turner, Monet, Henry James, Ruskin, Brodsky — that the descriptions have become load-bearing. Aglaura is the city that exists only in what people say about it. Venice is very close to being this.",
+          "source": {
+            "city": "Aglaura",
+            "pages": [
+              68,
+              68
+            ]
+          }
+        },
+        {
+          "id": "leandra",
+          "name": "Leandra",
+          "index": 2,
+          "description": "The true essence of Leandra is the subject of endless debate. The Penates believe they are the city's soul, even if they arrived last year; and they believe they take Leandra with them when they emigrate. The Lares consider the Penates temporary guests, importunate, intrusive; the real Leandra is theirs, which gives form to all it contains, the Leandra that was there before all these upstarts arrived and that will remain when all have gone away.",
+          "etymology": "From Greek leon + aner — lion of men, or lion-hearted. The feminine of Leander.",
+          "venice": "Venice's lion — the winged lion of Saint Mark — appears in every campo, on every portal, in every lagoon town that was once Venetian. Leandra's household gods are Venice's lions: they follow the families wherever they go, and the families follow them.",
+          "source": {
+            "city": "Leandra",
+            "pages": [
+              79,
+              79
+            ]
+          }
+        },
+        {
+          "id": "clarice",
+          "name": "Clarice",
+          "index": 3,
+          "description": "Clarice, the glorious city, has a tormented history. Several times it decayed, then burgeoned again, always keeping the first Clarice as an unparalleled model of every splendor, compared to which the city's present state can only cause more sighs at every fading of the stars.",
+          "etymology": "From Latin clara — bright, clear, famous. Through Old French and Italian it became a name of luminous distinction.",
+          "venice": "Venice has burned and been rebuilt three times over: the Doge's Palace, the Fenice opera house, countless churches. Each rebuilding cites the original, restores the precedent, claims continuity. Clarice is this process of perpetual glorious reconstruction made into a city.",
+          "source": {
+            "city": "Clarice",
+            "pages": [
+              106,
+              106
+            ]
+          }
+        },
+        {
+          "id": "irene",
+          "name": "Irene",
+          "index": 4,
+          "description": "At this point Kublai Khan expects Marco to speak of Irene as it is seen from within. But Marco cannot do this: he has not succeeded in discovering which is the city that those of the plateau call Irene. For that matter, it is of slight importance: if you saw it, standing in its midst, it would be a different city; Irene is a name for a city in the distance, and if you approach, it changes.",
+          "etymology": "From Greek eirene — peace. The Venetian Republic was called La Serenissima — the Most Serene. A republic that named itself after tranquillity.",
+          "venice": "Irene is the city you cannot approach — it dissolves as you near it. Venice's famous peace is exactly this: the closer you get, the less serene it is. The vaporetti, the crowds, the acqua alta. La Serenissima exists at a distance.",
+          "source": {
+            "city": "Irene",
+            "pages": [
+              124,
+              125
+            ]
+          }
+        },
+        {
+          "id": "marozia",
+          "name": "Marozia",
+          "index": 5,
+          "description": "I interpret it in this way: Marozia consists of two cities, the rat's and the swallow's; both change with time, but their relationship does not change; the second is the one about to free itself from the first.",
+          "etymology": "Named for Marozia of Rome (c. 890–937) — the extraordinary noblewoman who controlled three popes, mother of a pope, grandmother of a pope.",
+          "venice": "Venice was always two cities: the aristocratic Venice of the Golden Book families, and the Venice of the arsenalotti, the glassblowers, the fishermen of Chioggia. Rat and swallow. The prophecy of transformation — that one day the underclass will inherit — is Venice's permanent unresolved tension.",
+          "source": {
+            "city": "Marozia",
+            "pages": [
+              155,
+              155
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-6",
+      "name": "Cities & the Dead",
+      "color": "#9090c8",
+      "filter": "invert(0.88) brightness(0.42) contrast(1.4)",
+      "excerpt": "Every city is built on its dead — on the people who carried its stones, drank from its wells, argued in its squares, and were buried beneath its floors. Venice is more literal than most: its foundations are the petrified remains of alder and oak piles driven into the lagoon mud by people who have been dead for a thousand years. The city of the dead is not the graveyard at San Michele. It is everywhere.",
+      "illustration": "<path d=\"M14,48 Q24,40 50,40 Q76,40 86,48 Q81,58 50,60 Q19,58 14,48Z\" />\n      <path d=\"M86,48 Q94,42 90,34\" />\n      <line x1=\"66\" y1=\"40\" x2=\"72\" y2=\"18\" />\n      <line x1=\"62\" y1=\"18\" x2=\"78\" y2=\"18\" />\n      <path d=\"M4,66 Q18,61 32,66 Q46,71 60,66 Q74,61 88,66 Q94,68 96,66\" />\n      <path d=\"M4,73 Q18,68 32,73 Q46,78 60,73 Q74,68 88,73\" />",
+      "cities": [
+        {
+          "id": "adelma",
+          "name": "Adelma",
+          "index": 1,
+          "description": "I thought: \"You reach a moment in life when, among the people you have known, the dead outnumber the living. And the mind refuses to accept more faces, more expressions: on every new face you encounter, it prints the old forms, for each one it finds the most suitable mask.\"",
+          "etymology": "From Germanic roots — adal (noble) + helm (protection). A medieval name of fortified nobility.",
+          "venice": "Venice is a city where the dead return in faces. Its genetic isolation over centuries — the same families, the same calli, the same gene pool — means Venetians see their ancestors in each other's faces. Adelma is the recognition: you have been here before. Everyone who comes to Venice has been here before.",
+          "source": {
+            "city": "Adelma",
+            "pages": [
+              95,
+              95
+            ]
+          }
+        },
+        {
+          "id": "eusapia",
+          "name": "Eusapia",
+          "index": 2,
+          "description": "No city is more inclined than Eusapia to enjoy life and flee care. And to make the leap from life to death less abrupt, the inhabitants have constructed an identical copy of their city, underground. All corpses, dried in such a way that the skeleton remains sheathed in yellow skin, are carried down there, to continue their former activities.",
+          "etymology": "From Greek Eusebios — pious, devout, of good standing. Eusapia Palladino was also a famous 19th-century Neapolitan medium.",
+          "venice": "Venice already has a copy of itself underground — its foundations, the submerged piles, the Roman settlements beneath the lagoon mud. Eusapia's underground city mirrors its surface; Venice's foundations are its own underground twin, exact in proportion, invisible.",
+          "source": {
+            "city": "Eusapia",
+            "pages": [
+              109,
+              109
+            ]
+          }
+        },
+        {
+          "id": "argia",
+          "name": "Argia",
+          "index": 3,
+          "description": "What makes Argia different from other cities is that it has earth instead of air. The streets are completely filled with dirt, clay packs the rooms to the ceiling, on every stair another stairway is set in negative, over the roofs of the houses hang layers of rocky terrain like skies with clouds. We do not know if the inhabitants can move about the city, widening the worm tunnels and the crevices where roots twist: the dampness destroys people's bodies and they have scant strength; everyone is better off remaining still, prone; anyway, it is dark.",
+          "etymology": "From Greek Argos — shining, bright. Also the city where the Argonauts assembled. Argia is light transformed into its opposite.",
+          "venice": "Argia, filled with earth instead of air, is the nightmare inversion of Venice filled with water instead of land. Venice performs a daily miracle: it keeps the water out. On the days it fails — acqua alta — the city becomes Argia. The air fills with what it has no room for.",
+          "source": {
+            "city": "Argia",
+            "pages": [
+              126,
+              126
+            ]
+          }
+        },
+        {
+          "id": "laudomia",
+          "name": "Laudomia",
+          "index": 4,
+          "description": "Like Laudomia, every city has at its side another city whose inhabitants are called by the same names: it is the Laudomia of the dead, the cemetery. But Laudomia's special faculty is that of being not only double, but triple; it comprehends, in short, a third Laudomia, the city of the unborn.",
+          "etymology": "From Greek laos + domos — people's house, house of the people. A name of civic belonging.",
+          "venice": "Venice counts itself in deficit: its population has been declining since the 1950s. Laudomia's census includes the dead and unborn because Venice's true population includes everyone who has ever loved it and everyone who will arrive too late to save it.",
+          "source": {
+            "city": "Laudomia",
+            "pages": [
+              140,
+              140
+            ]
+          }
+        },
+        {
+          "id": "melania",
+          "name": "Melania",
+          "index": 5,
+          "description": "As time passes the roles, too, are no longer exactly the same as before; certainly the action they carry forward through intrigues and surprises leads toward some final denouement, which it continues to approach even when the plot seems to thicken more and more and the obstacles increase. If you look into the square in successive moments, you hear how from act to act the dialogue changes, even if the lives of Melania's inhabitants are too short for them to realize it.",
+          "etymology": "From Greek melania — darkness, blackness. A name of depth and shadow, of what lies beneath the surface.",
+          "venice": "Venice's tourist economy is a theatre in which the same play runs continuously. The same gondolier's speech, the same Vivaldi concert, the same description of the Rialto. Different actors, identical dialogue. Melania is Venice made explicit: an eternal performance with rotating casts.",
+          "source": {
+            "city": "Melania",
+            "pages": [
+              81,
+              81
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-7",
+      "name": "Cities & the Sky",
+      "color": "#d0c878",
+      "filter": "brightness(1.18) saturate(0.32) contrast(0.68) sepia(0.12)",
+      "excerpt": "The cities of the sky are cities that aspire — toward God, toward order, toward the stars. Venice's campanili reach upward while the city spreads horizontally across the water. Its domes map Byzantine heaven; its mosaics are astronomical diagrams made of gold. But Venice also has a second sky: the water beneath it, where the city is reflected upside down — a sky below, trembling with every wake.",
+      "illustration": "<path d=\"M8,68 Q8,18 50,18 Q92,18 92,68\" />\n      <line x1=\"3\" y1=\"68\" x2=\"97\" y2=\"68\" />\n      <circle cx=\"28\" cy=\"42\" r=\"1.8\" fill=\"currentColor\" />\n      <circle cx=\"50\" cy=\"30\" r=\"2.2\" fill=\"currentColor\" />\n      <circle cx=\"72\" cy=\"42\" r=\"1.8\" fill=\"currentColor\" />\n      <circle cx=\"38\" cy=\"55\" r=\"1.2\" fill=\"currentColor\" />\n      <circle cx=\"63\" cy=\"53\" r=\"1.2\" fill=\"currentColor\" />\n      <circle cx=\"50\" cy=\"46\" r=\"1\" fill=\"currentColor\" />\n      <path d=\"M18,70 Q50,76 82,70\" stroke-width=\"0.9\" />\n      <path d=\"M26,74 Q50,79 74,74\" stroke-width=\"0.7\" />",
+      "cities": [
+        {
+          "id": "eudoxia",
+          "name": "Eudoxia",
+          "index": 1,
+          "description": "In Eudoxia, which spreads both upward and down, with winding alleys, steps, dead ends, hovels, a carpet is preserved in which you can observe the city's true form. At first sight nothing seems to resemble Eudoxia less than the design of that carpet, laid out in symmetrical motives whose patterns are repeated along straight and circular lines, interwoven with brilliantly colored spires, in a repetition that can be followed throughout the whole woof.",
+          "etymology": "From Greek eudoxia — good opinion, good reputation, fame. Also the name of two Byzantine empresses.",
+          "venice": "Jacopo de' Barbari's 1500 woodcut of Venice is Eudoxia's carpet: a map that claims to contain the whole city, made from dozens of partial views stitched into one impossible image. The carpet and the city exist in permanent mutual legitimation, each the proof of the other.",
+          "source": {
+            "city": "Eudoxia",
+            "pages": [
+              96,
+              96
+            ]
+          }
+        },
+        {
+          "id": "perinthia",
+          "name": "Perinthia",
+          "index": 2,
+          "description": "Perinthia's astronomers are faced with a difficult choice. Either they must admit that all their calculations were wrong and their figures are unable to describe the heavens, or else they must reveal that the order of the gods is reflected exactly in the city of monsters.",
+          "etymology": "A historical Greek city in Thrace, on the Propontis. Its name simply means 'the city around the stone.'",
+          "venice": "Venice was laid out with extraordinary mathematical precision — its hydraulic engineering, its canal system, its urban density — and this very perfection produced its most extraordinary product: Carnival, the festival of anonymity and license. Perfect order generates its own chaos.",
+          "source": {
+            "city": "Perinthia",
+            "pages": [
+              145,
+              145
+            ]
+          }
+        },
+        {
+          "id": "andria",
+          "name": "Andria",
+          "index": 3,
+          "description": "Andria was built so artfully that its every street follows a planet's orbit, and the buildings and the places of community life repeat the order of the constellations and the position of the most luminous stars: Antares, Alpheratz, Capricorn, the Cepheids. The city's calendar is so regulated that jobs and offices and ceremonies are arranged in a map corresponding to the firmament on that date: and thus the days on earth and the nights in the sky reflect each other.",
+          "etymology": "From Greek aner, andros — man, human being. Or from the adjective andreios — manly, brave. A city named for humanity itself.",
+          "venice": "Venice's churches are oriented to the stars. San Marco's mosaics map a Byzantine cosmology. The Doge's Palace is an astronomical machine. Andria is a city built to mirror the heavens; Venice was built to mirror its own impossibility, and the heavens approved.",
+          "source": {
+            "city": "Andria",
+            "pages": [
+              150,
+              150
+            ]
+          }
+        },
+        {
+          "id": "tecla",
+          "name": "Tecla",
+          "index": 4,
+          "description": "Work stops at sunset. Darkness falls over the building site. The sky is filled with stars. \"There is the blueprint,\" they say.",
+          "etymology": "From Greek Theokleia — God's glory, the glory that proceeds from God.",
+          "venice": "Venice is never finished. Its restoration programme is permanent, its scaffolding continuous, its foundations perpetually reinforced. Tecla builds so that its destruction cannot begin; Venice restores so that its decline cannot be acknowledged. Both know, underneath, that the building will never be complete.",
+          "source": {
+            "city": "Thekla",
+            "pages": [
+              127,
+              127
+            ]
+          }
+        },
+        {
+          "id": "beersheba",
+          "name": "Beersheba",
+          "index": 5,
+          "description": "In Beersheba's beliefs there is an element of truth and one of error. It is true that the city is accompanied by two projections of itself, one celestial and one infernal; but the citizens are mistaken about their consistency. The inferno that broods in the deepest subsoil of Beersheba is a city designed by the most authoritative architects, built with the most expensive materials on the market, with every device and mechanism and gear system functioning, decked with tassels and fringes and frills hanging from all the pipes and levers.",
+          "etymology": "Hebrew be'er sheva — well of the oath, or well of seven. The ancient city where Abraham and Abimelech made their covenant.",
+          "venice": "Venice has always believed in its divine protection — the relics of Saint Mark, stolen from Alexandria and brought to the Basilica, the miraculous survival of the lagoon, the 1000-year republic. The celestial Beersheba is the Venice the Venetians believe they inhabit: serene, protected, exceptional.",
+          "source": {
+            "city": "Beersheba",
+            "pages": [
+              112,
+              112
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-8",
+      "name": "Continuous Cities",
+      "color": "#7b9bc8",
+      "filter": "brightness(0.55) saturate(0.12) hue-rotate(200deg) contrast(1.45)",
+      "excerpt": "The continuous city has no edge, no center, no distinguishable beginning or end. It simply continues. Venice has been extending itself into its lagoon for centuries — Murano, Burano, Torcello, Mestre, the industrial port of Marghera. Where does Venice stop? The question has no answer. The lagoon is also Venice. The mainland is also Venice. The city that floats has no fixed shore.",
+      "illustration": "<path d=\"M4,68 Q18,68 28,52 Q38,36 50,36 Q62,36 72,52 Q82,68 96,68\" />\n      <path d=\"M4,74 Q18,74 28,58 Q38,42 50,42 Q62,42 72,58 Q82,74 96,74\" />\n      <path d=\"M28,52 Q28,16 50,16 Q72,16 72,52\" />\n      <path d=\"M34,52 Q34,22 50,22 Q66,22 66,52\" />",
+      "cities": [
+        {
+          "id": "leonia",
+          "name": "Leonia",
+          "index": 1,
+          "description": "The city of Leonia refashions itself every day: every morning the people wake between fresh sheets, wash with just-unwrapped cakes of soap, wear brand-new clothing, take from the latest model refrigerator still unopened tins, listening to the last-minute jingles from the most up-to-date radio.\n\nOn the sidewalks, encased in spotless plastic bags, the remains of yesterday's Leonia await the garbage truck.",
+          "etymology": "From Latin leo, leonis — lion. The lion of Saint Mark is Venice's symbol, appearing on every portal, every coin, every colonized city.",
+          "venice": "Venice's tourist economy is Leonia: every morning the same performance of Venetian-ness is unwrapped, consumed, and disposed of. The city produces its own mythology daily and piles the used versions at the margins. Murano glass, gondola rides, Carnival masks — fresh today, rubbish tomorrow.",
+          "source": {
+            "city": "Leonia",
+            "pages": [
+              114,
+              114
+            ]
+          }
+        },
+        {
+          "id": "trude",
+          "name": "Trude",
+          "index": 2,
+          "description": "\"You can resume your flight whenever you like,\" they said to me, \"but you will arrive at another Trude, absolutely the same, detail by detail. The world is covered by a sole Trude which does not begin and does not end. Only the name of the airport changes.\"",
+          "etymology": "From Germanic trud — strength, force, thrust. An old name of Germanic energy and repetition.",
+          "venice": "Venice has been so thoroughly imitated — by Las Vegas, by Macau, by Orlando, by every city that installed a gondola — that the copies have contaminated the original. Trude is the city that is everywhere the same; a version of Venice now lives in Trude. You arrive and wonder if it is the real one.",
+          "source": {
+            "city": "Trude",
+            "pages": [
+              128,
+              128
+            ]
+          }
+        },
+        {
+          "id": "procopia",
+          "name": "Procopia",
+          "index": 3,
+          "description": "This year, finally, as I raise the curtain, the window frames only an expanse of faces: from one corner to the other, at all levels and all distances, those round, motionless, entirely flat faces are seen, with a hint of a smile, and in their midst, many hands, grasping the shoulders of those in front. Even the sky has disappeared. I might as well leave the window.\n\nNot that it is easy for me to move. There are twenty-six of us lodged in my room: to shift my feet I have to disturb those crouching on the floor, I force my way among the knees of those seated on the chest of drawers and the elbows of those taking turns leaning on the bed: all very polite people, luckily.",
+          "etymology": "From Greek prokopios — progressive, advancing before others. An early Christian martyr's name.",
+          "venice": "Venice fills with tourists until the residents become a minority. Procopia fills with the Kurds until the original guest cannot move. This is Venice's contemporary condition: the city filling with itself, with its own reflection, until the people who made it have no room left inside it.",
+          "source": {
+            "city": "Procopia",
+            "pages": [
+              147,
+              147
+            ]
+          }
+        },
+        {
+          "id": "cecilia",
+          "name": "Cecilia",
+          "index": 4,
+          "description": "\"The places have mingled,\" the goatherd said. \"Cecilia is everywhere. Here, once upon a time, there must have been the Meadow of the Low Sage. My goats recognize the grass on the traffic island.\"",
+          "etymology": "From Latin Caecilius — possibly from caecus, blind. A name that carries the paradox of seeing without sight, of music heard with closed eyes.",
+          "venice": "Where does Venice end? The lagoon is also Venice. Mestre is also Venice. The 118 islands are Venice and the channels between them are also Venice. Cecilia is the continuous city where borders dissolve; Venice never decided where it ended and the water began, and perhaps that was always the point.",
+          "source": {
+            "city": "Cecilia",
+            "pages": [
+              153,
+              153
+            ]
+          }
+        },
+        {
+          "id": "penthesilea",
+          "name": "Penthesilea",
+          "index": 5,
+          "description": "You have given up trying to understand whether, hidden in some sac or wrinkle of these dilapidated surroundings there exists a Penthesilea the visitor can recognize and remember, or whether Penthesilea is only the outskirts of itself. The question that now begins to gnaw at your mind is more anguished: outside Penthesilea does an outside exist? Or, no matter how far you go from the city, will you only pass from one limbo to another, never managing to leave it?",
+          "etymology": "From Greek — queen of the Amazons, name meaning 'compelling men to mourn.' A warrior without a fixed home, always expanding territory.",
+          "venice": "Venice has no natural centre. San Marco is a theatre, not a centre. The Rialto is a market. The true heart of Venice is wherever you happen to be standing, which means it is always somewhere else. Penthesilea's suburban sprawl is Venice's tourist sprawl: the city has expanded to fill every corner of its image.",
+          "source": {
+            "city": "Penthesilea",
+            "pages": [
+              157,
+              158
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-9",
+      "name": "Trading Cities",
+      "color": "#c8906b",
+      "filter": "sepia(0.75) brightness(0.8) saturate(2.1) contrast(1.15)",
+      "excerpt": "Venice was built on trade — specifically on the trade between the Christian West and the Islamic East, at a time when such trade was considered both essential and scandalous. The city's very form is a consequence of commerce: its canals are not decorative but functional, its palazzi are warehouses dressed in marble, its Rialto the centre of the medieval world's financial system. In the trading cities, what is exchanged is never only goods. It is desire, memory, language, and form.",
+      "illustration": "<line x1=\"50\" y1=\"8\" x2=\"50\" y2=\"52\" />\n      <line x1=\"12\" y1=\"26\" x2=\"88\" y2=\"26\" />\n      <path d=\"M8,26 Q13,44 24,44 Q35,44 40,26\" />\n      <path d=\"M60,26 Q65,44 76,44 Q87,44 92,26\" />\n      <line x1=\"36\" y1=\"52\" x2=\"64\" y2=\"52\" />\n      <line x1=\"50\" y1=\"52\" x2=\"50\" y2=\"66\" />\n      <line x1=\"28\" y1=\"66\" x2=\"72\" y2=\"66\" />\n      <circle cx=\"20\" cy=\"40\" r=\"3\" />\n      <circle cx=\"28\" cy=\"42\" r=\"2\" />\n      <circle cx=\"72\" cy=\"42\" r=\"2.5\" />\n      <circle cx=\"80\" cy=\"40\" r=\"2\" />",
+      "cities": [
+        {
+          "id": "chloe",
+          "name": "Chloe",
+          "index": 1,
+          "description": "In Chloe, a great city, the people who move through the streets are all strangers. At each encounter, they imagine a thousand things about one another; meetings which could take place between them, conversations, surprises, caresses, bites. But no one greets anyone; eyes lock for a second, then dart away, seeking other eyes, never stopping.",
+          "etymology": "From Greek chloe — blooming, verdant, the green shoot. An epithet of Demeter, goddess of the harvest.",
+          "venice": "Venice is Chloe above all other cities. On the Rialto bridge, on the Riva degli Schiavoni, in the narrow calli — strangers brush past each other, each imagining the other's life, each carrying their projections like invisible luggage. The real trade of Venice has always been in imagined lives.",
+          "source": {
+            "city": "Chloe",
+            "pages": [
+              51,
+              51
+            ]
+          }
+        },
+        {
+          "id": "ersilia",
+          "name": "Ersilia",
+          "index": 2,
+          "description": "In Ersilia, to establish the relationships that sustain the city's life, the inhabitants stretch strings from the corners of the houses, white or black or gray or black-and-white according to whether they mark a relationship of blood, of trade, authority, agency. When the strings become so numerous that you can no longer pass among them, the inhabitants leave: the houses are dismantled; only the strings and their supports remain.",
+          "etymology": "From Hersilia — in Roman mythology, the wife of Romulus, the first woman of Rome, mediator between the Romans and the Sabines. A name of civic weaving.",
+          "venice": "Venice's social fabric was once its most sophisticated product: its guilds, its scuole grandi, its sestieri, its intricate network of familial and commercial obligation. When the strings multiplied until they choked the city — when Napoleon arrived in 1797 — the network collapsed. Only the strings remained.",
+          "source": {
+            "city": "Ersilia",
+            "pages": [
+              76,
+              76
+            ]
+          }
+        },
+        {
+          "id": "esmeralda",
+          "name": "Esmeralda",
+          "index": 3,
+          "description": "In Esmeralda, city of water, a network of canals and a network of streets span and intersect each other. To go from one place to another you have always the choice between land and boat: and since the shortest distance between two points in Esmeralda is not a straight line but a zigzag that ramifies in tortuous optional routes, the ways that open to each passerby are never two, but many, and they increase further for those who alternate a stretch by boat with one on dry land.",
+          "etymology": "From Spanish and Portuguese esmeralda — emerald. The green gemstone, but also the colour of the Venetian lagoon in certain lights.",
+          "venice": "Venice is Esmeralda: every journey can be made by water or by foot. The two routes reveal different cities. The vaporetto gives you the grand facades; the calli give you the back doors. The city multiplies its possibilities at every junction, which is why no one ever fully maps it.",
+          "source": {
+            "city": "Esmeralda",
+            "pages": [
+              88,
+              88
+            ]
+          }
+        },
+        {
+          "id": "chloe2",
+          "name": "Oluïde",
+          "index": 4,
+          "description": "No matching passage for Oluïde was found in this edition of Invisible Cities.",
+          "etymology": "Oluïde — possibly from Latin oblitus, forgotten. A name for the city that exists only in the transaction, in the brief moment of exchange.",
+          "venice": "Venice's Rialto is the oldest continuously operating market in Europe. Every transaction there contains the memory of ten thousand previous ones. Oluïde is the market of pure signs; Venice's Rialto is where the signs — the prices, the goods, the exchange — became the city itself.",
+          "source": null
+        },
+        {
+          "id": "octavia",
+          "name": "Octavia",
+          "index": 5,
+          "description": "If you choose to believe me, good. Now I will tell how Octavia, the spider-web city, is made. There is a precipice between two steep mountains: the city is over the void, bound to the two crests with ropes and chains and catwalks. You walk on the little wooden ties, careful not to set your foot in the open spaces, or you cling to the hempen strands. Below there is nothing for hundreds and hundreds of feet: a few clouds glide past; farther down you can glimpse the chasm's bed.",
+          "etymology": "From Latin octavus — eighth. The eighth child, the octave, the number of completion and new beginning.",
+          "venice": "Venice is Octavia: suspended over the void. Its foundations — the petrified alder piles driven into the lagoon mud — are invisible. The entire city hangs above the water on a structure no one can see. Every Venetian lives with the knowledge that what supports their city is a kind of faith.",
+          "source": {
+            "city": "Octavia",
+            "pages": [
+              75,
+              75
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-10",
+      "name": "Hidden Cities",
+      "color": "#b07bc8",
+      "filter": "brightness(0.14) contrast(3.2) grayscale(1)",
+      "excerpt": "Within every city is another city that has not been seen — not because it is invisible, but because no one has looked in the right direction. Venice hides its hidden city in its calli: the narrow passages that tourists traverse in one direction and Venetians know only from behind. In every district is a campo that no guidebook mentions. In every canal is a reflection of a building that no longer exists. The hidden city of Venice is as large as Venice itself.",
+      "illustration": "<circle cx=\"50\" cy=\"30\" r=\"18\" />\n      <path d=\"M40,44 Q38,66 42,70 L58,70 Q62,66 60,44Z\" />\n      <circle cx=\"50\" cy=\"30\" r=\"6\" />\n      <line x1=\"50\" y1=\"4\" x2=\"50\" y2=\"10\" />\n      <line x1=\"74\" y1=\"12\" x2=\"69\" y2=\"17\" />\n      <line x1=\"26\" y1=\"12\" x2=\"31\" y2=\"17\" />\n      <line x1=\"80\" y1=\"34\" x2=\"74\" y2=\"34\" />\n      <line x1=\"20\" y1=\"34\" x2=\"26\" y2=\"34\" />",
+      "cities": [
+        {
+          "id": "olinda",
+          "name": "Olinda",
+          "index": 1,
+          "description": "In Olinda, if you go out with a magnifying glass and hunt carefully, you may find somewhere a point no bigger than the head of a pin which, if you look at it slightly enlarged, reveals within itself the roofs, the antennas, the skylights, the gardens, the pools, the streamers across the streets, the kiosks in the squares, the horse-racing track. That point does not remain there: a year later you will find it the size of half a lemon, then as large as a mushroom, then a soup plate. And then it becomes a full-size city, enclosed within the earlier city: a new city that forces its way ahead in the earlier city and presses it toward the outside.",
+          "etymology": "From Portuguese, possibly from Latin olens — fragrant, sweet-smelling. A city in northeast Brazil, a UNESCO world heritage site within a larger city.",
+          "venice": "Venice contains cities within itself — Dorsoduro is not Castello, San Polo is not Cannaregio. Within each sestiere is a smaller Venice; within each campo is a still smaller one. Olinda's city-within-city structure is Venice's structure: infinite regress, every scale containing the whole.",
+          "source": {
+            "city": "Olinda",
+            "pages": [
+              129,
+              129
+            ]
+          }
+        },
+        {
+          "id": "raissa",
+          "name": "Raissa",
+          "index": 2,
+          "description": "\"Also in Raissa, city of sadness, there runs an invisible thread that binds one living being to another for a moment, then unravels, then is stretched again between moving points as it draws new and rapid patterns so that at every second the unhappy city contains a happy city unaware of its own existence.\"",
+          "etymology": "Possibly from Arabic ra'is — leader, head, chief. Or from the name Raïssa, meaning 'the one who holds fast,' as in the philosopher Jacques Maritain's wife.",
+          "venice": "Venice is Raissa: a city of visible sadness — the depopulation, the flooding, the tourism monoculture, the abandoned palazzi — through which runs an invisible thread of joy. The Redentore festival, the light on the water at six in the morning, the particular silence of a foggy November day. The joy is always present and always invisible.",
+          "source": {
+            "city": "Raissa",
+            "pages": [
+              149,
+              149
+            ]
+          }
+        },
+        {
+          "id": "theodora",
+          "name": "Theodora",
+          "index": 3,
+          "description": "At least that is what Theodora's inhabitants believed, far from imagining that a forgotten fauna was stirring from its lethargy. Relegated for long eras to remote hiding places, ever since it had been deposed by the system of nonextinct species, the other fauna was coming back to the light from the library's basements where the incunabula were kept; it was leaping from the capitals and drainpipes, perching at the sleepers' bedside. Sphinxes, griffons, chimeras, dragons, hircocervi, harpies, hydras, unicorns, basilisks were resuming possession of their city.",
+          "etymology": "From Greek theos + doron — gift of God. A name of Byzantine imperial power: two Byzantine empresses bore this name.",
+          "venice": "Venice eliminated almost all of its original ecosystem — the lagoon birds, the fish populations, the original wetland ecology. What remains are the pigeons of San Marco, now considered pests, and the seagulls. Having perfected its built environment, Venice discovered it had also eliminated the wild within itself.",
+          "source": {
+            "city": "Theodora",
+            "pages": [
+              160,
+              160
+            ]
+          }
+        },
+        {
+          "id": "berenice",
+          "name": "Berenice",
+          "index": 4,
+          "description": "From my words you will have reached the conclusion that the real Berenice is a temporal succession of different cities, alternately just and unjust. But what I wanted to warn you about is something else: all the future Berenices are already present in this instant, wrapped one within the other, confined, crammed, inextricable.",
+          "etymology": "From Macedonian Greek Berenike — bringer of victory. Name of Ptolemaic queens of Egypt, of a Roman empress, of a historical comet.",
+          "venice": "Venice was deeply unjust — its Jewish ghetto (the original ghetto, which gave the world the word), its colonial empire in Crete and Dalmatia, its calculated cruelties. But it also contained the seed of something else: the Enlightenment's tolerance, Carnival's brief democracy of the mask, the printing press that made knowledge common. Within every unjust Venice is a just Venice waiting.",
+          "source": {
+            "city": "Berenice",
+            "pages": [
+              163,
+              163
+            ]
+          }
+        },
+        {
+          "id": "baucis-hidden",
+          "name": "Sophonia",
+          "index": 5,
+          "description": "And so every year the day comes when the workmen remove the marble pediments, lower the stone walls, the cement pylons, take down the Ministry, the monument, the docks, the petroleum refinery, the hospital, load them on trailers, to follow from stand to stand their annual itinerary. Here remains the half-Sophronia of the shooting-galleries and the carousels, the shout suspended from the cart of the headlong roller coaster, and it begins to count the months, the days it must wait before the caravan returns and a complete life can begin again.",
+          "etymology": "Sophonia — from Greek sophia — wisdom. A name of philosophical aspiration, of the city that knows itself.",
+          "venice": "Venice has always been two cities: the city of residents and the city of tourists, and each year the ratio shifts — more tourists, fewer residents. Sophonia's two halves — one permanent, one temporary — mirror Venice's condition: the temporary half grows, the permanent one dismantles itself quietly, one departure at a time.",
+          "source": {
+            "city": "Sophronia",
+            "pages": [
+              63,
+              63
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "theme-11",
+      "name": "Cities & Exchanges",
+      "color": "#7bc8a0",
+      "filter": "brightness(0.62) hue-rotate(128deg) saturate(1.5) contrast(1.2)",
+      "excerpt": "The exchange that sustains a city is never only economic. Venice exchanged everything with everywhere — Byzantine gold, Arabic numerals, Ottoman silk, Flemish painting, Hebrew scholarship, Greek manuscripts. The city was made of exchange: it had no natural resources except its position at the meeting of sea and land, East and West. What it produced was the exchange itself, the act of translation between worlds. It still is. Every visitor to Venice is an exchange.",
+      "illustration": "<path d=\"M5,52 Q8,44 14,40 Q18,38 19,43 L20,54\" />\n      <path d=\"M14,40 Q16,30 22,28 Q27,27 26,34 L24,46\" />\n      <path d=\"M22,28 Q24,18 30,17 Q35,16 34,24 L30,40\" />\n      <path d=\"M30,17 Q32,9 37,9 Q42,9 40,19 L36,38\" />\n      <path d=\"M95,52 Q92,44 86,40 Q82,38 81,43 L80,54\" />\n      <path d=\"M86,40 Q84,30 78,28 Q73,27 74,34 L76,46\" />\n      <path d=\"M78,28 Q76,18 70,17 Q65,16 66,24 L70,40\" />\n      <path d=\"M70,17 Q68,9 63,9 Q58,9 60,19 L64,38\" />\n      <line x1=\"40\" y1=\"38\" x2=\"60\" y2=\"38\" stroke-dasharray=\"2.5,3\" stroke-width=\"1\" />",
+      "cities": [
+        {
+          "id": "lalage",
+          "name": "Lalage",
+          "index": 1,
+          "description": "And Polo says: \"The city of your dream is Lalage. Its inhabitants arranged these invitations to rest in the night sky so that the moon would grant everything in the city the power to grow and grow endlessly.\"\n\n\"There is something you do not know,\" the Khan adds. \"The grateful moon has granted the city of Lalage a rarer privilege: to grow in lightness.\"",
+          "etymology": "From Greek lalagia — babbling, chattering, the sound of water over stones. A name of continuous, pleasurable speech.",
+          "venice": "Lalage makes a map of itself from golden thread — and Venice has been mapped more than any other city on earth, from de' Barbari's 1500 woodcut to satellite imagery. Each map is the city's conversation with its own image. The map is always in progress, always slightly wrong, always richer than the city it represents.",
+          "source": {
+            "city": "Lalage",
+            "pages": [
+              74,
+              74
+            ]
+          }
+        },
+        {
+          "id": "clarice2",
+          "name": "Smeraldina",
+          "index": 2,
+          "description": "In Esmeralda, city of water, a network of canals and a network of streets span and intersect each other. To go from one place to another you have always the choice between land and boat: and since the shortest distance between two points in Esmeralda is not a straight line but a zigzag that ramifies in tortuous optional routes, the ways that open to each passerby are never two, but many, and they increase further for those who alternate a stretch by boat with one on dry land.",
+          "etymology": "Smeraldina — from Italian smeraldo — emerald. The emerald city, the city of green water and green glass from Murano.",
+          "venice": "Venice is Smeraldina at its most literal: a city of superimposed networks. The canal network and the street network cover the same territory and offer entirely different cities. Venetians navigate by both simultaneously; tourists struggle to navigate by either. The city multiplies with every choice of route.",
+          "source": {
+            "city": "Esmeralda",
+            "pages": [
+              88,
+              88
+            ]
+          }
+        },
+        {
+          "id": "ipazia",
+          "name": "Ipazia",
+          "index": 3,
+          "description": "The philosopher was seated on the lawn. He said: \"Signs form a language, but not the one you think you know.\"\n\nI realized I had to free myself from the images which in the past had announced to me the things I sought: only then would I succeed in understanding the language of Hypatia.",
+          "etymology": "Italian form of Hypatia — from Greek hypatos, highest, supreme. A name of intellectual altitude.",
+          "venice": "Venice literally has a city beneath it. The Roman-era settlements under the lagoon mud, the Byzantine foundations, the petrified forests of alder and oak piles — all of these support the visible city from below, invisible but load-bearing. Ipazia's glimpsed deeper city is Venice's own foundation: always there, never fully seen.",
+          "source": {
+            "city": "Hypatia",
+            "pages": [
+              48,
+              48
+            ]
+          }
+        },
+        {
+          "id": "valdrada2",
+          "name": "Armilla",
+          "index": 4,
+          "description": "Whether Armilla is like this because it is unfinished or because it has been demolished, whether the cause is some enchantment or only a whim, I do not know. The fact remains that it has no walls, no ceilings, no floors: it has nothing that makes it seem a city, except the water pipes that rise vertically where the houses should be and spread out horizontally where the floors should be: a forest of pipes that end in taps, showers, spouts, overflows.",
+          "etymology": "Armilla — from Latin armilla — bracelet, armlet, ring. The bracelet city, the city of circular enclosure.",
+          "venice": "Venice's infrastructure is its architecture. Its wells — the vere da pozzo — are its most overlooked monuments. Its canals are not decoration but the city's circulatory system. Armilla, a city of pipes with no walls, is Venice inverted: a city that is nothing but its own utility, all infrastructure, no façade.",
+          "source": {
+            "city": "Armilla",
+            "pages": [
+              49,
+              49
+            ]
+          }
+        },
+        {
+          "id": "isaura",
+          "name": "Isaura",
+          "index": 5,
+          "description": "Isaura, city of the thousand wells, is said to rise over a deep, subterranean lake. On all sides, wherever the inhabitants dig long vertical holes in the ground, they succeed in drawing up water, as far as the city extends, and no farther. Its green border repeats the dark outline of the buried lake; an invisible landscape conditions the visible one; everything that moves in the sunlight is driven by the lapping wave enclosed beneath the rock's calcareous sky.",
+          "etymology": "From Isauria — a historical region in south-central Asia Minor, now Turkey. A name of ancient geographic specificity, of a real but vanished place.",
+          "venice": "Venice was built to solve the problem of fresh water — in the middle of a saltwater lagoon. Its wells collected rainwater filtered through sand and clay; the vere da pozzo — the stone wellheads — are now Venice's most overlooked monuments, each one a piece of civic hydraulic engineering made beautiful. Isaura, city of the thousand wells, is Venice's other self: the city built not for beauty but for survival, and beautiful because of it.",
+          "source": {
+            "city": "Isaura",
+            "pages": [
+              20,
+              20
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "book": {
+    "title": "Invisible Cities",
+    "author": "Italo Calvino",
+    "translator": "William Weaver",
+    "translation_year": 1974,
+    "url": "https://tehne.com/assets/i/upload/library/italo-calvino-invisible-cities-1974.pdf",
+    "pdf_page_offset": 7
+  }
+}

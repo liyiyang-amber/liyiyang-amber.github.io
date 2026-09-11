@@ -1,0 +1,99 @@
+---
+layout: invisible-cities
+title: "Invisible Cities"
+excerpt: "Every time I describe a city I am saying something about Venice."
+permalink: /memories/invisible-cities/
+date: 2026-09-08
+author_profile: true
+invisible_cities: true
+header:
+  teaser: invisible-cities/venice-1500.jpg
+---
+
+{% assign atlas = site.data.invisible_cities %}
+<section class="invisible-cities" aria-labelledby="ic-title" data-default-filter="{{ atlas.default_filter | escape }}">
+  <div class="ic-backdrop" aria-hidden="true">
+    <img class="ic-venice" src="{{ atlas.artwork.path | relative_url }}" alt="" width="1280" height="613">
+  </div>
+  <div class="ic-veil" aria-hidden="true"></div>
+
+  <header class="ic-header">
+    <div>
+      <span class="ic-eyebrow">Italo Calvino · 1972</span>
+      <h1 class="ic-title" id="ic-title">Invisible Cities</h1>
+    </div>
+    <p class="ic-quote" data-ic-quote>{{ atlas.quote | escape }}</p>
+    <a class="ic-back" href="{{ '/memories/' | relative_url }}">← Back to Memories</a>
+  </header>
+
+  <div class="ic-layout">
+    <nav class="ic-grid" aria-label="Explore cities and themes">
+      {% for theme in atlas.categories %}
+        <div class="ic-row" style="--ic-color: {{ theme.color }}">
+          <a class="ic-theme" href="#ic-{{ theme.id }}" data-ic-target="ic-{{ theme.id }}">{{ theme.name | escape }}</a>
+          <div class="ic-cities">
+            {% for city in theme.cities %}
+              <a class="ic-city" href="#ic-city-{{ city.id }}" data-ic-target="ic-city-{{ city.id }}" data-ic-note="{{ city.etymology | escape }}">{{ city.name | escape }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </nav>
+
+    <div class="ic-drawer-backdrop" aria-hidden="true" hidden></div>
+    <aside class="ic-reader" id="ic-reader" aria-label="City and theme readings">
+      <div class="ic-reader-tools" hidden>
+        <button class="ic-close" type="button" aria-label="Close reading panel">✕</button>
+      </div>
+      {% for theme in atlas.categories %}
+        <article class="ic-entry" id="ic-{{ theme.id }}" data-ic-kind="theme" data-ic-name="{{ theme.name | escape }}" data-ic-filter="{{ theme.filter | escape }}" style="--ic-color: {{ theme.color }}">
+          <p class="ic-kicker">Theme</p>
+          <h2 class="ic-name ic-name-theme" id="ic-heading-{{ theme.id }}" tabindex="-1">{{ theme.name | escape }}</h2>
+          <div class="ic-illustration" aria-hidden="true">
+            <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">{{ theme.illustration }}</svg>
+          </div>
+          <p class="ic-description">{{ theme.excerpt | escape }}</p>
+          <div class="ic-notes">
+            <h3 class="ic-note-heading">Cities in this theme</h3>
+            <div class="ic-theme-cities">
+              {% for city in theme.cities %}
+                <a class="ic-city" href="#ic-city-{{ city.id }}" data-ic-target="ic-city-{{ city.id }}">{{ city.name | escape }}</a>
+              {% endfor %}
+            </div>
+          </div>
+          <blockquote class="ic-panel-quote">“{{ atlas.quote | escape }}”<cite>— Marco Polo to Kublai Khan</cite></blockquote>
+        </article>
+
+        {% for city in theme.cities %}
+          <article class="ic-entry" id="ic-city-{{ city.id }}" data-ic-kind="city" data-ic-name="{{ city.name | escape }}" data-ic-theme="{{ theme.name | escape }}" data-ic-filter="{{ theme.filter | escape }}" style="--ic-color: {{ theme.color }}">
+            <a class="ic-kicker" href="#ic-{{ theme.id }}" data-ic-target="ic-{{ theme.id }}">{{ theme.name | escape }} ↗</a>
+            <h2 class="ic-name" id="ic-heading-city-{{ city.id }}" tabindex="-1">{{ city.name | escape }}</h2>
+            <div class="ic-illustration" aria-hidden="true">
+              <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">{{ theme.illustration }}</svg>
+            </div>
+            {% if city.source %}
+              <p class="ic-description">{{ city.description | escape }}</p>
+              <p class="ic-source">
+                {{ atlas.book.author | escape }} · translated by {{ atlas.book.translator | escape }}<br>
+                <a href="{{ atlas.book.url | escape }}#page={{ city.source.pages.first | plus: atlas.book.pdf_page_offset }}" target="_blank" rel="noopener noreferrer"><cite>{{ atlas.book.title | escape }}</cite>, {% if city.source.pages.first == city.source.pages.last %}p. {{ city.source.pages.first }}{% else %}pp. {{ city.source.pages.first }}–{{ city.source.pages.last }}{% endif %}</a>
+                {% if city.source.city != city.name %}<span class="ic-source-city">Named “{{ city.source.city | escape }}” in this edition.</span>{% endif %}
+              </p>
+            {% else %}
+              <p class="ic-source-note"><strong>Source note:</strong> {{ city.description | escape }}</p>
+            {% endif %}
+            <div class="ic-notes">
+              <h3 class="ic-note-heading">On the name</h3>
+              <p class="ic-etymology">{{ city.etymology | escape }}</p>
+              <p class="ic-connection">{{ city.venice | escape }}</p>
+            </div>
+            <blockquote class="ic-panel-quote">“{{ atlas.quote | escape }}”<cite>— Marco Polo to Kublai Khan</cite></blockquote>
+            <div class="ic-meta"><span>City {{ city.index }} of 5</span><span>{{ theme.name | escape }}</span></div>
+          </article>
+        {% endfor %}
+      {% endfor %}
+    </aside>
+  </div>
+
+  <div class="ic-tooltip" id="ic-tooltip" role="tooltip" hidden></div>
+  <p class="ic-attribution">Background: Jacopo de’ Barbari, <em>View of Venice</em>, 1500 · <a href="{{ atlas.artwork.source | escape }}" target="_blank" rel="noopener noreferrer">Public domain</a></p>
+</section>

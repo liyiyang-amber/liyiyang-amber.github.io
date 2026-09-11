@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+{% include base_path %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js invisible-cities-document">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+  <body class="invisible-cities-page">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+    <main class="ic-page-main">
+      <aside class="ic-author-sidebar" aria-label="About the author">
+        {% include sidebar.html %}
+      </aside>
+      {{ content }}
+    </main>
+    {% include scripts.html %}
+  </body>
+</html>
