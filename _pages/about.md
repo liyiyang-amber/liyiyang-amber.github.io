@@ -75,13 +75,20 @@ And there are days when I seek words to keep going... The following is the one I
 
 
 
+<div class="about-interests" markdown="1">
+
 Now in the following, you'll find a whimsical bit more about me:
+{: .about-interests__intro}
+
 - 最喜欢的歌手是Lana Del Rey
 - 喜欢大自然 hiking爱好者 是在户外就能莫名开心的人
 - 喜欢阳光（但是怕晒）看到很绝的光影会哇哇大叫然后拍照
 - 多洛米蒂是精神老家
 - 喜欢蓝天白云 喜欢日出
 - 抹茶爱好者
+{: .about-interests__list role="list"}
+
+</div>
 
 <div class="article-card">
   “The woods are lovely, dark and deep.<br>
