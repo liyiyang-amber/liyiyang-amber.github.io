@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% assign journey_page = site.travel | where: "permalink", page.journey_permalink | first %}
+<main id="main" class="travel-journey-shell" role="main">
+  <article class="travel-journey travel-video-page">
+    <div class="travel-video-page__inner">
+      <a class="travel-video-page__back" data-journey-return href="{{ journey_page.url | relative_url }}#travel-map-instructions">&larr; Back to the route map</a>
+      <p class="travel-journey__eyebrow">{{ journey_page.journey.eyebrow | escape }}{% if journey_page.journey.period %} · {{ journey_page.journey.period | escape }}{% endif %}</p>
+      {% include travel-overview.html overview=journey_page.journey.overview journey_url=journey_page.url standalone=true %}
+    </div>
+  </article>
+</main>

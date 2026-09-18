@@ -1,0 +1,32 @@
+{
+  "approval_status": "sample_only",
+  "directory": "cinematic-v3-seceda-sculpted",
+  "previous_revision": "cinematic-v3-seceda",
+  "references": ["images/swiss_do/Seceda.jpg", "images/swiss_do/Seceda_2.jpg", "images/swiss_do/Seceda_4.jpg"],
+  "visual_reference_attachments":["/Users/amber_test/Downloads/Seceda-ridgeline-loop-hike-18.webp","/Users/amber_test/Downloads/seceda-dolomiti-hike-10.jpg"],
+  "ridge_target": {"lonlat": [11.762,46.6075], "elevation_m":2630, "note":"Include the higher measured summit group beyond the foreground crest."},
+  "ridge_geometry": {
+    "bounds":[11.728,46.594,11.786,46.620], "subdivisions":5, "maximum_carve_m":330, "protected_path_m":30,
+    "crest_anchors":[[11.73306,46.60160],[11.73582,46.60106],[11.73899,46.60187],[11.74491,46.60187],[11.74808,46.60214],[11.75400,46.60403],[11.75993,46.60591],[11.763883,46.608605],[11.767045,46.609414],[11.769416,46.611030],[11.773368,46.612647],[11.776529,46.612377],[11.780481,46.612916]]
+  },
+  "weather_profiles": {
+    "seceda-clear":{"snowline_m":2390,"snow_full_m":2940,"sun":2.4,"sky":"94bcd0","ambient":0.58,"haze":0.13,"cloud_density":0,"ridge_material":true,"sculpted_ridge":true,"sun_rotation_degrees":[38,-24,-105],"ridge_clouds":[]},
+    "seceda-cloudwrapped":{"snowline_m":2390,"snow_full_m":2940,"sun":2.05,"sky":"b4cbd3","ambient":0.63,"haze":0.16,"cloud_density":0.018,"ridge_material":true,"sculpted_ridge":true,"sun_rotation_degrees":[38,-24,-105],"ridge_clouds":[
+      {"group":"valley","lonlat":[11.753,46.610],"elevation_m":2380,"scale_m":[850,480,300],"density":0.015,"drift_m":[80,-20,25]},
+      {"group":"summit","lonlat":[11.770,46.611],"elevation_m":2960,"scale_m":[780,460,180],"density":0.026,"drift_m":[95,25,8]}
+    ]},
+    "seceda-reveal":{"snowline_m":2390,"snow_full_m":2940,"sun":2.05,"sky":"b4cbd3","ambient":0.63,"haze":0.16,"cloud_density":0.018,"ridge_material":true,"sculpted_ridge":true,"sun_rotation_degrees":[38,-24,-105],"reveal_seconds":2,"ridge_clouds":[
+      {"group":"valley","lonlat":[11.753,46.610],"elevation_m":2380,"scale_m":[850,480,300],"density":0.015,"drift_m":[80,-20,25]},
+      {"group":"summit","lonlat":[11.770,46.611],"elevation_m":2960,"scale_m":[780,460,180],"density":0.026,"drift_m":[95,25,8]},
+      {"group":"reveal","lonlat":[11.756,46.605],"elevation_m":2710,"scale_m":[900,440,220],"density":0.022,"drift_m":[-180,450,65]}
+    ]}
+  },
+  "shots": {
+    "d07-seceda":{"seconds":1.5,"weather_profile":"seceda-clear","ridge_camera":{"lonlat":[11.7270,46.6015],"height_m":55,"elevation_m":2600,"drift_m":[4,0,0],"lens_mm":43}},
+    "d07-summit":{"seconds":1,"weather_profile":"seceda-clear","ridge_camera":{"lonlat":[11.7275,46.6014],"height_m":25,"elevation_m":2575,"drift_m":[2,0,0],"lens_mm":46}},
+    "d08-seceda-lift":{"seconds":2,"weather_profile":"seceda-cloudwrapped","ridge_camera":{"lonlat":[11.7280,46.6016],"height_m":35,"elevation_m":2590,"drift_m":[4,0,0],"lens_mm":43}},
+    "d08-pieralongia-out":{"seconds":4,"weather_profile":"seceda-reveal","travel_fraction":0.112,"ridge_camera":{"offset_m":[-42,-24,5],"drift_m":[3,0,0],"lens_mm":38}},
+    "d08-pieralongia-return":{"seconds":3,"weather_profile":"seceda-cloudwrapped","travel_fraction":0.974,"ridge_camera":{"offset_m":[-40,-28,4],"drift_m":[3,0,0],"lens_mm":34}},
+    "d08-loop-arrival":{"seconds":1,"weather_profile":"seceda-cloudwrapped","ridge_camera":{"lonlat":[11.7278,46.6014],"height_m":25,"elevation_m":2575,"drift_m":[2,0,0],"lens_mm":46}}
+  }
+}

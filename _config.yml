@@ -185,6 +185,26 @@ exclude:
   - node_modules
   - package.json*
   - Rakefile
+  - scripts/prepare-journey-overview.py
+  - scripts/render-journey-overview.py
+  - scripts/encode-journey-overview.py
+  - scripts/test-journey-overview.py
+  - scripts/test-travel-overview.js
+  - scripts/JOURNEY-OVERVIEW.md
+  - scripts/prepare-journey-cinematic.py
+  - scripts/render-journey-cinematic.py
+  - scripts/encode-journey-cinematic.py
+  - scripts/prepare-journey-film.py
+  - scripts/encode-journey-film.py
+  - scripts/test-journey-film.py
+  - scripts/test-journey-film-browser.cjs
+  - scripts/test-journey-video-page.rb
+  - scripts/journey-seceda-terrain.py
+  - scripts/prepare-journey-seceda.py
+  - scripts/preview-journey-seceda.py
+  - scripts/test-journey-seceda.py
+  - scripts/test-journey-seceda-browser.cjs
+  - scripts/assemble-journey-seceda.py
   - README
   - tmp
   - vendor

@@ -28,8 +28,63 @@ $journey-rail: #315a47;
 $journey-cable: #39758e;
 $journey-bus: #aa6a2b;
 $journey-rideshare: #6f5968;
+
+.travel-overview {
+  margin: 0 auto 2.5rem;
+  max-width: 960px;
+
+  @media (min-width: 900px) {
+    // Keep the complete 4:3 player and native controls within a laptop viewport.
+    max-width: unquote("min(960px, calc((100svh - 180px) * 4 / 3))");
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background: $journey-paper;
+    border-radius: 12px;
+  }
+
+  &__description, &__credits { font-size: .8rem; color: $journey-copy; }
+  &__description { margin: .75rem 0; }
+  &__downloads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.25rem;
+    font-size: .8rem;
+    margin: .75rem 0;
+  }
+  &__credits summary { cursor: pointer; }
+  a:focus-visible, summary:focus-visible, video:focus-visible {
+    outline: 3px solid $journey-route;
+    outline-offset: 4px;
+  }
+}
 $journey-hike: #b44f39;
 $journey-line: rgba(28, 25, 21, 0.12);
+
+.travel-video-page {
+  min-height: 70vh;
+  padding: clamp(24px, 4vw, 48px) 20px;
+
+  &__inner { max-width: 960px; margin: 0 auto; }
+  &__back {
+    display: inline-block;
+    margin-bottom: 24px;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+  .travel-overview__title {
+    margin: 0 0 24px;
+    font-family: "Travel Playfair", Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.2;
+  }
+  .travel-journey__eyebrow { line-height: 1.6; }
+  a:focus-visible { outline: 3px solid $journey-route; outline-offset: 4px; }
+}
 
 #main.travel-journey-shell {
   width: 100%;
@@ -179,6 +234,17 @@ $journey-line: rgba(28, 25, 21, 0.12);
 
 .travel-map-section__touch-instruction {
   display: none;
+}
+
+.travel-journey .travel-map-section__video-link {
+  color: $journey-route;
+  text-transform: none;
+  letter-spacing: .02em;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  scroll-margin-top: 5rem;
+
+  &:focus-visible { outline: 3px solid $journey-route; outline-offset: 4px; }
 }
 
 .travel-map-frame {

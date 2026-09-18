@@ -1,0 +1,254 @@
+{
+  "diagnostic_only": false,
+  "accessed_on": "2026-09-15",
+  "elevation": "Copernicus GLO-30 and GLO-90, AWS COG distribution / 2021 release",
+  "land_cover": "OpenStreetMap current water and forest polygons; ODbL 1.0",
+  "terrain_credit": "produced using Copernicus WorldDEM-30 and WorldDEM-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved",
+  "manifest_sha256": "61bcdac79624efa7f4a8aaca6beb58077082a6eb478b0ce894ae5edbee76f865",
+  "routes_sha256": "7a61ad306b6b126be05090b568be3463bd8e1d66e9634783646aa2a5d909cd10",
+  "configuration_sha256": "3dbe37fdd3d3fc00a803ff67c13b2e3238429ad6562536560c98efb2ec8ee6e9",
+  "sources": [
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E007_00_DEM/Copernicus_DSM_COG_10_N46_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E007_00_DEM.tif",
+      "sha256": "426e3d1492d94e4f23d444843f852ff5be675da5c4c14e661b5642006864047d"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E008_00_DEM/Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif",
+      "sha256": "47769664394ee1ff3b51f5c1b43a3441d7f7bce8d086d0ed2f3a892b895fae3e"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E011_00_DEM/Copernicus_DSM_COG_10_N46_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E011_00_DEM.tif",
+      "sha256": "eaf59e0a1c97c8be53ff38c7ebca4ed1cfd3ba491c4c6dea3302ffe2a5ccb5bb"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E012_00_DEM/Copernicus_DSM_COG_10_N46_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E012_00_DEM.tif",
+      "sha256": "46b61212f5850f75b5878ea1e14daaa53d3f734820adcb73f2f4f345c1130f33"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E005_00_DEM/Copernicus_DSM_COG_30_N45_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E005_00_DEM.tif",
+      "sha256": "a739af6d34f4412be99de54fccb0ed756ac8ffaeed15cbf0b5c4d1f1c6052b0a"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E006_00_DEM/Copernicus_DSM_COG_30_N45_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E006_00_DEM.tif",
+      "sha256": "a002f90ad4b187486930ca502cc8ad67bcf6c65f973e5920702b6d068fc876ce"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E007_00_DEM/Copernicus_DSM_COG_30_N45_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E007_00_DEM.tif",
+      "sha256": "a581f2d9539b30e64dce807b9105752689fba3261e0c7ae62602d7f24f1f0d43"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E008_00_DEM/Copernicus_DSM_COG_30_N45_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E008_00_DEM.tif",
+      "sha256": "17ef05156ba29d063dfdfc75f015417099cf515e1d1cd0c14fa39c5aa5dfda55"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E009_00_DEM/Copernicus_DSM_COG_30_N45_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E009_00_DEM.tif",
+      "sha256": "c897ede243e6ed465f1a5be9b43a3f98ae6a06a45dfbcccab2ec650269a634de"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E010_00_DEM/Copernicus_DSM_COG_30_N45_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E010_00_DEM.tif",
+      "sha256": "6cd81a31efb6e686745029dbd7eb65a5458a8b2b149c920cacb06f6cf06477b0"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E011_00_DEM/Copernicus_DSM_COG_30_N45_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E011_00_DEM.tif",
+      "sha256": "cc9138fc2b405f0b24b6c7ad1d9376a2184a8ca575504eedc8690ccb36377bee"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E012_00_DEM/Copernicus_DSM_COG_30_N45_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E012_00_DEM.tif",
+      "sha256": "9adf78772a8601d57f8562aa0d6dec84a400d941f467f2ebcc096bb6a2c8b073"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E005_00_DEM/Copernicus_DSM_COG_30_N46_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E005_00_DEM.tif",
+      "sha256": "85cf6a624fbf61a3e20761ceec65989947b1268d60300955e656aa1095c3ee59"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E006_00_DEM/Copernicus_DSM_COG_30_N46_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E006_00_DEM.tif",
+      "sha256": "1a790f6987d5644281c76a92bad2d1997e08170c9912832443f99d1b5ad24bcf"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E007_00_DEM/Copernicus_DSM_COG_30_N46_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E007_00_DEM.tif",
+      "sha256": "3528ab5ba11ec63b6fd3dff91736911e69a0af0d87e50c7b61bc259deab9e732"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E008_00_DEM/Copernicus_DSM_COG_30_N46_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E008_00_DEM.tif",
+      "sha256": "27f1c6555357b4933eaeda91b39bdfab79a2d4688c6562ca26af374f6e3ab4fc"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E009_00_DEM/Copernicus_DSM_COG_30_N46_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E009_00_DEM.tif",
+      "sha256": "6860c0b93a271f3b702a4a16aa885ba19c4907e808c56f94a620c6a657aa5f18"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E010_00_DEM/Copernicus_DSM_COG_30_N46_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E010_00_DEM.tif",
+      "sha256": "4c0c831912f0ca9fe1cd53b27509aa30e76b08cf98a092b070aa9177c1a010e0"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E011_00_DEM/Copernicus_DSM_COG_30_N46_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E011_00_DEM.tif",
+      "sha256": "0bf8bc145ec8f14bbc35c8f04b4ddbcfa42d9a5827245c0a1f0494d5caea174c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E012_00_DEM/Copernicus_DSM_COG_30_N46_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E012_00_DEM.tif",
+      "sha256": "da3d8d471b8fbf7fffdd80cf157e5f405fb396105aee1401766c60658c69d431"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E005_00_DEM/Copernicus_DSM_COG_30_N47_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E005_00_DEM.tif",
+      "sha256": "d5571680a4ad783f8a80fac6f595aa42cd42562bed09055ef341b6106420a861"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E006_00_DEM/Copernicus_DSM_COG_30_N47_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E006_00_DEM.tif",
+      "sha256": "dc2d4bee6c974402f70949a889453e3f6ffbc32a178388bd9ff859ac247e63e9"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E007_00_DEM/Copernicus_DSM_COG_30_N47_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E007_00_DEM.tif",
+      "sha256": "a835078ef2bb7b512586e9c2c53d0e39fb767f3aea5426737c076e33b71203f7"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E008_00_DEM/Copernicus_DSM_COG_30_N47_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E008_00_DEM.tif",
+      "sha256": "33952fed93b6d8454bba21d4368ae8bca5b3958ad010e774527524c4bf0349f3"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E009_00_DEM/Copernicus_DSM_COG_30_N47_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E009_00_DEM.tif",
+      "sha256": "51f5f20d1a5c8351dd8f8a18e8ae376bf93253c300d95a6e0b54c9fe75640a4c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E010_00_DEM/Copernicus_DSM_COG_30_N47_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E010_00_DEM.tif",
+      "sha256": "ec174c3c040e2795a98e8587107f051c109ca3d46e4dfafb4e67cb1f9fcf1f63"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E011_00_DEM/Copernicus_DSM_COG_30_N47_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E011_00_DEM.tif",
+      "sha256": "fa7d946d23516eafb3eb6f4c2f98de750b0dd711a82bb65bb12a3c00bc01a252"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E012_00_DEM/Copernicus_DSM_COG_30_N47_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E012_00_DEM.tif",
+      "sha256": "621d7ac02a22713cd4a63fa7693441831b428657e3f1d7e23badf48539a7423c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E005_00_DEM/Copernicus_DSM_COG_30_N48_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E005_00_DEM.tif",
+      "sha256": "8ca13c073545fdb442f8dc6d35ab1b84ea468bffec87e96815c596cc1ea728ea"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E006_00_DEM/Copernicus_DSM_COG_30_N48_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E006_00_DEM.tif",
+      "sha256": "d22e8ff5a019421cbe68ae8e6d6dda77d30c85081897834aa3dc5868590b81d2"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E007_00_DEM/Copernicus_DSM_COG_30_N48_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E007_00_DEM.tif",
+      "sha256": "2d35ed06d72cfa3c0ba9b1e1b44a9d554230b16c5805085dc7406cc02ab39f14"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E008_00_DEM/Copernicus_DSM_COG_30_N48_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E008_00_DEM.tif",
+      "sha256": "abe2c86e57d5fb762a51be1bc5008ce65e6b231d78e126589b9e8786cfc15032"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E009_00_DEM/Copernicus_DSM_COG_30_N48_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E009_00_DEM.tif",
+      "sha256": "05c751a6f21f4cb8cb3ddb383306f059d6bf6ee6ca06e6f420d92e32043b0cbf"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E010_00_DEM/Copernicus_DSM_COG_30_N48_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E010_00_DEM.tif",
+      "sha256": "4f425965a2b98f8dcb9642d45666ec003e85ec924a41fc0255263072ad591a95"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E011_00_DEM/Copernicus_DSM_COG_30_N48_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E011_00_DEM.tif",
+      "sha256": "a29f330cc612750ced76ee450885ca8606bdd8de813157fa641a91dee4bc2e24"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E012_00_DEM/Copernicus_DSM_COG_30_N48_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E012_00_DEM.tif",
+      "sha256": "d521add1f23832bb75da207bf357941a4ede0ab4242a447d714154a2a4ad0869"
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3B%28nwr%5B%22natural%22%3D%22water%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3Bnwr%5B%22natural%22%3D%22wood%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3B%29%3Bout+geom%3B",
+      "file": "osm-dolomites.json",
+      "sha256": "61dac512cdc8ae4a29807b27833ed3cad2c9bcdb495ea0f16d6e06cd541627bf"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22natural%22%3D%22water%22%5D%5B%22name%22~%22L%C3%A9man%7CGenfersee%7CBodensee%7CZ%C3%BCrichsee%7CWalensee%7CThunersee%7CBrienzersee%22%5D%2845.6%2C5.5%2C48.9%2C12.7%29%3Bout+geom%3B",
+      "file": "osm-regional-lakes.json",
+      "sha256": "b1718d495379777db7d734562921e994c38a9df674c346c9090968f68b4ff013"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3B%28nwr%5B%22natural%22%3D%22water%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3Bnwr%5B%22natural%22%3D%22wood%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3B%29%3Bout+geom%3B",
+      "file": "osm-swiss.json",
+      "sha256": "aeec45b7655eaaa8b0bbb35ae56b0fd86a36d3dfbab79271ca64a686f740a3d0"
+    }
+  ],
+  "render": {
+    "blender": "4.5.13 LTS",
+    "renderer": "EEVEE",
+    "duration_seconds": 72,
+    "resolution": [
+      1280,
+      960
+    ],
+    "fps": 24,
+    "audio": false,
+    "vertical_exaggeration": 1,
+    "projection": "Local equirectangular, origin 9 E / 47 N, kilometres",
+    "render_grid_metres": {
+      "overview": 980.0,
+      "oeschinensee": 32.4,
+      "jungfrau": 79.6,
+      "dolomites": 100.5,
+      "gardena": 39.5
+    },
+    "renderer_sha256": "beec8d05549c4c8f996db1d0bc6155e808c7af6fa27a2d4c624a8a19af23d12d",
+    "weather": "Illustrative recollection only; not a historical weather reconstruction"
+  },
+  "media": [
+    {
+      "file": "swiss-dolomites-overview.mp4",
+      "bytes": 6003609,
+      "sha256": "a8aa463b1e86194092d69186f3f1786d9f67e8ec00045a746b56700f144d8325"
+    },
+    {
+      "file": "swiss-dolomites-overview.gif",
+      "bytes": 32638095,
+      "sha256": "74b1c24f3fad20d23baa5b67fd9b5d2088e09d39a448c25b8ebe2f280b220223"
+    },
+    {
+      "file": "swiss-dolomites-overview-poster.jpg",
+      "bytes": 79289,
+      "sha256": "9b20f61287e79b87b31afd2db4767ed3bc06fc9e0fc833038557a4dce2ef090f"
+    }
+  ],
+  "gif": {
+    "width": 480,
+    "height": 360,
+    "fps": 8,
+    "palette_colors": 128,
+    "dither": "bayer:bayer_scale=5",
+    "duration_seconds": 72
+  }
+}

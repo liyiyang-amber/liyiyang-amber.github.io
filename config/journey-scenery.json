@@ -1,0 +1,29 @@
+{
+  "version": 3,
+  "approval_status": "sample_only",
+  "sample_duration": 15,
+  "full_duration": 150,
+  "minimum_free_gib": 8,
+  "destination_seconds_by_day": [2, 5, 9, 5, 3, 7, 4, 4, 5, 1],
+  "walking_pair": [
+    {"id": "boy", "height_m": 1.75, "jacket": "315a47", "pack": "bc9d5e", "hair": "342820", "phase": 0},
+    {"id": "girl", "height_m": 1.65, "jacket": "b65e48", "pack": "466f80", "hair": "493027", "phase": 0.43}
+  ],
+  "weather_profiles": {
+    "clear-lake": {"snowline_m": 2380, "snow_full_m": 3030, "sun": 2.1, "sky": "94bed1", "ambient": 0.65, "haze": 0.26, "cloud_density": 0.0008},
+    "snow-sun": {"snowline_m": 2050, "snow_full_m": 2750, "sun": 2.25, "sky": "8bbbd4", "ambient": 0.6, "haze": 0.24, "cloud_density": 0.001},
+    "cloud-peaks": {"snowline_m": 2480, "snow_full_m": 3150, "sun": 1.65, "sky": "bbcad0", "ambient": 0.68, "haze": 0.32, "cloud_density": 0.006},
+    "changing-valley": {"snowline_m": 2530, "snow_full_m": 3200, "sun": 2.15, "sky": "98c4d8", "ambient": 0.64, "haze": 0.3, "cloud_density": 0.009, "transition": true,
+      "mist_placement": {"kind": "upper-slopes", "zero_below_rise": 0.6, "full_above_rise": 0.75, "ridge_ray_angles_degrees": [-22, -8, 8, 22], "ridge_distance_m": [600, 5000], "ridge_step_m": 30, "ridge_approach_fraction": 0.67, "lift_m": 90, "volume_scale_m": [560, 440, 360]}}
+  },
+  "landmarks": {
+    "santa-maddalena-church": {"lonlat": [11.71922, 46.64479], "model": "gothic-church", "rotation_degrees": -30, "source_url": "https://www.funes.eu/it/Chiesa_di_Santa_Maddalena_4", "coordinate_source": "Municipal page StreetView link cbll=46.64479,11.71922", "reference": "images/swiss_do/Stmaddalena.jpg"},
+    "ortisei-church": {"lonlat": [11.6718, 46.5752], "model": "onion-church", "rotation_degrees": -12, "source_url": "https://www.valgardena.it/en/addresses/detail/base/poi/ortisei-val-gardena/ortisei-parish-church/54B87FF3F6E24A90A5923D17A3BD9043/", "coordinate_source": "Official tourism page Google Maps link 46.5752,11.6718", "reference": "images/swiss_do/Ortisei.jpg"}
+  },
+  "sample_shots": [
+    {"id": "v3-oeschinensee-pair", "base_shot": "d02-lake-trail", "seconds": 5, "weather_profile": "clear-lake", "scenery": "lakeside", "reference": "images/swiss_do/Oeschinensee.jpg", "camera_offset_m": [-18, -10, 3.8], "look_offset_m": [95, 12, 21], "lens_mm": 27, "show_pair": true},
+    {"id": "v3-mannlichen-snow", "base_shot": "d04-panoramaweg", "seconds": 3, "weather_profile": "snow-sun", "scenery": "snow-trail", "reference": "images/swiss_do/Mannlichen.jpg", "camera_offset_m": [-20, 21, 3.8], "look_offset_m": [170, -105, 36], "lens_mm": 30, "show_pair": true},
+    {"id": "v3-santa-maddalena", "base_shot": "d06-viewpoint-trail", "seconds": 3, "weather_profile": "cloud-peaks", "scenery": "church-meadow", "reference": "images/swiss_do/Stmaddalena.jpg", "landmark": "santa-maddalena-church", "destination_camera": {"offset_m": [-330, 480, 6], "look_offset_m": [260, -420, 120], "drift_m": [6, 0, 0]}, "lens_mm": 37, "show_pair": false},
+    {"id": "v3-ortisei-atmosphere", "base_shot": "d07-ortisei-weather", "seconds": 4, "weather_profile": "changing-valley", "scenery": "village-weather", "reference": "images/swiss_do/Ortisei.jpg", "additional_references": ["images/swiss_do/Ortisei_4.jpg", "images/swiss_do/Ortisei_5.jpg"], "landmark": "ortisei-church", "destination_camera": {"offset_m": [-145, -270, 55], "look_offset_m": [70, 340, 55], "drift_m": [5, 0, 0]}, "lens_mm": 38, "show_pair": false, "weather": true}
+  ]
+}

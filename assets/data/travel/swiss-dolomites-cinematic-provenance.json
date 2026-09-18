@@ -1,0 +1,742 @@
+{
+  "status": "approved_seceda_revision_local_assembly",
+  "accessed_on": "2026-09-17",
+  "source": "Copernicus GLO-30 / GLO-90 2021; OpenStreetMap outlines and above-ground topology checks",
+  "sources": [
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3B%28nwr%5B%22natural%22%3D%22water%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3Bnwr%5B%22natural%22%3D%22wood%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.38%2C7.52%2C46.82%2C8.19%29%3B%29%3Bout+geom%3B",
+      "file": "osm-swiss.json",
+      "sha256": "a05a062eb3f2361f8c10201d87f21a214809e8f9ca2326fb8b17ccbf118cd5df",
+      "omitted_incomplete_polygons": [
+        "way/680404205",
+        "relation/1027542"
+      ]
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3B%28nwr%5B%22natural%22%3D%22water%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3Bnwr%5B%22natural%22%3D%22wood%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.42%2C11.41%2C46.89%2C12.24%29%3B%29%3Bout+geom%3B",
+      "file": "osm-dolomites.json",
+      "sha256": "6c5af89f7eeb61c431ae65030ad96ac9536535f19c6b0000e64e584dcecfb997"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22natural%22%3D%22water%22%5D%5B%22name%22~%22L%C3%A9man%7CGenfersee%7CBodensee%7CZ%C3%BCrichsee%7CWalensee%7CThunersee%7CBrienzersee%22%5D%2845.6%2C5.5%2C48.9%2C12.7%29%3Bout+geom%3B",
+      "file": "osm-regional-lakes.json",
+      "sha256": "7a51b7763107ec9092ebe8621f7b2ab104c9407513fa4a0c971f763c1d87efd1"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3B%28nwr%5B%22natural%22%3D%22wood%22%5D%2846.43%2C6.62%2C46.62%2C6.84%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.43%2C6.62%2C46.62%2C6.84%29%3B%29%3Bout+geom%3B",
+      "file": "film-lavaux-forest.json",
+      "sha256": "d39d2aa6ab0b2703074bda37c3d7f425d2012d0c953869353efb1141f822ca16",
+      "query": "[out:json][timeout:50];(nwr[\"natural\"=\"wood\"](46.43,6.62,46.62,6.84);nwr[\"landuse\"=\"forest\"](46.43,6.62,46.62,6.84););out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3B%28nwr%5B%22natural%22%3D%22wood%22%5D%2846.8%2C11.4%2C47.05%2C11.61%29%3Bnwr%5B%22landuse%22%3D%22forest%22%5D%2846.8%2C11.4%2C47.05%2C11.61%29%3B%29%3Bout+geom%3B",
+      "file": "film-brenner-forest.json",
+      "sha256": "2cba12475ef7c13f52125e95a7400192d737022391e2c909fa50e2dd27f34d23",
+      "query": "[out:json][timeout:50];(nwr[\"natural\"=\"wood\"](46.8,11.4,47.05,11.61);nwr[\"landuse\"=\"forest\"](46.8,11.4,47.05,11.61););out geom;",
+      "osm_timestamp": "2026-09-17T15:46:46Z"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E006_00_DEM/Copernicus_DSM_COG_10_N46_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E006_00_DEM.tif",
+      "sha256": "43372378d9fdbcba2d8acd6a2b58c8a0d19ba7d2d49e16297bc48d9365f26493"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E007_00_DEM/Copernicus_DSM_COG_30_N46_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E007_00_DEM.tif",
+      "sha256": "3528ab5ba11ec63b6fd3dff91736911e69a0af0d87e50c7b61bc259deab9e732"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E006_00_DEM/Copernicus_DSM_COG_30_N46_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E006_00_DEM.tif",
+      "sha256": "1a790f6987d5644281c76a92bad2d1997e08170c9912832443f99d1b5ad24bcf"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E007_00_DEM/Copernicus_DSM_COG_10_N46_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E007_00_DEM.tif",
+      "sha256": "426e3d1492d94e4f23d444843f852ff5be675da5c4c14e661b5642006864047d"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E008_00_DEM/Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif",
+      "sha256": "47769664394ee1ff3b51f5c1b43a3441d7f7bce8d086d0ed2f3a892b895fae3e"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E011_00_DEM/Copernicus_DSM_COG_10_N46_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E011_00_DEM.tif",
+      "sha256": "eaf59e0a1c97c8be53ff38c7ebca4ed1cfd3ba491c4c6dea3302ffe2a5ccb5bb"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E012_00_DEM/Copernicus_DSM_COG_10_N46_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N46_00_E012_00_DEM.tif",
+      "sha256": "46b61212f5850f75b5878ea1e14daaa53d3f734820adcb73f2f4f345c1130f33"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N47_00_E011_00_DEM/Copernicus_DSM_COG_10_N47_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N47_00_E011_00_DEM.tif",
+      "sha256": "1420e245f9a5da7b2740d7ebf762c4d1d60f3c594262db51e9b2fcf7b7f69b99"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E011_00_DEM/Copernicus_DSM_COG_30_N47_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E011_00_DEM.tif",
+      "sha256": "fa7d946d23516eafb3eb6f4c2f98de750b0dd711a82bb65bb12a3c00bc01a252"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E012_00_DEM/Copernicus_DSM_COG_30_N47_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E012_00_DEM.tif",
+      "sha256": "621d7ac02a22713cd4a63fa7693441831b428657e3f1d7e23badf48539a7423c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E011_00_DEM/Copernicus_DSM_COG_30_N46_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E011_00_DEM.tif",
+      "sha256": "0bf8bc145ec8f14bbc35c8f04b4ddbcfa42d9a5827245c0a1f0494d5caea174c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E012_00_DEM/Copernicus_DSM_COG_30_N46_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E012_00_DEM.tif",
+      "sha256": "da3d8d471b8fbf7fffdd80cf157e5f405fb396105aee1401766c60658c69d431"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E011_00_DEM/Copernicus_DSM_COG_30_N48_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E011_00_DEM.tif",
+      "sha256": "a29f330cc612750ced76ee450885ca8606bdd8de813157fa641a91dee4bc2e24"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E008_00_DEM/Copernicus_DSM_COG_30_N46_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E008_00_DEM.tif",
+      "sha256": "27f1c6555357b4933eaeda91b39bdfab79a2d4688c6562ca26af374f6e3ab4fc"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N47_00_E009_00_DEM/Copernicus_DSM_COG_10_N47_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_10_N47_00_E009_00_DEM.tif",
+      "sha256": "ca0b7567f5e12b8c814500bcf434855fb2a1084248bb80d3c80a91169887817c"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E008_00_DEM/Copernicus_DSM_COG_30_N47_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E008_00_DEM.tif",
+      "sha256": "33952fed93b6d8454bba21d4368ae8bca5b3958ad010e774527524c4bf0349f3"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E009_00_DEM/Copernicus_DSM_COG_30_N47_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E009_00_DEM.tif",
+      "sha256": "51f5f20d1a5c8351dd8f8a18e8ae376bf93253c300d95a6e0b54c9fe75640a4c"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.43%2C6.62%2C46.62%2C6.84%29%3Bout+geom%3B",
+      "file": "film-lavaux-rail.json",
+      "sha256": "6f9630d73baccf5e524b28bc6250a001c64bc3595853812da990b2271bd4f7fc",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.43,6.62,46.62,6.84);out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.59%2C7.62%2C46.78%2C7.91%29%3Bout+geom%3B",
+      "file": "film-lake-thun-rail.json",
+      "sha256": "47cfc9ccdd9617f122bf38e32132bfeb36b3b97759d65c3917b831af7d562811",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.59,7.62,46.78,7.91);out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.64%2C7.84%2C46.79%2C8.08%29%3Bout+geom%3B",
+      "file": "film-brienz-road.json",
+      "sha256": "8f79d7466ca6e471011816ec448e3e8388593543821cde8d804240bfbe9801f0",
+      "query": "[out:json][timeout:50];way[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|service|living_street|track|.*_link)$\"](46.64,7.84,46.79,8.08);out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.51%2C7.79%2C46.72%2C8.02%29%3Bout+geom%3B",
+      "file": "film-valley-rail.json",
+      "sha256": "8317224a9e33e89f312658a1bb9df43205c384f98df32a4127c4f5bfe093864e",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.51,7.79,46.72,8.02);out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.53%2C7.82%2C46.72%2C8.1%29%3Bout+geom%3B",
+      "file": "film-mannlichen-rail.json",
+      "sha256": "80f7b84da1a9de052d1d5cc930a62ad8d2fc7bedf3c2e9bda13709c41cb35d74",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.53,7.82,46.72,8.1);out geom;",
+      "osm_timestamp": "117080"
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.64%2C11.53%2C46.87%2C11.77%29%3Bout+geom%3B",
+      "file": "film-brixen-rail.json",
+      "sha256": "c4bc162b7b66e13d64831e5453c38511f0d178a644fb8378636c44e1b38e13e3",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.64,11.53,46.87,11.77);out geom;",
+      "osm_timestamp": "2026-09-17T15:54:51Z"
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.61%2C11.99%2C46.8%2C12.21%29%3Bout+geom%3B",
+      "file": "film-braies-road.json",
+      "sha256": "8cada80329fbb149c14a4b306280b727b6d44e47c852c4f518f51e4819574d6e",
+      "query": "[out:json][timeout:50];way[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|service|living_street|track|.*_link)$\"](46.61,11.99,46.8,12.21);out geom;",
+      "osm_timestamp": "2026-09-17T15:54:51Z"
+    },
+    {
+      "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.57%2C11.6%2C46.74%2C11.82%29%3Bout+geom%3B",
+      "file": "film-funes-road.json",
+      "sha256": "5384cf458f296dff0a64eb419331786a13724bbefed1b85c7bf63976d7b72594",
+      "query": "[out:json][timeout:50];way[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|service|living_street|track|.*_link)$\"](46.57,11.6,46.74,11.82);out geom;",
+      "osm_timestamp": "2026-09-17T15:55:51Z"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.51%2C11.59%2C46.68%2C11.82%29%3Bout+geom%3B",
+      "file": "film-gardena-road.json",
+      "sha256": "4a37647bdbdcb5525cfea92aa99c1b6a64b158b41f11971a42c4725fced0286c",
+      "query": "[out:json][timeout:50];way[\"highway\"~\"^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|service|living_street|track|.*_link)$\"](46.51,11.59,46.68,11.82);out geom;",
+      "osm_timestamp": "2026-09-17T15:56:51Z"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.8%2C11.4%2C47.05%2C11.61%29%3Bout+geom%3B",
+      "file": "film-brenner-rail.json",
+      "sha256": "76cb8902115661f793042e2a127d95760a4f34eae8df9976b54dcb92699a8013",
+      "query": "[out:json][timeout:50];way[\"railway\"~\"^(rail|narrow_gauge|light_rail)$\"](46.8,11.4,47.05,11.61);out geom;",
+      "osm_timestamp": "2026-09-17T15:56:51Z"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E005_00_DEM/Copernicus_DSM_COG_30_N45_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E005_00_DEM.tif",
+      "sha256": "a739af6d34f4412be99de54fccb0ed756ac8ffaeed15cbf0b5c4d1f1c6052b0a"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E006_00_DEM/Copernicus_DSM_COG_30_N45_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E006_00_DEM.tif",
+      "sha256": "a002f90ad4b187486930ca502cc8ad67bcf6c65f973e5920702b6d068fc876ce"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E007_00_DEM/Copernicus_DSM_COG_30_N45_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E007_00_DEM.tif",
+      "sha256": "a581f2d9539b30e64dce807b9105752689fba3261e0c7ae62602d7f24f1f0d43"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E008_00_DEM/Copernicus_DSM_COG_30_N45_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E008_00_DEM.tif",
+      "sha256": "17ef05156ba29d063dfdfc75f015417099cf515e1d1cd0c14fa39c5aa5dfda55"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E009_00_DEM/Copernicus_DSM_COG_30_N45_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E009_00_DEM.tif",
+      "sha256": "c897ede243e6ed465f1a5be9b43a3f98ae6a06a45dfbcccab2ec650269a634de"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E010_00_DEM/Copernicus_DSM_COG_30_N45_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E010_00_DEM.tif",
+      "sha256": "6cd81a31efb6e686745029dbd7eb65a5458a8b2b149c920cacb06f6cf06477b0"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E011_00_DEM/Copernicus_DSM_COG_30_N45_00_E011_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E011_00_DEM.tif",
+      "sha256": "cc9138fc2b405f0b24b6c7ad1d9376a2184a8ca575504eedc8690ccb36377bee"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N45_00_E012_00_DEM/Copernicus_DSM_COG_30_N45_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N45_00_E012_00_DEM.tif",
+      "sha256": "9adf78772a8601d57f8562aa0d6dec84a400d941f467f2ebcc096bb6a2c8b073"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E005_00_DEM/Copernicus_DSM_COG_30_N46_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E005_00_DEM.tif",
+      "sha256": "85cf6a624fbf61a3e20761ceec65989947b1268d60300955e656aa1095c3ee59"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E009_00_DEM/Copernicus_DSM_COG_30_N46_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E009_00_DEM.tif",
+      "sha256": "6860c0b93a271f3b702a4a16aa885ba19c4907e808c56f94a620c6a657aa5f18"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N46_00_E010_00_DEM/Copernicus_DSM_COG_30_N46_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N46_00_E010_00_DEM.tif",
+      "sha256": "4c0c831912f0ca9fe1cd53b27509aa30e76b08cf98a092b070aa9177c1a010e0"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E005_00_DEM/Copernicus_DSM_COG_30_N47_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E005_00_DEM.tif",
+      "sha256": "d5571680a4ad783f8a80fac6f595aa42cd42562bed09055ef341b6106420a861"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E006_00_DEM/Copernicus_DSM_COG_30_N47_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E006_00_DEM.tif",
+      "sha256": "dc2d4bee6c974402f70949a889453e3f6ffbc32a178388bd9ff859ac247e63e9"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E007_00_DEM/Copernicus_DSM_COG_30_N47_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E007_00_DEM.tif",
+      "sha256": "a835078ef2bb7b512586e9c2c53d0e39fb767f3aea5426737c076e33b71203f7"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N47_00_E010_00_DEM/Copernicus_DSM_COG_30_N47_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N47_00_E010_00_DEM.tif",
+      "sha256": "ec174c3c040e2795a98e8587107f051c109ca3d46e4dfafb4e67cb1f9fcf1f63"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E005_00_DEM/Copernicus_DSM_COG_30_N48_00_E005_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E005_00_DEM.tif",
+      "sha256": "8ca13c073545fdb442f8dc6d35ab1b84ea468bffec87e96815c596cc1ea728ea"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E006_00_DEM/Copernicus_DSM_COG_30_N48_00_E006_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E006_00_DEM.tif",
+      "sha256": "d22e8ff5a019421cbe68ae8e6d6dda77d30c85081897834aa3dc5868590b81d2"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E007_00_DEM/Copernicus_DSM_COG_30_N48_00_E007_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E007_00_DEM.tif",
+      "sha256": "2d35ed06d72cfa3c0ba9b1e1b44a9d554230b16c5805085dc7406cc02ab39f14"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E008_00_DEM/Copernicus_DSM_COG_30_N48_00_E008_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E008_00_DEM.tif",
+      "sha256": "abe2c86e57d5fb762a51be1bc5008ce65e6b231d78e126589b9e8786cfc15032"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E009_00_DEM/Copernicus_DSM_COG_30_N48_00_E009_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E009_00_DEM.tif",
+      "sha256": "05c751a6f21f4cb8cb3ddb383306f059d6bf6ee6ca06e6f420d92e32043b0cbf"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E010_00_DEM/Copernicus_DSM_COG_30_N48_00_E010_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E010_00_DEM.tif",
+      "sha256": "4f425965a2b98f8dcb9642d45666ec003e85ec924a41fc0255263072ad591a95"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N48_00_E012_00_DEM/Copernicus_DSM_COG_30_N48_00_E012_00_DEM.tif",
+      "file": "Copernicus_DSM_COG_30_N48_00_E012_00_DEM.tif",
+      "sha256": "d521add1f23832bb75da207bf357941a4ede0ab4242a447d714154a2a4ad0869"
+    },
+    {
+      "file": "scenery-landmarks-swiss.json",
+      "url": "https://overpass.osm.ch/api/interpreter",
+      "sha256": "ee0e59f50b125e2e34aab5d600b22f8bbf40c6f5f86780a6c1ad9a46020ba273",
+      "osm_timestamp": "117080"
+    },
+    {
+      "file": "scenery-brixen-tower.json",
+      "url": "https://www.openstreetmap.org/api/0.6/way/231738203/full.json",
+      "sha256": "960450aeb77e6c069c356751c2f9f982c00ffa183f0edaea8f8109c9fdb94d66",
+      "osm_timestamp": null
+    }
+  ],
+  "surface_transport_audits": [
+    {
+      "shot": "d01-lake-geneva",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.43%2C6.62%2C46.62%2C6.84%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        173053825,
+        173053826
+      ],
+      "checked_length_m": 145.0,
+      "max_dem_grade": 0.11186691810344827,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-lake-thun",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.59%2C7.62%2C46.78%2C7.91%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        652411019
+      ],
+      "checked_length_m": 100.0,
+      "max_dem_grade": 0.053017578125,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-iseltwald-bus",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.64%2C7.84%2C46.79%2C8.08%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        187769297
+      ],
+      "checked_length_m": 38.0,
+      "max_dem_grade": 0.13279965049342105,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-iseltwald-return",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.64%2C7.84%2C46.79%2C8.08%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        187769297
+      ],
+      "checked_length_m": 22.0,
+      "max_dem_grade": 0.07834694602272728,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-lauterbrunnen-valley",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.51%2C7.79%2C46.72%2C8.02%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        307151057
+      ],
+      "checked_length_m": 85.0,
+      "max_dem_grade": 0.10510110294117647,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-murren-rail",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.51%2C7.79%2C46.72%2C8.02%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        718490096
+      ],
+      "checked_length_m": 75.0,
+      "max_dem_grade": 0.14036458333333332,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-murren-return",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.51%2C7.79%2C46.72%2C8.02%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        718490096
+      ],
+      "checked_length_m": 63.0,
+      "max_dem_grade": 0.11436631944444403,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d03-wengen-rail",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.51%2C7.79%2C46.72%2C8.02%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        307170759
+      ],
+      "checked_length_m": 79.0,
+      "max_dem_grade": 0.18935423259493672,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d04-grindelwald-rail",
+      "source_url": "https://overpass.osm.ch/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.53%2C7.82%2C46.72%2C8.1%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        187799104
+      ],
+      "checked_length_m": 73.0,
+      "max_dem_grade": 0.2968883775684932,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d05-brixen-valley",
+      "source_url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.64%2C11.53%2C46.87%2C11.77%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        417389326,
+        417389327
+      ],
+      "checked_length_m": 145.0,
+      "max_dem_grade": 0.09497575431034483,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d06-braies-car",
+      "source_url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.61%2C11.99%2C46.8%2C12.21%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        79430298
+      ],
+      "checked_length_m": 30.0,
+      "max_dem_grade": 0.27451171875,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d06-funes-bus",
+      "source_url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.57%2C11.6%2C46.74%2C11.82%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        240165836
+      ],
+      "checked_length_m": 26.0,
+      "max_dem_grade": 0.03339092548076923,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d06-ortisei-bus",
+      "source_url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.51%2C11.59%2C46.68%2C11.82%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        854540830
+      ],
+      "checked_length_m": 39.5,
+      "max_dem_grade": 0.18450850474683544,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d10-bolzano-bus",
+      "source_url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22highway%22~%22%5E%28motorway%7Ctrunk%7Cprimary%7Csecondary%7Ctertiary%7Cunclassified%7Cresidential%7Cservice%7Cliving_street%7Ctrack%7C.%2A_link%29%24%22%5D%2846.51%2C11.59%2C46.68%2C11.82%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        1027053230
+      ],
+      "checked_length_m": 30.0,
+      "max_dem_grade": 0.28639322916666665,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    },
+    {
+      "shot": "d10-alpine-rail",
+      "source_url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A50%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Cnarrow_gauge%7Clight_rail%29%24%22%5D%2846.8%2C11.4%2C47.05%2C11.61%29%3Bout+geom%3B",
+      "osm_way_ids": [
+        132218248
+      ],
+      "checked_length_m": 122.5,
+      "max_dem_grade": 0.08647161989795918,
+      "note": "Above-ground map check; displayed heights remain illustrative, not surveyed engineering."
+    }
+  ],
+  "story_sha256": "e1fdfe32ac501bb32f27c35199d9ec7bbd0da2879ed15fbdff20c43a03d1c293",
+  "route_sha256": "21b6d43069ee6f43d4cc8263a8d51de17d8a7fadb45fe3fd931e33191861676a",
+  "note": "Seceda-only photo-guided artistic relief, not higher-resolution survey or photogrammetry. Source DEMs are untouched; local shoulders are carved while measured crest anchors, heights, geographic route corridors and public geometry stay fixed. Valley and summit clouds remain after the reveal. The user-approved sample supplies six replacement clips; the previous sample and 62 original clips remain frozen.",
+  "terrain_mesh_hashes": {
+    "overview": "37c75cad7cdf606487b008a5613ee6d67686cb309128bfb45a9feaee7f775773",
+    "geneva": "4decefa73dc7bc8f49445281a4e19b9405be2e171c3a84d5cfeaee890d168c45",
+    "lavaux": "da1afa90425c50c6cfb606f88c4273dadd110f46440924a8ae61843846849dbb",
+    "geneva-background": "c48494dadb16fab43be3f847cabb9a82b19384cb5578467bfdeeadffa3643dee",
+    "oeschinensee": "c5b48372964b745084b458691af1d9744887ee385fb41d5f26f9b205256fdc7e",
+    "lake-thun": "948b27afde4122fcd6b35309074fa56a6b1ed6050d512ed3b73c6d85999e0e21",
+    "brienz": "83333d426e6d3db3e5f73f7707b7b90a213e61603a977dbe2e8f95c9c82518af",
+    "valley": "a6310ebcf0dc86626bc65f4e32530e76971f0760bef7d0118302f69faf3e0341",
+    "mannlichen": "1aedec89533dda32e217f84de4721273507a04753adb75d0b5e16f7231f59359",
+    "brixen": "5ec3d3cae493065ecc4bd3d70df3f75281252e703a828cfa0d95ac12464fd401",
+    "braies": "7e5eb995052e850e1fad3fe6cb2d5d3e056571121ca26387a1c35a2232a757eb",
+    "funes": "7477d226212fd7d18b9d835dd413fd568b81a144f60e7a2c9df8559f6162bd1c",
+    "gardena": "f22cc8fda01dddfb3e96c951d3dadf6a6cdae3f5fb9aa5bd642d0f97e6d21a74",
+    "siusi": "a49e632640078f49a3e0fca798fe3a5ca3644ce04809f31b583ddc014587d658",
+    "bolzano": "182e1b95d21e77d0abef6ff2b5589482eca533d4edeea2be604682e66868380d",
+    "brenner": "31ed9f9c7b7cc16e3ec4df41d4e4f90280d91ccf12fa5bec0d085ec1fbb19d4f",
+    "dolomites-background": "1eecf481aede249eb45d037e823e77490fb8ca01dadfc357d15c6deb768bbb79",
+    "munich": "b25aa74aa58a15ae7e1bda9e4818e61d400884ef583391c3c2166f3f321b35f6",
+    "jungfrau": "fb8fa9c0ca592c112d7367f209fe44c61c3b7c0e250029f938b4961a11b4b174"
+  },
+  "parent_payload_sha256": "69d03dc4db37e5e6cc6129b72e87a4b194256ce76db504e2d971511553636783",
+  "scenery_recipe_sha256": "c62fcb0b7416278a0b7efcad2649a328d755423d6676247ff96190b96d34916e",
+  "approved_sample_sha256": "4fa92ae5222bab954f6996f2ee975dcfcd3cdc3aac2e7b807e8d136a68cca918",
+  "landmarks": {
+    "santa-maddalena-church": {
+      "lonlat": [
+        11.71922,
+        46.64479
+      ],
+      "model": "gothic-church",
+      "rotation_degrees": -30,
+      "source_url": "https://www.funes.eu/it/Chiesa_di_Santa_Maddalena_4",
+      "coordinate_source": "Municipal page StreetView link cbll=46.64479,11.71922",
+      "reference": "images/swiss_do/Stmaddalena.jpg"
+    },
+    "ortisei-church": {
+      "lonlat": [
+        11.6718,
+        46.5752
+      ],
+      "model": "onion-church",
+      "rotation_degrees": -12,
+      "source_url": "https://www.valgardena.it/en/addresses/detail/base/poi/ortisei-val-gardena/ortisei-parish-church/54B87FF3F6E24A90A5923D17A3BD9043/",
+      "coordinate_source": "Official tourism page Google Maps link 46.5752,11.6718",
+      "reference": "images/swiss_do/Ortisei.jpg"
+    },
+    "spiez-castle": {
+      "lonlat": [
+        7.6875171,
+        46.689374
+      ],
+      "model": "castle",
+      "rotation_degrees": -20,
+      "source_url": "https://www.openstreetmap.org/way/212739946",
+      "coordinate_source": "OSM geometry/centroid; original illustrative model, not a surveyed building"
+    },
+    "interlaken-church": {
+      "lonlat": [
+        7.8643191,
+        46.6874941
+      ],
+      "model": "gothic-church",
+      "rotation_degrees": 5,
+      "source_url": "https://www.openstreetmap.org/way/202410138",
+      "coordinate_source": "OSM geometry/centroid; original illustrative model, not a surveyed building"
+    },
+    "lauterbrunnen-church": {
+      "lonlat": [
+        7.9084652,
+        46.592676
+      ],
+      "model": "gothic-church",
+      "rotation_degrees": 0,
+      "source_url": "https://www.openstreetmap.org/way/230551186",
+      "coordinate_source": "OSM geometry/centroid; original illustrative model, not a surveyed building"
+    },
+    "brixen-tower": {
+      "lonlat": [
+        11.657830685714286,
+        46.7165491
+      ],
+      "model": "clock-tower",
+      "rotation_degrees": 0,
+      "source_url": "https://www.openstreetmap.org/way/231738203",
+      "coordinate_source": "OSM geometry/centroid; original illustrative model, not a surveyed building"
+    },
+    "staubbachfall": {
+      "lonlat": [
+        7.905429,
+        46.589776
+      ],
+      "model": "waterfall",
+      "rotation_degrees": 0,
+      "source_url": "https://www.openstreetmap.org/node/948595022",
+      "coordinate_source": "OSM geometry/centroid; original illustrative model, not a surveyed building"
+    }
+  },
+  "approval_evidence": {
+    "status": "user_authorized_rebuild_after_temporary_cache_loss",
+    "historical_sample_sha256": "e58845fb8a86a279932921919fc67c0add541121eb0265bd793442098a3e30db",
+    "historical_sample_bytes_available": false,
+    "retained_design_sha256": "a9499904027a74f9f65dd96ce1a950747f000d1d0e724ef45c713bf2c5d61453",
+    "note": "User approved upper-slope mist and then explicitly requested rebuilding the full film after the temporary cache disappeared. This is a new render, not verified reuse of the lost sample."
+  },
+  "protected_site_hashes": {
+    "_travel/swiss+dolomites.md": "28e10dd19c6be90813765b981b81244eaf9f0b70d36959df8914404966c600f3",
+    "assets/data/travel/swiss-dolomites-routes.geojson": "7a61ad306b6b126be05090b568be3463bd8e1d66e9634783646aa2a5d909cd10",
+    "assets/media/travel/swiss-dolomites-cinematic.mp4": "9e106bb8b9b6b2ecea6a07613475f0a17d827c14166edaed5876510d9623f863",
+    "assets/media/travel/swiss-dolomites-cinematic-poster.jpg": "2f03517c4b1587bd612d0aa23d14486506c60fc0394b99d067e0e4f119a46ffb"
+  },
+  "source_photo_hashes": {
+    "images/swiss_do/Seceda.jpg": "717c5b8d726550adb8d316ef0b13543517c175e7b4bffa8801257b1a587f1333",
+    "images/swiss_do/Seceda_2.jpg": "dac35bb58cf3d2773c4c2ea35112a14e7cb736faa31c164f1434b838a2c15750",
+    "images/swiss_do/Seceda_4.jpg": "e2757f8f8d04db1ed3e0e643dc6d03e986be9b7fb6e3fa2d21014bbe0b5848ad"
+  },
+  "parent_installed_sha256": "3b0f56c769d82811442f282b2eeaad461c65415bd12678b018453380663b9aab",
+  "seceda_recipe_sha256": "a2784bd2ff1e0f476594c04bb603216b3ebe64b49315384a52c3dc8ebcc156e1",
+  "modified_shots": [
+    "d07-seceda",
+    "d07-summit",
+    "d08-seceda-lift",
+    "d08-pieralongia-out",
+    "d08-pieralongia-return",
+    "d08-loop-arrival"
+  ],
+  "unchanged_clips": 62,
+  "visual_reference_attachments": [
+    {
+      "path": "/Users/amber_test/Downloads/Seceda-ridgeline-loop-hike-18.webp",
+      "sha256": "f244688f6d3536d3b9c561b2a3f19b15b801f6c9d08e4fb9b8f7f8e93d0ed3a8",
+      "status": "local_file_available"
+    },
+    {
+      "path": "/Users/amber_test/Downloads/seceda-dolomiti-hike-10.jpg",
+      "sha256": "bc46f213cfe412fe973bd459e0b0fc781f6f3c92328b2b89f584333caa5a4f18",
+      "status": "local_file_available"
+    }
+  ],
+  "seceda_relief": {
+    "path": "/Users/amber_test/.codex/visualizations/2026/08/17/01a01022-fc48-72e0-ab42-8302c57831f0/journey-film-render/cinematic-v3-seceda-sculpted/seceda-relief.npz",
+    "sha256": "cdce45c634e6e3310ae5910243dce4a5ef4ba91388f228bb7f2a875472e968b6",
+    "audit": {
+      "classification": "photo-guided artistic reconstruction, not new survey data",
+      "shape": [
+        481,
+        726
+      ],
+      "spacing_m": [
+        5.993820736854345,
+        5.991494022092168
+      ],
+      "height_scale": 1,
+      "maximum_lowering_m": 303.5999999999999,
+      "maximum_raising_m": 0.0,
+      "seam_error_m": 0,
+      "protected_path_m": 30,
+      "path_height_error_m": 0,
+      "anchors": [
+        {
+          "lonlat": [
+            11.73306,
+            46.6016
+          ],
+          "source_height_m": 2474.417976734812,
+          "render_height_m": 2474.417976734805
+        },
+        {
+          "lonlat": [
+            11.73582,
+            46.60106
+          ],
+          "source_height_m": 2437.507099092285,
+          "render_height_m": 2437.5070990922845
+        },
+        {
+          "lonlat": [
+            11.73899,
+            46.60187
+          ],
+          "source_height_m": 2510.8916402821606,
+          "render_height_m": 2510.8916402821606
+        },
+        {
+          "lonlat": [
+            11.74491,
+            46.60187
+          ],
+          "source_height_m": 2549.166797179682,
+          "render_height_m": 2549.1667971796824
+        },
+        {
+          "lonlat": [
+            11.74808,
+            46.60214
+          ],
+          "source_height_m": 2596.554509914231,
+          "render_height_m": 2596.554509914231
+        },
+        {
+          "lonlat": [
+            11.754,
+            46.60403
+          ],
+          "source_height_m": 2632.969626687647,
+          "render_height_m": 2632.969626687631
+        },
+        {
+          "lonlat": [
+            11.75993,
+            46.60591
+          ],
+          "source_height_m": 2601.3391677834397,
+          "render_height_m": 2601.3391677834397
+        },
+        {
+          "lonlat": [
+            11.763883,
+            46.608605
+          ],
+          "source_height_m": 2857.082399872435,
+          "render_height_m": 2857.0823998724345
+        },
+        {
+          "lonlat": [
+            11.767045,
+            46.609414
+          ],
+          "source_height_m": 2949.1612725015016,
+          "render_height_m": 2949.1612725014998
+        },
+        {
+          "lonlat": [
+            11.769416,
+            46.61103
+          ],
+          "source_height_m": 2783.065501728591,
+          "render_height_m": 2783.065501728591
+        },
+        {
+          "lonlat": [
+            11.773368,
+            46.612647
+          ],
+          "source_height_m": 2958.410462821512,
+          "render_height_m": 2958.41046282151
+        },
+        {
+          "lonlat": [
+            11.776529,
+            46.612377
+          ],
+          "source_height_m": 2874.0723030052127,
+          "render_height_m": 2874.0723030052127
+        },
+        {
+          "lonlat": [
+            11.780481,
+            46.612916
+          ],
+          "source_height_m": 2890.6055138874026,
+          "render_height_m": 2890.605513887402
+        }
+      ],
+      "anchor_error_m": 1.6370904631912708e-11
+    }
+  },
+  "assembly_note": "Lossless stream-copy assembly. All 3300 frames outside the six Seceda intervals verified against the installed parent film. Poster unchanged."
+}

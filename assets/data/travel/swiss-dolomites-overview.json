@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "duration": 72,
+  "fps": 24,
+  "resolution": [1280, 960],
+  "renderer": "Blender 4.5.13 / EEVEE",
+  "projection": {"origin": [9.0, 47.0], "units": "km", "vertical_scale": 1},
+  "opening_seconds": 3,
+  "ending_seconds": 3,
+  "days": [
+    {"id": "day-01", "seconds": 5, "region": "overview", "camera_span": 110},
+    {"id": "day-02", "seconds": 6, "region": "oeschinensee", "camera_span": 7},
+    {"id": "day-03", "seconds": 10, "region": "jungfrau", "camera_span": 23},
+    {"id": "day-04", "seconds": 7, "region": "jungfrau", "camera_span": 10},
+    {"id": "day-05", "seconds": 6, "region": "overview", "camera_span": 190},
+    {"id": "day-06", "seconds": 8, "region": "dolomites", "camera_span": 26},
+    {"id": "day-07", "seconds": 4, "region": "gardena", "camera_span": 9},
+    {"id": "day-08", "seconds": 7, "region": "gardena", "camera_span": 8},
+    {"id": "day-09", "seconds": 7, "region": "gardena", "camera_span": 9},
+    {"id": "day-10", "seconds": 6, "region": "overview", "camera_span": 140}
+  ],
+  "regions": {
+    "overview": {"bounds": [5.0, 45.0, 12.999, 48.999], "dem": 90, "max_grid": 620},
+    "oeschinensee": {"bounds": [7.60, 46.43, 7.83, 46.57], "dem": 30, "max_grid": 540},
+    "jungfrau": {"bounds": [7.53, 46.39, 8.18, 46.81], "dem": 30, "max_grid": 620},
+    "dolomites": {"bounds": [11.41, 46.42, 12.23, 46.88], "dem": 30, "max_grid": 620},
+    "gardena": {"bounds": [11.54, 46.48, 11.86, 46.70], "dem": 30, "max_grid": 620}
+  },
+  "playback": {
+    "day-02-oeschinensee-hike": {"return": true},
+    "day-03-kandersteg-spiez": {"reverse_parts": [0]},
+    "day-03-iseltwald-round-trip": {"return": true},
+    "day-03-murren-grutschalp": {"reverse": true},
+    "day-03-grutschalp-lauterbrunnen": {"reverse": true},
+    "day-04-grindelwald-wengen": {"reverse_parts": [0]},
+    "day-05-wengen-brixen": {"reverse_parts": [0, 1]},
+    "day-06-santa-maddalena-hike": {"return": true, "weight": 2.2},
+    "day-07-seceda-round-trip": {"return": true},
+    "day-08-seceda-hike": {"weight": 2.5},
+    "day-08-seceda-ortisei": {"reverse": true},
+    "day-09-alpe-di-siusi-hike": {"weight": 2.5},
+    "day-09-alpe-di-siusi-ortisei": {"reverse": true}
+  }
+}

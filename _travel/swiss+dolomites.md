@@ -17,6 +17,13 @@ journey:
   content_status: itinerary
   eyebrow: Switzerland & the Dolomites
   period: June 15–24, 2024
+  overview:
+    page_url: /memories/swiss-dolomites/video/
+    video: /assets/media/travel/swiss-dolomites-cinematic.mp4
+    poster: /assets/media/travel/swiss-dolomites-cinematic-poster.jpg
+    duration: 150
+    provenance: /assets/data/travel/swiss-dolomites-cinematic-provenance.json
+    alt: A cinematic 3D journey from Geneva Airport through the Swiss Alps and the Dolomites to Munich Airport, June 15–24, 2024. Named departure and arrival views lead into low mountain, lake, cableway and trail scenes with small illustrated transport.
   route_geojson: /assets/data/travel/swiss-dolomites-routes.geojson
   route_legs:
     - id: day-01-geneva-kandersteg

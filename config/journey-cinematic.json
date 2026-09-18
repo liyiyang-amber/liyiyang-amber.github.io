@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "approval_status": "sample_only",
+  "duration": 150,
+  "sample_duration": 15,
+  "resolution": [1280, 960],
+  "fps": 24,
+  "samples": 48,
+  "opening_seconds": 4,
+  "ending_seconds": 4,
+  "day_seconds": [10, 14, 26, 18, 10, 18, 8, 14, 14, 10],
+  "minimum_free_gib": 8,
+  "sample_minimum_free_gib": 6,
+  "video_limit_mib": 35,
+  "vehicle_dimensions_metres": {
+    "rail": [3, 50, 4.2],
+    "bus": [2.5, 12, 3.5],
+    "rideshare": [1.8, 4.5, 1.6],
+    "cable_car": [3, 2.5, 4.2],
+    "hike": [0.7, 0.55, 1.7]
+  },
+  "regions": {
+    "oeschinensee": {"bounds": [7.64, 46.44, 7.82, 46.57]},
+    "lake-thun": {"bounds": [7.62, 46.59, 7.91, 46.78]},
+    "mannlichen": {"bounds": [7.82, 46.53, 8.08, 46.71]}
+  },
+  "sample_shots": [
+    {
+      "id": "oeschinensee-departure", "seconds": 2,
+      "leg_id": "day-02-oeschinensee-hike", "region": "oeschinensee",
+      "camera": "departure_aerial", "part": 0, "fraction": 0.04, "speed_mps": 1.1,
+      "from_place": "kandersteg", "to_place": "oeschinensee",
+      "endpoint_labels": ["from", "to"], "show_route": true
+    },
+    {
+      "id": "oeschinensee-trail", "seconds": 5,
+      "leg_id": "day-02-oeschinensee-hike", "region": "oeschinensee",
+      "camera": "trail_level", "part": 0, "fraction": 0.952, "speed_mps": 1.05,
+      "from_place": "kandersteg", "to_place": "oeschinensee",
+      "endpoint_labels": [], "show_route": false,
+      "camera_offset_m": [-25, -12, 3.5], "look_offset_m": [140, 10, 34], "lens_mm": 24
+    },
+    {
+      "id": "oeschinensee-arrival", "seconds": 2,
+      "leg_id": "day-02-oeschinensee-hike", "region": "oeschinensee",
+      "camera": "arrival_aerial", "part": 0, "fraction": 0.995, "speed_mps": 0.5,
+      "from_place": "kandersteg", "to_place": "oeschinensee",
+      "endpoint_labels": ["to"], "show_route": true
+    },
+    {
+      "id": "lake-thun-rail", "seconds": 3,
+      "leg_id": "day-03-spiez-interlaken", "region": "lake-thun",
+      "camera": "rail_tracking", "part": 0, "fraction": 0.55, "speed_mps": 15,
+      "from_place": "spiez", "to_place": "interlaken",
+      "endpoint_labels": [], "show_route": false, "verify_surface_rail": true,
+      "camera_offset_m": [-130, 350, 8], "look_offset_m": [0, 0, 85], "lens_mm": 28,
+      "camera_height_mode": "terrain"
+    },
+    {
+      "id": "mannlichen-cableway", "seconds": 3,
+      "leg_id": "day-04-wengen-mannlichen", "region": "mannlichen",
+      "camera": "cableway_tracking", "part": 0, "fraction": 0.68, "speed_mps": 5,
+      "from_place": "wengen", "to_place": "mannlichen",
+      "endpoint_labels": [], "show_route": false,
+      "camera_offset_m": [60, -30, 6], "look_offset_m": [-80, 70, 20], "lens_mm": 30
+    }
+  ]
+}

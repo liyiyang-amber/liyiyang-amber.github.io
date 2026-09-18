@@ -5,8 +5,15 @@
 {% endif %}
 
 {% if page.layout == 'travel-journey' %}
+  {% if page.journey.overview and page.journey.overview.page_url == nil %}
+    <script src="{{ '/assets/js/travel-overview.js' | relative_url }}" defer></script>
+  {% endif %}
   <script src="{{ '/assets/vendor/leaflet/leaflet.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/travel-journey.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.layout == 'travel-video' %}
+  <script src="{{ '/assets/js/travel-overview.js' | relative_url }}" defer></script>
 {% endif %}
 
 {% if site.travel_notes.form_id %}

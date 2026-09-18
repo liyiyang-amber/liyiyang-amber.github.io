@@ -50,11 +50,20 @@ layout: default
       </div>
     </header>
 
+    {% if journey.overview %}
+      {% unless journey.overview.page_url %}
+        {% include travel-overview.html overview=journey.overview %}
+      {% endunless %}
+    {% endif %}
+
     {% if places.size > 0 %}
       <section class="travel-map-section" aria-labelledby="travel-map-instructions">
         <p id="travel-map-instructions" class="travel-map-section__instructions">
           <span class="travel-map-section__desktop-instruction">Hover or focus a place for a preview &mdash; click to scroll; pinch on a trackpad to zoom; select a route for details</span>
           <span class="travel-map-section__touch-instruction">Tap a place once to preview and again to scroll; tap a route for details</span>
+          {% if journey.overview.page_url %}
+            <span aria-hidden="true"> · </span><a id="travel-overview-title" class="travel-map-section__video-link" href="{{ journey.overview.page_url | relative_url }}">Click to see the overview route video</a>
+          {% endif %}
         </p>
 
         <div class="travel-map-frame">

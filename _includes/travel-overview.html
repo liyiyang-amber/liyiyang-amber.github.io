@@ -1,0 +1,25 @@
+{% assign overview = include.overview %}
+<section class="travel-overview" aria-labelledby="travel-overview-title">
+  {% if include.standalone %}
+    <h1 id="travel-overview-title" class="travel-overview__title">The journey in motion</h1>
+  {% else %}
+    <h2 id="travel-overview-title" class="travel-journey__eyebrow">The journey in motion</h2>
+  {% endif %}
+  <video data-travel-overview controls loop muted playsinline preload="none"
+    width="1280" height="960" poster="{{ overview.poster | relative_url }}"
+    aria-label="{{ overview.alt | escape }}" aria-describedby="travel-overview-description">
+    <source src="{{ overview.video | relative_url }}" type="video/mp4">
+    <p><a href="{{ overview.video | relative_url }}">Download the journey film</a>.</p>
+  </video>
+  <p id="travel-overview-description" class="travel-overview__description">{{ overview.alt | escape }} {% if include.standalone %}Explore the complete itinerary and route sources on <a href="{{ include.journey_url | relative_url }}#travel-map-instructions">the journey page</a>.{% else %}The complete itinerary and route sources are below.{% endif %}</p>
+  <div class="travel-overview__downloads">
+    <span>{% if overview.duration %}{{ overview.duration }} seconds · {% endif %}silent · real Alpine terrain</span>
+    <a href="{{ overview.video | relative_url }}" download>Download MP4</a>
+    {% if overview.gif %}<a href="{{ overview.gif | relative_url }}" download>Download GIF</a>{% endif %}
+  </div>
+  <details class="travel-overview__credits">
+    <summary>Terrain, route and animation credits</summary>
+    <p>Original cartoon transport over <a href="https://registry.opendata.aws/copernicus-dem/">Copernicus GLO-30 / GLO-90 elevation</a> (2021 release), with lake and forest outlines © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Terrain shading and weather are illustrative; route heights are visual overlays, not measured bridge or tunnel elevations. Ortisei’s changing weather is a recollection, not a dated weather record.</p>
+    <p>Produced using Copernicus WorldDEM-30 and WorldDEM-90 © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.{% if overview.provenance %} <a href="{{ overview.provenance | relative_url }}">Sources and rendering provenance</a>.{% endif %}</p>
+  </details>
+</section>

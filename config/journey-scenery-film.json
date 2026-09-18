@@ -1,0 +1,61 @@
+{
+  "approval_status": "approved",
+  "approved_sample_sha256": "e58845fb8a86a279932921919fc67c0add541121eb0265bd793442098a3e30db",
+  "duration": 150,
+  "destination_seconds": 47,
+  "directory": "cinematic-v3-film",
+  "region_profiles": {
+    "geneva": ["clear-lake", "Geneva_airport.jpg"],
+    "lavaux": ["clear-lake", "Spiez.jpg"],
+    "oeschinensee": ["clear-lake", "Oeschinensee.jpg"],
+    "lake-thun": ["clear-lake", "Spiez.jpg"],
+    "brienz": ["clear-lake", "Iseltwald.jpg"],
+    "valley": ["clear-lake", "Lauterbrunnen.jpg"],
+    "mannlichen": ["snow-sun", "Mannlichen.jpg"],
+    "brixen": ["cloud-peaks", "Brixen.jpg"],
+    "braies": ["cloud-peaks", "Lagodibraise.jpg"],
+    "funes": ["cloud-peaks", "Stmaddalena.jpg"],
+    "gardena": ["cloud-peaks", "Seceda.jpg"],
+    "siusi": ["cloud-peaks", "Alpedisiusi.jpg"],
+    "bolzano": ["cloud-peaks", "Ortisei.jpg"],
+    "brenner": ["cloud-peaks", "Seceda.jpg"]
+  },
+  "duration_overrides": {
+    "d02-forest-trail": 3, "d02-lake-trail": 5,
+    "d03-iseltwald-bus": 2, "d03-iseltwald-arrival": 2,
+    "d03-lauterbrunnen-valley": 2, "d03-grutschalp-lift": 2.5,
+    "d03-murren-arrival": 1, "d03-wengen-arrival": 1,
+    "d04-panoramaweg": 5,
+    "d05-brixen-valley": 4, "d05-brixen-arrival": 3,
+    "d06-braies-car": 2, "d06-braies-arrival": 4,
+    "d06-viewpoint-trail": 3, "d06-viewpoint-return": 1,
+    "d07-furnes": 0.5, "d07-seceda": 1.5, "d07-summit": 1,
+    "d07-return-upper": 0.5, "d07-return-lower": 0.5, "d07-ortisei-weather": 4,
+    "d09-meadow-trail": 5, "d09-forest-return": 2,
+    "d10-bolzano-bus": 1
+  },
+  "insertions": [
+    {"id": "d03-interlaken-town", "base_shot": "d03-lake-thun", "after": "d03-lake-thun", "seconds": 1},
+    {"id": "d04-grindelwald-village", "base_shot": "d04-grindelwald-rail", "after": "d04-grindelwald-rail", "seconds": 2},
+    {"id": "d10-ortisei-departure", "base_shot": "d10-bolzano-bus", "before": "d10-bolzano-bus", "seconds": 1}
+  ],
+  "destinations": {
+    "d01-arrival": {"scenery": "alpine-village", "place_anchor": "kandersteg", "reference": "Kandersteg.jpg", "offset_m": [-210, -220, 10], "look_offset_m": [30, 80, 55]},
+    "d02-lake-trail": {"approved_shot": "v3-oeschinensee-pair"},
+    "d03-spiez": {"scenery": "castle-vineyard", "landmark": "spiez-castle", "reference": "Spiez.jpg", "offset_m": [-330, -330, 12], "look_offset_m": [0, 160, 18]},
+    "d03-interlaken-town": {"scenery": "town-flags", "landmark": "interlaken-church", "reference": "Interlaken.jpg", "offset_m": [-75, 115, 4], "look_offset_m": [5, -180, 32]},
+    "d03-iseltwald-arrival": {"scenery": "waterfront", "place_anchor": "iseltwald", "reference": "Iseltwald.jpg", "offset_m": [-170, 140, 9], "look_offset_m": [60, -70, 35]},
+    "d03-lauterbrunnen-valley": {"scenery": "waterfall-village", "landmark": "lauterbrunnen-church", "reference": "Lauterbrunnen.jpg", "offset_m": [80, 185, 30], "look_offset_m": [-50, -180, 55]},
+    "d03-murren-arrival": {"scenery": "alpine-village", "place_anchor": "murren", "reference": "Murren.jpg", "offset_m": [-180, 120, 25], "look_offset_m": [70, -80, 20]},
+    "d03-wengen-arrival": {"scenery": "alpine-village", "place_anchor": "wengen", "reference": "Wengen.jpg", "offset_m": [-50, -230, 65], "look_offset_m": [80, 100, 45]},
+    "d04-panoramaweg": {"approved_shot": "v3-mannlichen-snow"},
+    "d04-grindelwald-village": {"scenery": "alpine-village", "place_anchor": "grindelwald", "reference": "Grindelwald.jpg", "offset_m": [-190, 120, 12], "look_offset_m": [190, -250, 120]},
+    "d05-brixen-arrival": {"scenery": "pastel-street", "landmark": "brixen-tower", "reference": "Brixen.jpg", "offset_m": [0, 155, 7], "look_offset_m": [0, 0, 38]},
+    "d06-braies-arrival": {"scenery": "lakeside", "place_anchor": "lago-di-braies", "reference": "Lagodibraise.jpg", "offset_m": [-50, 90, 8], "look_offset_m": [80, -280, 70], "boats": true},
+    "d06-viewpoint-trail": {"approved_shot": "v3-santa-maddalena"},
+    "d07-ortisei-weather": {"approved_shot": "v3-ortisei-atmosphere"},
+    "d08-pieralongia-out": {"scenery": "ridge-trail", "reference": "Seceda.jpg"},
+    "d09-meadow-trail": {"scenery": "meadow-trail", "reference": "Alpedisiusi.jpg"},
+    "d10-ortisei-departure": {"scenery": "village-weather", "landmark": "ortisei-church", "reference": "Ortisei.jpg", "offset_m": [-145, -270, 55], "look_offset_m": [70, 340, 55]}
+  }
+}

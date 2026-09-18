@@ -64,6 +64,25 @@ def validate_asset(value, label, errors)
   end
 end
 
+def validate_overview_page(value, journey_permalink, errors)
+  label = "journey.overview.page_url"
+  unless value.is_a?(String) && value.match?(%r{\A/(?:[a-zA-Z0-9_-]+/)+\z})
+    errors << "#{label} must be a root-relative page permalink ending in /"
+    return
+  end
+
+  pages = Dir.glob(ROOT.join("_pages/**/*.{md,html}").to_s).filter_map do |path|
+    data = load_front_matter(path)
+    data if data["permalink"] == value
+  rescue StandardError
+    nil
+  end
+  unless pages.length == 1 && pages.first["layout"] == "travel-video" &&
+      pages.first["journey_permalink"] == journey_permalink
+    errors << "#{label} must resolve to one travel-video page referencing this journey"
+  end
+end
+
 def coordinate?(value)
   number = Float(value, exception: false)
   number&.finite?
@@ -298,6 +317,26 @@ def validate_page(path)
   end
 
   status = journey["content_status"]
+  if journey.key?("overview")
+    overview = journey["overview"]
+    if overview.is_a?(Hash)
+      %w[video poster alt].each do |field|
+        errors << "journey.overview.#{field} is required" unless present?(overview[field])
+      end
+      %w[video gif poster provenance].each do |field|
+        validate_asset(overview[field], "journey.overview.#{field}", errors) if present?(overview[field])
+      end
+      validate_overview_page(overview["page_url"], data["permalink"], errors) if overview.key?("page_url")
+      if overview.key?("duration")
+        duration = Float(overview["duration"], exception: false)
+        unless overview["duration"].is_a?(Numeric) && duration&.finite? && duration.positive?
+          errors << "journey.overview.duration must be a positive finite number of seconds"
+        end
+      end
+    else
+      errors << "journey.overview must be a mapping"
+    end
+  end
   errors << "journey.content_status must be itinerary or complete" unless CONTENT_STATUSES.include?(status)
   complete = status == "complete"
 
