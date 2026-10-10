@@ -31,6 +31,7 @@ layout: default
   <article
     class="travel-journey"
     data-travel-journey
+    data-map-worker-url="{{ '/assets/vendor/maplibre-gl/5.24.0/maplibre-gl-csp-worker.js' | relative_url }}"
     data-content-status="{{ content_status | escape }}"
     {% if journey.route_geojson %}data-route-url="{{ journey.route_geojson | relative_url }}"{% endif %}
   >

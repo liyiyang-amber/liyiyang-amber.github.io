@@ -177,6 +177,7 @@
     var touchPreviewPlaceId = null;
     var activeRouteId = null;
     var routeUnavailable = false;
+    var backgroundUnavailable = false;
     var map = null;
     var markers = {};
     var routeLayers = {};
@@ -296,6 +297,16 @@
       if (!status) return;
       status.hidden = true;
       status.textContent = "";
+    }
+
+    function updateMapStatus() {
+      if (routeUnavailable) {
+        showStatus("The route layers could not be loaded. Waypoints, travel modes, and the complete itinerary remain available.");
+      } else if (backgroundUnavailable) {
+        showStatus("The map background is unavailable. Waypoints, routes, and the complete itinerary remain available.");
+      } else {
+        hideStatus();
+      }
     }
 
     function focusableElements(dialog) {
@@ -571,6 +582,10 @@
       zoomControl: true,
       zoomSnap: 0.25,
       zoomDelta: 1,
+      minZoom: 1,
+      maxZoom: 20,
+      maxBounds: [[-85.05112878, -Infinity], [85.05112878, Infinity]],
+      maxBoundsViscosity: 1,
       scrollWheelZoom: false,
       dragging: true,
       touchZoom: true,
@@ -579,26 +594,9 @@
     });
     attachTrackpadPinchZoom(map, mapElement);
 
-    var tileErrors = 0;
-    var tileLayer = window.L.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-      {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: "abcd",
-        maxZoom: 20,
-      }
-    );
-    tileLayer.on("tileerror", function () {
-      tileErrors += 1;
-      if (tileErrors === 4) {
-        showStatus("Map tiles could not be loaded. Waypoints and the complete itinerary remain available.");
-      }
-    });
-    tileLayer.on("load", function () {
-      if (tileErrors < 4 && !routeUnavailable) hideStatus();
-    });
-    tileLayer.addTo(map);
+    var mapAttribution =
+      '<a href="https://openfreemap.org/">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/">OpenMapTiles</a> Data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    map.attributionControl.addAttribution(mapAttribution);
 
     var placeBounds = window.L.latLngBounds(
       places.map(function (place) {
@@ -606,6 +604,74 @@
       })
     );
     var allBounds = window.L.latLngBounds(placeBounds);
+
+    // The adapter needs an initialized Leaflet view. Initialize it before addTo
+    // so renderer failures are caught here rather than during a later fitBounds.
+    fitJourneyBounds();
+    var backgroundLayer = null;
+    var backgroundTimer = null;
+    try {
+      if (!window.maplibregl || !window.L.maplibreGL) {
+        throw new Error("The vector map renderer is unavailable");
+      }
+      window.maplibregl.setWorkerUrl(root.getAttribute("data-map-worker-url"));
+      backgroundLayer = window.L.maplibreGL({
+        style: "https://tiles.openfreemap.org/styles/liberty",
+        interactive: false,
+        attributionControl: false,
+      });
+      backgroundLayer.addTo(map);
+      var backgroundMap = backgroundLayer.getMaplibreMap();
+      var backgroundFailed = false;
+      var contextLost = false;
+
+      function backgroundError() {
+        backgroundFailed = true;
+        backgroundUnavailable = true;
+        window.clearTimeout(backgroundTimer);
+        updateMapStatus();
+      }
+
+      function backgroundReady() {
+        // Failed tiles can count as loaded. Keep resource-error notices until
+        // reload; a slow successful load or restored WebGL context can recover.
+        if (backgroundFailed || contextLost || !backgroundMap.isStyleLoaded() || !backgroundMap.areTilesLoaded()) return;
+        window.clearTimeout(backgroundTimer);
+        backgroundUnavailable = false;
+        updateMapStatus();
+      }
+
+      backgroundMap.on("error", backgroundError);
+      backgroundMap.on("load", backgroundReady);
+      backgroundMap.on("idle", backgroundReady);
+      backgroundMap.on("webglcontextlost", function () {
+        contextLost = true;
+        backgroundUnavailable = true;
+        updateMapStatus();
+      });
+      backgroundMap.on("webglcontextrestored", function () {
+        contextLost = false;
+      });
+      backgroundTimer = window.setTimeout(function () {
+        backgroundUnavailable = true;
+        updateMapStatus();
+      }, 15000);
+      map.on("unload", function () { window.clearTimeout(backgroundTimer); });
+    } catch (error) {
+      // A constructor can fail after the adapter has attached its container.
+      // Remove that partial layer without interrupting markers and routes.
+      if (backgroundLayer && map.hasLayer(backgroundLayer)) {
+        if (!backgroundLayer.getMaplibreMap()) {
+          backgroundLayer.onRemove = function () {
+            var container = this.getContainer();
+            if (container) container.remove();
+          };
+        }
+        map.removeLayer(backgroundLayer);
+      }
+      backgroundUnavailable = true;
+      updateMapStatus();
+    }
 
     function markerIcon(place) {
       return window.L.divIcon({
@@ -1037,7 +1103,7 @@
       })
       .catch(function () {
         routeUnavailable = true;
-        showStatus("The route layers could not be loaded. Waypoints, travel modes, and the complete itinerary remain available.");
+        updateMapStatus();
         fitJourneyBounds();
       });
   });

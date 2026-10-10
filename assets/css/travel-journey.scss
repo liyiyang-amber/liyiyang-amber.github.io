@@ -263,18 +263,13 @@ $journey-line: rgba(28, 25, 21, 0.12);
   background: #d8d2c3;
 }
 
-.travel-map .leaflet-tile {
-  filter: sepia(8%) brightness(0.97);
-}
-
 .travel-map .leaflet-control-attribution {
   max-width: calc(100% - 12px);
-  overflow: hidden;
   color: $journey-copy;
   background: rgba(250, 246, 236, 0.9);
   font-size: 0.61rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .travel-map .leaflet-control-attribution a {
